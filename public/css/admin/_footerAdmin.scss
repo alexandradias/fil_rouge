@@ -1,0 +1,42 @@
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+@import "variableAdmin";
+
+
+
+/*____________________________________________________________________________________________________________________*/
+/*FOOTER*/
+
+.footer{
+  @include fontRoboto;
+  margin:0;
+  padding:0;
+  height: 100px;
+  width: 100%;
+  background-color: rgba(93,112,110,0.3);
+  /* position: fixed;*/
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.text_foot{
+  color:white;
+  @include fontBeth;
+}
+
+.foot_line{
+  text-align: center;
+  font-size: X-large;
+  margin: 0;
+}
+
+.foot_sign{
+  @include fontRoboto;
+  text-align: right;
+  font-style: italic;
+  font-size: small;
+  margin: 0;
+}

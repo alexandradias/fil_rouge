@@ -1,0 +1,65 @@
+{#la … extends me permets d'appeler le fichier partiel qui regroupe le 'header' et 'footer' présent sur toutes les pages de mon site#}
+{% extends 'baseUser/base_ateliers.html.twig' %}
+
+    {# j'intègre le contenu de ma page entre le 'block' et le 'endblock'#}
+     {% block content %}
+
+         <div class="slide_ateliers">
+
+             <div class="text_ateliers">
+                 <div class="bloc_text_ateliers">
+                     {{'Nos ateliers'}}
+                 </div>
+             </div>
+
+             {#<p class="text_slide_ateliers">Je vous présente mes ateliers, ma passion, <br>
+                 l'objectif de toute une vie!<br>
+             </p>#}
+             <div>
+                 <img src="{{ asset('assets/img/SA1.jpg') }}" alt="slide_atelier_home"/>
+             </div>
+
+         </div>
+
+         <div class="product_bloc_title_atelier"></div>
+
+         <div class="ateliers">
+
+
+             {% for atelier in ateliers %}
+
+                 <div class="product_bloc_atelier">
+                     <a href="{{ path('ateliersByCategorie', {'id': atelier.id}) }}">
+                         <img src="{{ asset('assets/img/'~ atelier.image)}}" alt="image produit">
+                         <p class="product_bloc_nomPdt_atelier">{{ atelier.NomTypeAtelier }}</p>
+                         <p class="product_bloc_description_short_atelier">{{ atelier.descriptionShortAtelier }}</p>
+                     </a>
+                    <div class="price_atelier">
+                         <div class="price_ring_atelier">
+                             <p class="product_bloc_tarif_atelier">{{ atelier.tarifTtcAtelier }} €</p>
+                         </div>
+                         <a href="{{ path('productsByCategorie', {'id': atelier.id}) }}"class="price_ring_atelier">
+                             <p>{{ ('+') }} </p>
+                         </a>
+                     </div>
+                 </div>
+
+             {% endfor %}
+
+         </div>
+
+
+
+     {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+

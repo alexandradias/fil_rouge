@@ -1,0 +1,86 @@
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+@import "variableAdmin";
+
+
+
+
+/*//___________________________________________________________________________
+//FORMULAIRE insertproduct*/
+
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ /* margin-left: 400px;*/
+  //border:solid 2px black;
+}
+
+.form_content{
+  @include fontAdam;
+  margin-top:10px;
+  margin-bottom: 30px;
+  width: 50%;
+}
+
+.form_content_submit{
+  color: white;
+  text-align: center;
+  padding: 6px;
+  @include fontAdam;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  margin-top: 50px;
+  background-color: $vertfonceColor;
+  border-radius: 3px;
+  width: 300px;
+}
+
+.form_content_label{
+  @include fontAdam;
+  margin-top:30px;
+  width: 50%;
+  text-transform: uppercase;
+}
+
+
+.h1{
+  @include fontAdam;
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  color: $kakiColor;
+  margin-bottom: 30px;
+}
+
+
+.hrInsert{
+  width: 800px;
+  height: 1px;
+  background-color: $vertTendre;
+  border:none;
+  /*margin-top: 30px;*/
+  /*margin-bottom: 30px;*/
+}
+
+.hrTop{
+  width: 800px;
+  height: 1px;
+  background-color: $vertClair;
+  border:none;
+  margin-top: -7px;
+}
+
+.back_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back_content img{
+  width: 30%;
+  margin-left: 0;
+}
+
+/*_________________________________ FORMULAIRE END*/

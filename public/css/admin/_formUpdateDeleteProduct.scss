@@ -1,0 +1,131 @@
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+@import "variableAdmin";
+
+
+
+
+/*___________________________________________________________________________
+//LIST PRODUCTS*/
+
+.table{
+  margin-left:auto;
+  margin-right:auto;
+  /* border: solid 2px black;*/
+  width:60%;
+}
+
+.table tr{
+  border:solid 1px #959690;
+  padding: 0;
+  /* @include fontMinimal;
+   letter-spacing: 2px;
+
+   width: 100%;*/
+
+}
+
+.table img{
+  width: 60%;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+
+.tr{
+  @include fontRoboto;
+  margin:0;
+  padding: 0;
+}
+
+
+/*___________________________________________________________________________
+//FORMULAIRE updateproduct*/
+
+.h1Update{
+  @include fontAdam;
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  color: $kakiColor;
+  margin-bottom: 30px;
+}
+
+.hrTopUpdate{
+  width: 800px;
+  height: 1px;
+  background-color: $vertClair;
+  border:none;
+  margin-top: -7px;
+}
+
+.update_nomPdt{
+  @include fontRoboto;
+  text-transform: uppercase;
+  font-size: 18px;
+
+  /*width: 5%;*/
+}
+
+.update_description{
+  @include fontRoboto;
+  font-size: 15px;
+  width: 40%;
+}
+
+.update_tarif{
+  @include fontRoboto;
+  font-size: 15px;
+}
+
+.icon_update{
+  width: 150%;
+}
+
+.icon_update img{
+  padding: 0;
+  margin: 0;
+}
+
+.icon_valid{
+  width: 100%;
+  align-items: center;
+}
+
+
+
+/*___________________________________________________________________________
+//FORMULAIRE deleteproduct*/
+
+
+
+.h1Delete{
+  @include fontAdam;
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  color: $kakiColor;
+  margin-bottom: 30px;
+}
+
+.hrTopDelete{
+  width: 800px;
+  height: 1px;
+  background-color: $vertClair;
+  border:none;
+  margin-top: -7px;
+}
+
+.icon_delete{
+  width: 150%;
+}
+
+.icon_delete img{
+  margin-left: 10px;
+  margin-top: 0;
+}
+
+
+
+
+

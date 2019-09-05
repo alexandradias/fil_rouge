@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projet fil rouge</title>
+
+
+    {#<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">#}
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset ('css/style.css') }}">
+
+</head>
+
+{#//______________________________________________________________________________________________________________________
+//BODY START#}
+<body>
+
+{#//_____________________________________________________________________________________________________HEADER USER START#}
+
+{#//Mon header fait parti d'un fichier partiel ce qui me permettra de l'appeler sur chacune de mes pages grâce à 'extends'#}
+<header>
+    <div  class="header1">
+            <div class="logo1">
+                <a href="{{ path ('home') }}">
+                    <img src="{{ asset('assets/logo/logo_1000.svg') }}" alt="logo Anne Lamour Patisserie">
+                </a>
+            </div>
+            {#<div class="text_header1">
+                <p>De toutes les passions, la seule vraiment respectable me parait être la gourmandise.</p>
+                <p>Guy De Maupassant</p>
+            </div>#}
+            {#<div class="burger1"><img src="{{ asset('assets/icon/burger_1000.png') }}" alt="menu burger"></div>#}
+           {# <div class="img_header"> <img src="{{ asset('assets/img/slide_1.png') }}" alt="slide1_home"/></div>#}
+        <div class="menu">
+
+                <div><a href="{{ path ('home') }}"> HOME </a></div>
+
+                <div><a href="{{ path ('productsByCategorie', {'categorie': 'patisserie'}) }}"> PATISSERIES </a></div>
+
+                <div><a href="{{ path ('productsByCategorie', {'categorie': 'chocolat'}) }}"> CHOCOLATS </a></div>
+
+                <div><a href="{{ path ('productsByCategorie', {'categorie': 'glace'}) }}"> GLACES </a></div>
+
+                <div><a href="{{ path ('ateliersByCategorie') }}"> ATELIERS </a></div>
+
+
+        </div>
+    </div>
+
+    <div  class="header2">
+        <a href="{{ path ('home') }}">
+            <div class="logo2"><img src="{{ asset('assets/logo/logo_w_1000.svg') }}" alt="logo Anne Lamour Patisserie"></div>
+        </a>
+    </div>
+    <div class="bloc_white"></div>
+
+</header>
+{#//--------------------------------------------------------------------------------------------------------HEADER USER END#}
+
+{#//____________________________________________________________________________________________________________MAIN START#}
+
+<main class="main">
+       {# //Je mets en place le 'block content' qui me permettra de placer mes éléments
+        //que je souhaite voir modifier à travers mon site web seule cette partie sera différente#}
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="{{ path ('home') }}"> HOME </a></li>
+            <br>
+            <li><a href="{{ path ('productsByCategorie', {'categorie': 'patisserie'}) }}"> PATISSERIES </a></li>
+            <br>
+            <li><a href="{{ path ('productsByCategorie', {'categorie': 'chocolat'}) }}"> CHOCOLATS </a></li>
+            <br>
+            <li><a href="{{ path ('productsByCategorie', {'categorie': 'glace'}) }}"> GLACES </a></li>
+            <br>
+            <li><a href="{{ path ('ateliersByCategorie') }}"> ATELIERS </a></li>
+            <br>
+          {#  <li><a href="{{ path ('contact') }}"> CONTACT </a></li>#}
+        </ul>
+    </div>
+    {#j'intègre un icon arrowtop qui va me permettre de remonter vers le haut de ma page
+    son action sera généré depuis mon fichier.js#}
+    <div class="top"><img src="{{ asset('assets/icon/arrow_top.svg') }}" alt="icon arrow-top"></div>
+
+</main>
+
+{#//----------------------------------------------------------------------------------------------------------MAIN END#}
+
+{#//______________________________________________________________________________________________________FOOTER START#}
+
+{#//je mets en place le footer, celui ci fait parti du fichier partiel => présent sur toutes mes vues#}
+<footer class="footer">
+
+    {#<div class="cgv">
+        <p>Conditions générales de vente</p>
+    </div>#}
+    <div class="foot">
+        {#//je mets en place les 3 sections#}
+        <div class="img_foot">
+            <a href="{{ path ('contact') }}">
+                <div><img src="{{ asset('assets/icon/contact.svg') }}" alt="contact"></div>
+            </a>
+        </div>
+        <div class="img_foot">
+            <a href="{{ path ('cgv') }}">
+                <img src="{{ asset('assets/icon/cgv.svg') }}" alt="conditions générales de vente">
+            </a>
+        </div>
+        <div class="img_foot">
+            <a href="{{'https://www.instagram.com/lamour.anne/?hl=fr'}}" target="{{ 'blank' }}">
+            <img src="{{ asset('assets/icon/instagram.svg')}}" alt="instagram">
+            </a>
+        </div>
+    </div>
+
+</footer>
+{#//------------------------------------------------------------------------------------------------------------FOOTER END#}
+    <!--Je charge la bibliotheque jQuery avec un CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--Je charge mon fichier JS qui va utiliser jQuery
+    (donc je le charge après jQuery)-->
+    <script src={{ asset('assets/js/menu.js') }}></script>
+</body>
+{#//______________________________________________________________________________________________________________________
+//BODY END#}
+</html>

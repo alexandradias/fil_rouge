@@ -1,0 +1,129 @@
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+@import "variable_mixin";
+
+
+
+
+/*//___________________________________________________________________________
+//FORMULAIRE CONTACT*/
+
+.content_contact{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: $vertfonceColor;
+  margin-bottom: 100px;
+
+}
+
+.form-contact{
+  @include fontRoboto;
+}
+
+.form_content{
+  @include fontAdam;
+  margin-top:10px;
+  margin-bottom: 30px;
+  width: 50%;
+}
+
+.form_content_submit{
+  @include fontAdam;
+  color: white;
+  text-align: center;
+  padding: 6px;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  margin-top: 50px;
+  background-color: $vertfonceColor;
+  border-radius: 3px;
+  width: 800px;
+}
+
+.form_content_submit:hover{
+  background-color: $redColor;
+}
+
+.form_content_label{
+  @include fontRoboto;
+  margin-top:30px;
+  margin-bottom:30px;
+  width: 50%;
+  text-transform: uppercase;
+}
+
+#contact_Nom{
+  @include fontRoboto;
+  margin: 0 auto;
+  width: 100%;
+  height: 100px;
+}
+
+#contact_Prenom{
+  @include fontRoboto;
+  margin: 0 auto;
+  width: 100%;
+  height: 100px;
+}
+
+#contact_Email{
+  @include fontRoboto;
+  margin: 0 auto;
+  width: 100%;
+  height: 100px;
+}
+
+#contact_Message{
+  @include fontRoboto;
+  margin: 0 auto;
+  width: 100%;
+  height: 200px;
+}
+
+#contact_Envoyer{
+  text-align: center;
+  background-color: $redColor;
+  margin: 0 auto;
+}
+
+.hrInsert_contact{
+  width: 800px;
+  height: 1px;
+  background-color: $vertTendre;
+  border:none;
+  /*margin-top: 30px;*/
+  /*margin-bottom: 30px;*/
+}
+
+.hrTop_contact{
+  width: 800px;
+  height: 1px;
+  background-color: $vertClair;
+  border:none;
+  margin-top: -7px;
+}
+
+.back_content_contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back_content_contact img{
+  width: 30%;
+  margin-left: 0;
+}
+
+
+.h1_contact{
+  @include fontAdam;
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  color: $kakiColor;
+  margin-bottom: 30px;
+  margin-top: 200px;
+}

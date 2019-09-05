@@ -1,0 +1,66 @@
+{#-> la … extends me permets d'appeler le fichier partiel
+-> qui se situe dans le dossier baseAdmin de ma section templates
+-> ce fichier regroupe le 'header' et le 'footer' présent sur toutes les pages de mon site#}
+{% extends 'baseAdmin/base_admin_insert_update_delete.html.twig' %}
+
+    {# j'intègre le contenu de ma page entre le 'block' et le 'endblock'#}
+     {% block content %}
+
+         {#Je crée une condition afin d'appeler le titre à ma page selon l'action choisie#}
+         {% if action =='update' %}
+
+             <h1 class="h1Update">Update Product</h1>
+             <hr class="hrTopUpdate">
+             <hr class="hrTopUpdate">
+
+         {% elseif action == 'delete'%}
+
+             <h1 class="h1Delete">Delete Product</h1>
+             <hr class="hrTopDelete">
+             <hr class="hrTopDelete">
+
+         {% endif %}
+
+         {#Je crée un tableau qui englobera tous les produits de ma BDD selon l'action choisie (soit updateProduct soit deleteProduct)#}
+         <table class="table">
+
+             {#Je crée une boucle afin d'afficher tous les produits présents dans ma BDD#}
+             {% for product in products %}
+
+                 {#J'indique dans des td les champs que je souhaite voir apparaitre (champs présents dans ma BDD)
+                 Dans ce cas l'image du produit + le nom + la description + le prix TTC#}
+                 <tr class="tr">
+                     <td> <img src="{{ asset('assets/img/'~ product.image)}}" alt="image produit"></td>
+                     {#<td>{{ product.image }} </td>#}
+                     <td class="update_nomPdt">{{ product.NomPdt }}</td>
+
+                     {#<td>{{ product.PhotoPdt }}</td>#}
+                     <td class="update_description">{{ product.DescriptionPdt }}</td>
+
+
+                     {#<td>{{ product.TarifsHtPdt }}</td>#}
+                     {#<td>{{ product.TvaPdt }}</td>#}
+                     <td>{{ product.TarifsTtcPdt }}</td>
+
+                     {# Je crée une condition qui me permettra soit d''update' ou 'delete' un product#}
+                     <td>{% if action == 'update' %}
+                             <a href="{{ path('UpdateProduct', { 'id': product.id }) }}">
+                                 <div class="icon_update"><img src="{{ asset('assets/icon/edit_small.svg') }}" alt="icon update"/>
+                                 </div>
+                                 {#update#}
+                             </a>
+
+                         {%elseif action == 'delete' %}
+                             <a href="{{ path('DeleteProduct', { 'id': product.id }) }}">
+                                 <div class="icon_delete"><img src="{{ asset('assets/icon/delete_small.svg') }}" alt="icon delete"/>
+                                 </div>
+                             </a>
+                         {% endif %}
+                     </td>
+                 </tr>
+
+             {% endfor%}
+
+         </table>
+
+     {% endblock %}

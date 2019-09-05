@@ -1,0 +1,61 @@
+{#la … extends me permets d'appeler le fichier partiel qui regroupe le 'header' et 'footer' présent sur toutes les pages de mon site#}
+{% extends 'baseUser/base_products.html.twig' %}
+
+    {# j'intègre le contenu de ma page entre le 'block' et le 'endblock'#}
+    {% block content %}
+
+        {#<div class="slide_chocolat">
+            <p class="text_slide_chocolat">{{ 'nom produit' }}</p>
+            <div>
+                #}{#<img src="{{ asset('assets/img/'~ product.image)}}" alt="photo du produit sélectionné">#}{#
+                #}{#<img src="{{ asset(product.image) }}" alt="photo du produit sélectionné"/>#}{#
+            </div>
+        </div>#}
+
+        <div class="slide_product">
+
+            {#<div class="text_product">{{ product.DescriptionPdt }}</div>#}
+
+            <div class="text_product">
+                <div class="bloc_text_product">
+                    {{ product.NomPdt }}
+                </div>
+            </div>
+
+
+            <div>
+                <img src="{{ asset('assets/img/'~ product.photoPdt)}}" alt="Photo du produit sélectionné"/>
+            </div>
+
+        </div>
+
+        <div class="global">
+                    <div class="content">
+
+                            <div class="back">
+                                <a href="javascript:history.go(-1)">
+                                    <img src="{{ asset('assets/icon/back_small.svg') }}" alt="icon back"/>
+                                </a>
+                            </div>
+                        <p class="product_composition">{{ 'Sa Signature' }}</p>
+                        {#<div class="product_title">{{ product.NomPdt }}</div>#}
+                        <p class="product_description">{{ product.DescriptionPdt }}</p>
+                    </div>
+
+
+                <div class="bloc_text">
+
+                    <p class="product_composition">{{ 'Sa Composition' }}</p>
+                    <p class="product_description">{{ product.DescriptionPdt }}</p>
+                    <p class="product_tarif">{{ product.TarifsTtcPdt }} €</p>
+
+                    <a href="{{ path('productValid', {'id': product.id}) }}">
+                        <button type="submit" class="add_button">
+                            Ajout panier
+                        </button>
+                    </a>
+
+                </div>
+        </div>
+
+    {% endblock %}

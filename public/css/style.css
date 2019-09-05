@@ -1,0 +1,1142 @@
+@charset "UTF-8";
+/*@import "font";*/
+/*____________________________________________________________________________________________________________________*/
+/*BODY*/
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+/*VARIABLE*/
+/*je crée mes variable pour mon css (feuille de style)
+On appelle la variable à la place de la valeur dans nos class ou id */
+/*$footerColor: rgba(149,150,144,0.4);*/
+/*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/
+/*____________________________________________________________________________________________________________________*/
+/*HEADER1*/
+.header1 {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(149, 150, 144, 0.3);
+  /*background-color: rgba(93,112,110,0.3);*/
+  align-items: center;
+  position: fixed;
+  z-index: 1; }
+
+.logo1 {
+  width: 15%;
+  margin: 0 0 0 5%; }
+
+.logo1 img {
+  width: 100%; }
+
+.burger1 {
+  width: 3%;
+  margin: 0 5% 0 0; }
+
+.burger1 img {
+  width: 100%; }
+
+.text_header1 {
+  text-align: right;
+  color: #959690;
+  margin-right: 10%;
+  font-size: 20px;
+  /*@include fontMinimal;*/ }
+
+.menu {
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  letter-spacing: 9px;
+  display: flex;
+  right: 0;
+  font-size: 90%;
+  padding: 30px;
+  color: #959690; }
+
+.menu a {
+  text-decoration: none;
+  color: #646253;
+  margin-left: 50px; }
+
+.menu a:active {
+  text-decoration: none;
+  color: #646253; }
+
+.menu a:visited {
+  text-decoration: none;
+  color: #646253; }
+
+.menu a:hover {
+  text-decoration: none;
+  color: #a20000; }
+
+ul {
+  list-style-type: none; }
+
+/*____________________________________________________________________________________________________________________*/
+/*MENU ATELIER*/
+.menu_atelier {
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  letter-spacing: 9px;
+  display: flex;
+  right: 0;
+  font-size: 90%;
+  padding: 30px; }
+
+.menu_atelier a {
+  text-decoration: none;
+  color: white;
+  margin-left: 50px; }
+
+.menu_atelier a:active {
+  text-decoration: none;
+  color: white; }
+
+.menu_atelier a:visited {
+  text-decoration: none;
+  color: white; }
+
+.menu_atelier a:hover {
+  text-decoration: none;
+  color: #a20000; }
+
+/*____________________________________________________________________________________________________________________*/
+/*HEADER2*/
+.header2 {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(149, 150, 144, 0.5);
+  /*background-color: rgba(93,112,110,0.7);*/
+  /*background-color: rgba(149,150,144,0.7);*/
+  align-items: center;
+  position: fixed;
+  z-index: 1; }
+
+.logo2 {
+  width: 100%;
+  margin: 0 0 0 5%;
+  justify-content: center; }
+
+.logo2 img {
+  width: 50%;
+  display: flex;
+  justify-content: center; }
+
+.burger2 {
+  width: 3%;
+  margin: 0 5% 0 0; }
+
+.burger2 img {
+  width: 100%; }
+
+/*____________________________________________________________________________________________________________________*/
+/*HEADER3*/
+.header3 {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(149, 150, 144, 0.3);
+  align-items: center;
+  position: fixed;
+  z-index: 1; }
+
+/*____________________________________________________________________________________________________________________*/
+/*HEADER4*/
+.header4 {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(149, 150, 144, 0.5);
+  /*background-color: rgba(93,112,110,0.7);*/
+  /*background-color: rgba(149,150,144,0.7);*/
+  align-items: center;
+  position: fixed;
+  margin: 0 auto;
+  z-index: 1; }
+
+.bloc_white {
+  height: 90px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0; }
+
+/*____________________________________________________________________________________________________________________*/
+/*HEADER5*/
+.header5 {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(149, 150, 144, 0.5);
+  /*background-color: rgba(93,112,110,0.3);*/
+  align-items: center;
+  position: fixed;
+  z-index: 1; }
+
+/*____________________________________________________________________________________________________________________*/
+/*HEADER6*/
+.header6 {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(149, 150, 144, 0.5);
+  /*background-color: rgba(93,112,110,0.7);*/
+  /*background-color: rgba(149,150,144,0.7);*/
+  align-items: center;
+  position: fixed;
+  margin: 0 auto;
+  z-index: 1; }
+
+/*____________________________________________________________________________________________________________________*/
+/*SIDEBAR*/
+.sidebar {
+  /*height: calc(100vh - 150px);*/
+  width: 20%;
+  background-color: #959690;
+  font-family: Adam, Helvetica, sans-serif;
+  letter-spacing: 9px;
+  display: flex;
+  position: fixed;
+  right: 0;
+  top: 40%;
+  font-size: 90%;
+  padding: 30px; }
+
+.sidebar a {
+  text-decoration: none;
+  color: white; }
+
+.sidebar a:active {
+  text-decoration: none;
+  color: #a20000; }
+
+.sidebar a:visited {
+  text-decoration: none;
+  color: white; }
+
+.sidebar a:hover {
+  text-decoration: none;
+  color: #a20000; }
+
+ul {
+  list-style-type: none; }
+
+.top {
+  height: 30px;
+  display: flex;
+  position: fixed;
+  right: 5%;
+  top: 80%;
+  margin-right: 30px; }
+
+/*____________________________________________________________________________________________________________________*/
+/*SIDEBAR 2*/
+.sidebar2 {
+  /*height: calc(100vh - 150px);*/
+  width: 20%;
+  background-color: #959690;
+  font-family: Adam, Helvetica, sans-serif;
+  letter-spacing: 9px;
+  display: flex;
+  position: fixed;
+  right: 0;
+  top: 40%;
+  font-size: 90%;
+  padding: 30px; }
+
+.sidebar2 a {
+  text-decoration: none;
+  color: white; }
+
+.sidebar2 a:active {
+  text-decoration: none;
+  color: #a20000; }
+
+.sidebar2 a:visited {
+  text-decoration: none;
+  color: white; }
+
+.sidebar2 a:hover {
+  text-decoration: none;
+  color: #a20000; }
+
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+/*VARIABLE*/
+/*je crée mes variable pour mon css (feuille de style)
+On appelle la variable à la place de la valeur dans nos class ou id */
+/*$footerColor: rgba(149,150,144,0.4);*/
+/*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/
+/*____________________________________________________________________________________________________________________*/
+/*MAIN*/
+.main {
+  width: 100%; }
+
+/*_________________________________ SLIDE HOME*/
+.slide {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  align-items: center; }
+
+.slide img {
+  width: 100%; }
+
+.text_slide {
+  height: 20%;
+  width: 100%;
+  font-size: 25px;
+  text-align: left;
+  color: #959690;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  line-height: 35px;
+  position: absolute;
+  font-family: 'Minimal';
+  src: url("../font/minimal.otf") format("opentype"); }
+
+.portrait {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  align-items: center; }
+
+.portrait img {
+  width: 100%; }
+
+.text_portrait {
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  font-size: 25px;
+  text-align: left;
+  color: white;
+  font-family: Minimal, Helvetica, sans-serif;
+  padding-left: 5%;
+  padding-bottom: 3%;
+  line-height: 35px; }
+
+.iframe {
+  margin-bottom: 100px; }
+
+/*_________________________________ SLIDE HOME END*/
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+/*VARIABLE*/
+/*je crée mes variable pour mon css (feuille de style)
+On appelle la variable à la place de la valeur dans nos class ou id */
+/*$footerColor: rgba(149,150,144,0.4);*/
+/*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/
+/*_________________________________ TOP PRODUCT*/
+.slide_product {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  display: flex;
+  align-items: center; }
+
+.slide_product img {
+  width: 100%; }
+
+.text_slide_product {
+  height: 20%;
+  width: 100%;
+  top: 55%;
+  font-size: 25px;
+  text-align: left;
+  color: white;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  line-height: 35px;
+  position: absolute;
+  font-family: 'Minimal';
+  src: url("../font/minimal.otf") format("opentype"); }
+
+.text_product {
+  top: 72%;
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #646253;
+  padding-top: 5%;
+  margin: 0 auto;
+  position: absolute;
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  /*white-space: pre-line;*/ }
+
+.bloc_text_product {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 14px;
+  padding-top: 4px;
+  background-color: rgba(255, 255, 255, 0.7); }
+
+/*_________________________________ PRODUCT*/
+.product_title {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 15px;
+  color: #959690;
+  font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  justify-content: center; }
+
+.bloc_text {
+  vertical-align: top;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+
+.bloc_text a :hover {
+  color: #a20000; }
+
+.product_composition {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  color: #90a39d;
+  margin: 0; }
+
+.product_description {
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #90a39d;
+  margin: 10px 0 40px 0;
+  white-space: pre-wrap; }
+
+.product_tarif {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #646253; }
+
+.product img {
+  width: 100%;
+  /* margin: 10%;
+   padding: 10%;*/ }
+
+.slide_product {
+  width: 100%;
+  /* height: 70%;*/
+  position: relative;
+  display: flex;
+  align-items: center; }
+
+.slide_product img {
+  width: 100%; }
+
+.add_button {
+  background-color: #5b6f6d;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  font-size: 20px;
+  /*margin-bottom: 200px;*/
+  padding: 5px;
+  width: 100%;
+  margin: 0 auto; }
+
+/*PARTIE VALID DU PRODUCT*/
+/*_______________________________________*/
+.bouton_content1 a button {
+  background-color: #5b6f6d;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  font-size: 20px;
+  padding: 5px;
+  margin: 2px auto;
+  width: 100%; }
+
+.bouton_content2 a button {
+  background-color: #a20000;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  font-size: 20px;
+  padding: 5px;
+  margin: 2px auto;
+  width: 100%; }
+
+.bouton_content1 a :hover {
+  color: #a20000; }
+
+.bouton_content2 a :hover {
+  color: #5b6f6d; }
+
+/*_______________________________________*/
+.back {
+  width: 5%;
+  margin-left: 5%; }
+
+.back img {
+  width: 100%; }
+
+.content a img p {
+  display: flex;
+  margin-top: 5%;
+  width: 100%; }
+
+.content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto; }
+
+.global {
+  margin-top: 2%;
+  margin-bottom: 20%; }
+
+/*PARTIE COMMANDE (ORDER)*/
+/*_______________________________________*/
+.order {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column; }
+
+.content_order {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #90a39d;
+  font-size: 20px;
+  margin-top: 200px;
+  margin-bottom: 0;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: center; }
+
+.content_order2 {
+  width: 50%;
+  font-family: 'Roboto', sans-serif;
+  color: #90a39d;
+  font-size: 20px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: center; }
+
+.content_order2 img {
+  width: 20%; }
+
+/*_______________________________________*/
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+/*VARIABLE*/
+/*je crée mes variable pour mon css (feuille de style)
+On appelle la variable à la place de la valeur dans nos class ou id */
+/*$footerColor: rgba(149,150,144,0.4);*/
+/*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/
+/*_________________________________ TOP PRODUCTS*/
+.slide_products {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  display: flex;
+  align-items: center; }
+
+.slide_products img {
+  width: 100%; }
+
+.text_slide_products {
+  height: 20%;
+  width: 100%;
+  top: 55%;
+  font-size: 25px;
+  text-align: left;
+  color: white;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  line-height: 35px;
+  position: absolute;
+  font-family: 'Minimal';
+  src: url("../font/minimal.otf") format("opentype"); }
+
+.text_products {
+  top: 72%;
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #646253;
+  padding-top: 5%;
+  margin: 0 auto;
+  position: absolute;
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  /*white-space: pre-line;*/ }
+
+.bloc_text_products {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 14px;
+  padding-top: 4px;
+  background-color: rgba(255, 255, 255, 0.7); }
+
+/*_________________________________ PRODUCTS*/
+.product_bloc_title {
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  letter-spacing: 20px;
+  color: #959690;
+  font-size: 40px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+  text-transform: uppercase; }
+
+.products {
+  vertical-align: top;
+  /*width: 90%;*/
+  /*margin-top: 20em;*/
+  display: flex;
+  justify-content: space-around;
+  /*align-items: center;*/
+  flex-wrap: wrap;
+  width: 80%; }
+
+.products a {
+  text-decoration: none;
+  color: #646253; }
+
+.products a :hover {
+  color: #90a39d; }
+
+.product_bloc {
+  vertical-align: top;
+  border: solid 1px #959690;
+  /*@include fontMinimal;*/
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 2px;
+  margin: 0 20px 50px 20px;
+  width: 25%;
+  height: 500px;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.product_bloc_nomPdt {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  white-space: pre; }
+
+.product_bloc_description {
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre; }
+
+.product_bloc_tarif {
+  margin: O auto;
+  padding: 0;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.product_bloc img {
+  width: 100%;
+  /* margin: 10%;
+   padding: 10%;*/ }
+
+.price_ring {
+  background-color: #646253;
+  width: 18%;
+  height: 11%;
+  border-radius: 100%;
+  color: white;
+  margin: 0 10px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 15px; }
+
+.price {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
+.price_ring a {
+  background-color: #646253;
+  width: 100%;
+  border-radius: 100%;
+  color: white;
+  margin: 0 10px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 15px; }
+
+/*_________________________________ PRODUCTS END*/
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+/*VARIABLE*/
+/*je crée mes variable pour mon css (feuille de style)
+On appelle la variable à la place de la valeur dans nos class ou id */
+/*$footerColor: rgba(149,150,144,0.4);*/
+/*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/
+/*_________________________________ TOP ATELIERS*/
+.slide_ateliers {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  display: flex;
+  align-items: center; }
+
+.slide_ateliers img {
+  width: 100%; }
+
+.text_slide_ateliers {
+  height: 20%;
+  width: 100%;
+  top: 55%;
+  font-size: 25px;
+  text-align: left;
+  color: white;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  line-height: 35px;
+  position: absolute;
+  font-family: 'Minimal';
+  src: url("../font/minimal.otf") format("opentype"); }
+
+.text_ateliers {
+  top: 72%;
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #646253;
+  padding-top: 5%;
+  margin: 0 auto;
+  position: absolute;
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  /*white-space: pre-line;*/ }
+
+.bloc_text_ateliers {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 14px;
+  padding-top: 4px;
+  background-color: rgba(255, 255, 255, 0.7); }
+
+/*_________________________________ ATELIERS*/
+.ateliers {
+  vertical-align: top;
+  /*width: 90%;*/
+  /*margin-top: 20em;*/
+  display: flex;
+  justify-content: space-around;
+  /*align-items: center;*/
+  flex-wrap: wrap;
+  width: 80%; }
+
+.ateliers a {
+  text-decoration: none; }
+
+.ateliers a :hover {
+  color: #90a39d; }
+
+.product_bloc_title_atelier {
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  letter-spacing: 20px;
+  color: #959690;
+  font-size: 40px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+  text-transform: uppercase; }
+
+.product_bloc_atelier {
+  vertical-align: top;
+  border: solid 1px #959690;
+  /*@include fontMinimal;*/
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 2px;
+  margin: 0 20px 50px 20px;
+  width: 25%;
+  height: 500px;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.product_bloc_atelier a {
+  color: #646253; }
+
+.product_bloc_nomPdt_atelier {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  white-space: pre; }
+
+.product_bloc_description_short_atelier {
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre; }
+
+.price_ring_atelier {
+  background-color: #646253;
+  width: 18%;
+  height: 11%;
+  border-radius: 100%;
+  color: white;
+  margin: 0 10px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 15px; }
+
+.price_atelier {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white; }
+
+.price_atelier a {
+  color: white; }
+
+.price_ring_atelier {
+  background-color: #646253;
+  /*width: 100%;*/
+  text-decoration: none;
+  border-radius: 100%;
+  color: white;
+  margin: 0 10px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 15px; }
+
+.price_ring_atelier a :hover {
+  color: #90a39d; }
+
+.product_bloc_tarif_atelier {
+  margin: O auto;
+  padding: 0;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.product_bloc_atelier img {
+  width: 100%;
+  /* margin: 10%;
+   padding: 10%;*/ }
+
+/*_________________________________ SLIDE CONTACT*/
+.contact_content {
+  width: 100%;
+  border-style: none;
+  /*display: flex;
+  justify-content: space-between;
+  align-items: center;*/ }
+
+.contact {
+  /*border:solid 2px black;*/
+  text-align: center;
+  font-family: Adam, Helvetica, sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding-top: 150px; }
+
+.contact p {
+  font-family: Adam, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 15px; }
+
+#nom {
+  padding: 10px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 20px;
+  border-style: none;
+  display: inline-block;
+  text-align: left;
+  height: 100%; }
+
+hr {
+  width: 70%; }
+
+/*_________________________________ SLIDE CONTACT END*/
+/*//___________________________________________________________________________
+//FORMULAIRE*/
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+
+.form_content {
+  font-family: Adam, Helvetica, sans-serif;
+  margin: 50px;
+  width: 100%;
+  border-style: none; }
+
+/*_________________________________ FORMULAIRE END*/
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+/*VARIABLE*/
+/*je crée mes variable pour mon css (feuille de style)
+On appelle la variable à la place de la valeur dans nos class ou id */
+/*$footerColor: rgba(149,150,144,0.4);*/
+/*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/
+/*____________________________________________________________________________________________________________________*/
+/*FOOTER*/
+.footer {
+  margin: 0;
+  padding: 0;
+  height: 80px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype"); }
+
+.foot {
+  display: flex;
+  width: 15%; }
+
+.foot img {
+  width: 100%; }
+
+.img_foot {
+  margin-left: 20px; }
+
+.cgv {
+  font-family: Helvetica,sans-serif;
+  font-size: 10px;
+  color: #90a39d;
+  left: 0; }
+
+/*_________________________________ FOOTER END*/
+@media screen and (max-width: 600px) {
+  .header1 {
+    height: 10px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: #5d706e;
+    align-items: center;
+    position: fixed;
+    z-index: 1; } }
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+/*VARIABLE*/
+/*je crée mes variable pour mon css (feuille de style)
+On appelle la variable à la place de la valeur dans nos class ou id */
+/*$footerColor: rgba(149,150,144,0.4);*/
+/*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/
+/*____________________________________________________________________________________________________________________*/
+/*CGV*/
+.CGV {
+  width: 78%;
+  margin: 0;
+  padding-top: 50px; }
+
+.cgv_title {
+  padding-top: 200px;
+  padding-bottom: 30px;
+  margin: 0;
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  letter-spacing: 20px;
+  color: #646253;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.cgv_title_small {
+  margin: 50px 0 50px 100px;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 10px;
+  color: #90a39d;
+  font-size: 20px;
+  text-align: left;
+  text-transform: uppercase; }
+
+.cgv_content {
+  margin: 0 0 0 100px;
+  font-family: 'Roboto', sans-serif;
+  text-align: justify; }
+
+.hr_cgv {
+  width: 85%;
+  height: 1px;
+  background-color: #90a39d;
+  border: none;
+  margin-top: -7px; }
+
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+/*VARIABLE*/
+/*je crée mes variable pour mon css (feuille de style)
+On appelle la variable à la place de la valeur dans nos class ou id */
+/*$footerColor: rgba(149,150,144,0.4);*/
+/*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/
+/*//___________________________________________________________________________
+//FORMULAIRE CONTACT*/
+.content_contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #5b6f6d;
+  margin-bottom: 100px; }
+
+.form-contact {
+  font-family: 'Roboto', sans-serif; }
+
+.form_content {
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 50%; }
+
+.form_content_submit {
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  color: white;
+  text-align: center;
+  padding: 6px;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  margin-top: 50px;
+  background-color: #5b6f6d;
+  border-radius: 3px;
+  width: 800px; }
+
+.form_content_submit:hover {
+  background-color: #a20000; }
+
+.form_content_label {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 50%;
+  text-transform: uppercase; }
+
+#contact_Nom {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  width: 100%;
+  height: 100px; }
+
+#contact_Prenom {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  width: 100%;
+  height: 100px; }
+
+#contact_Email {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  width: 100%;
+  height: 100px; }
+
+#contact_Message {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  width: 100%;
+  height: 200px; }
+
+#contact_Envoyer {
+  text-align: center;
+  background-color: #a20000;
+  margin: 0 auto; }
+
+.hrInsert_contact {
+  width: 800px;
+  height: 1px;
+  background-color: #90a39d;
+  border: none;
+  /*margin-top: 30px;*/
+  /*margin-bottom: 30px;*/ }
+
+.hrTop_contact {
+  width: 800px;
+  height: 1px;
+  background-color: #a0b2a4;
+  border: none;
+  margin-top: -7px; }
+
+.back_content_contact {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.back_content_contact img {
+  width: 30%;
+  margin-left: 0; }
+
+.h1_contact {
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  color: #646253;
+  margin-bottom: 30px;
+  margin-top: 200px; }
+
+/*# sourceMappingURL=style.css.map */

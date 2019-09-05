@@ -1,0 +1,20 @@
+{#la … extends me permets d'appeler le fichier partiel qui regroupe le 'header' et 'footer' présent sur toutes les pages de mon site#}
+{% extends 'baseUser/base_products.html.twig' %}
+
+    {# j'intègre le contenu de ma page entre le 'block' et le 'endblock'#}
+    {% block content %}
+
+        <div class="order">
+
+            <div class="content_order">
+                <p>{{ 'Commande en cours de traitement…' }}</p>
+            </div>
+            <div class="content_order2">
+                <a href="{{ path('home') }}">
+                    <img src="{{ asset('assets/icon/back_small.svg') }}" alt="icon back"/>
+                </a>
+            </div>
+        </div>
+
+
+    {% endblock %}

@@ -1,0 +1,70 @@
+{#la … extends me permets d'appeler le fichier partiel qui regroupe le 'header' et 'footer' présent sur toutes les pages de mon site#}
+{% extends 'baseUser/base_products.html.twig' %}
+
+    {# j'intègre le contenu de ma page entre le 'block' et le 'endblock'#}
+     {% block content %}
+
+
+
+          <div class="slide_products">
+
+               <div class="text_products">
+                    <div class="bloc_text_products">
+                         {{categorie}}
+                    </div>
+               </div>
+
+               <p class="text_slide_products">Lorem ipsum dolor sit amet, <br>
+                    consectetur adipisicing elit.<br>
+                    Ab accusamus alias assumenda aut <br>
+                    blanditiis debitis deserunt digniss.
+               </p>
+               <div>
+                    <img src="{{ asset('assets/img/T2.jpg') }}" alt="slide_patisserie_chocolat_home"/>
+               </div>
+
+          </div>
+
+          <div class="product_bloc_title"></div>
+
+          <div class="products">
+               
+
+              {% for product in products %}
+
+                    <div class="product_bloc">
+                         <a href="{{ path('product', {'id': product.id}) }}">
+                              <img src="{{ asset('assets/img/'~ product.image)}}" alt="image produit">
+                              <p class="product_bloc_nomPdt">{{ product.NomPdt }}</p>
+                              <p class="product_bloc_description">{{ product.DescriptionPdt }}</p>
+                         </a>
+                         <div class="price">
+                              <div class="price_ring">
+                                   <p class="product_bloc_tarif">{{ product.TarifsTtcPdt }} €</p>
+                              </div>
+                              <a href="{{ path('product', {'id': product.id}) }}"class="price_ring">
+                                        <p>{{ ('+') }} </p>
+                              </a>
+                         </div>
+
+
+                    </div>
+
+               {% endfor %}
+
+          </div>
+
+
+     {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+

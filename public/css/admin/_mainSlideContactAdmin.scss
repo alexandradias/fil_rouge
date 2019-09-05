@@ -1,0 +1,47 @@
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+@import "variableAdmin";
+
+
+
+/*_________________________________ SLIDE CONTACT*/
+
+.contact_content{
+  width: 100%;
+  border-style: none;
+  /*display: flex;
+  justify-content: space-between;
+  align-items: center;*/
+
+}
+
+.contact{
+  border:solid 2px black;
+  padding:10px;
+  text-align: center;
+  font-family: Adam, Helvetica, sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+
+
+}
+
+.contact p{
+  font-family: Adam, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+
+}
+
+#nom{
+  padding: 10px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 20px;
+  border-style: none;
+  display: inline-block;
+  text-align: left;
+  height: 100%;
+}
+
+/*_________________________________ SLIDE CONTACT END*/

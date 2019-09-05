@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projet fil rouge</title>
+
+    {#-> Je crée un css => style_admin.css qui sera propre à l'administrateur#}
+    <link href="https://fonts.googleapis.com/css?family=Beth+Ellen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset ('css/admin/styleAdmin.css') }}">
+
+</head>
+
+{#//____________________________________________________________________________________________________________________
+//BODY START#}
+<body>
+
+{#//______________________________________________________________________________________________________HEADER START#}
+
+{#//Mon header fait parti d'un fichier partiel ce qui me permettra de l'appeler sur chacune de mes pages grâce à 'extends'#}
+<header class="header">
+
+        <div class="logoAdmin">
+            <a href="{{ path ('homeAdmin') }}">
+                <img src="{{ asset('assets/logo/logo_w_1000.svg') }}" alt="logo Anne Lamour Patisserie">
+            </a>
+        </div>
+       {# <div class="burger"><img src="{{ asset('assets/icon/burger_1000.png') }}" alt="menu burger"></div>#}
+</header>
+{#//--------------------------------------------------------------------------------------------------------HEADER END#}
+
+{#//________________________________________________________________________________________________________MAIN START#}
+
+<main class="mainAdmin">
+   {#-> Je mets en place la fonction 'block content' qui me permettra de placer mes éléments dans mon fichier twig#}
+    {#Seule la partie présente entre le block sera modifiée sur les vues de mon site#}
+
+        {% block content %}
+        {% endblock %}
+
+    <div class="top_admin"><img src="{{ asset('assets/icon/arrow_top.svg') }}" alt="icon arrow-top"></div>
+
+</main>
+{#//----------------------------------------------------------------------------------------------------------MAIN END#}
+
+{#//______________________________________________________________________________________________________FOOTER START#}
+
+{#-> je mets en place le footer, celui-ci fait parti du fichier partiel => présent sur toutes les vues#}
+<footer class="footer">
+
+    <div class="foot">
+        <div class="text_foot">
+            <p class="foot_line">De toutes les passions, la seule vraiment respectable me parait être la gourmandise !</p>
+            <p class="foot_sign">Guy De Maupassant</p>
+        </div>
+    </div>
+
+</footer>
+{#//--------------------------------------------------------------------------------------------------------FOOTER END#}
+    <!--Je charge la bibliothèque jQuery avec un CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--Je charge mon fichier JS qui va utiliser jQuery
+    (donc je le charge après jQuery)-->
+    <script src="assets/js/menu.js"></script>
+</body>
+{#//__________________________________________________________________________________________________________BODY END#}
+</html>

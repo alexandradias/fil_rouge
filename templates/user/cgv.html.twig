@@ -1,0 +1,119 @@
+{#la … extends me permets d'appeler le fichier partiel qui regroupe le 'header' et 'footer' présent sur toutes les pages de mon site#}
+{% extends 'baseUser/base.html.twig' %}
+
+     {# j'intègre le contenu de ma page entre le 'block' et le 'endblock'#}
+     {% block content %}
+        <div>
+            <h1 class="cgv_title">CGV</h1>
+             <hr class="hr_cgv">
+             <hr class="hr_cgv">
+
+             <div class="CGV">
+                <h2 class="cgv_title_small">APPLICATION</h2>
+                    <p class="cgv_content">
+                        Les présentes Conditions Générales de Vente (ci-après « C.G.V »), définissent les modalités de vente entre la Société et le Client dans le cadre d'un système de vente à distance sur les réseaux numériques tels qu’Internet et le réseau mobile, pour des marchandises définies au catalogue de vente du site Internet et mobile www.philippeconticini.fr (ci-après « le Site »).
+
+                        Ces CGV s’appliquent à l’exclusion de toutes autres conditions, notamment celles en vigueur sur d’autres sites internet ou d’autres supports.
+
+                        Les présentes C.G.V sont portées à la connaissance de chaque Client pour lui permettre de passer commande et d’effectuer ses achats.
+
+                        Le fait pour le Client de remplir une commande sur le Site (remplissage du panier) et de confirmer la commande (validation du panier) vaut acceptation pleine et entière des présentes C.G.V, lesquelles seront seules applicables au contrat qui suit.
+
+                        La Société se réserve le droit de modifier en tout ou en partie et à tout moment les présentes C.G.V.
+
+                        La Société propose à la vente les produits et les cours et ateliers prévus aux articles suivants.
+                    </p>
+
+                <h2 class="cgv_title_small">LES PRODUITS</h2>
+                    <p class="cgv_content">
+                        Les produits proposés au Client sont ceux qui figurent dans le catalogue publié sur le Site dans la limite des stocks disponibles et sous réserve du bon fonctionnement du Site.
+
+                        Chaque produit est présenté accompagné d’une photographie et d’un descriptif établi par la Société. Les descriptifs sont destinés à présenter au Client les caractéristiques essentielles des produits avant la prise de commande définitive et ne peuvent en aucun cas engager la responsabilité de la Société. Les visuels des produits sont fournis à titre indicatif et ne sont pas contractuels.
+
+                        La Société garantit au Client que les produits sont fabriqués, emballés et conservés selon les règles de qualité stricte conformément aux normes en vigueur en France. Toutefois, la Société ne saurait étendre sa garantie sur ses produits si le Client n’a pas respecté des conditions de conservation optimales, ou si celui-ci a consommé des produits au-delà de la date limite de conservation indiquée sur l’emballage.
+                    </p>
+
+                <h2 class="cgv_title_small">La prise de commande des produits</h2>
+                    <p class="cgv_content">
+                        La prise de commande sur le Site implique l’ouverture d’un compte Client composé d’une adresse e-mail et d’un mot de passe. Ces identifiants sont et devront être tenus confidentiels. Le droit d'accès par le Client aux identifiants peut s’effectuer sur simple demande auprès du Service Clients Internet de CONTICINI SAS, qui répondra uniquement par e-mail à l’adresse utilisée lors de la création du compte Client.
+
+                        Les produits en livraison à domicile ne concernent pas les produits frais, mais seulement les produits non consommables (type livres et publications) et les produits de confiserie.
+
+                        Pour passer commande, le Client s’engage à remplir les éléments constitutifs de sa commande avec précision et rigueur. A ce titre, il s’engage à renseigner intégralement les différentes rubriques nécessaires au bon traitement de sa commande.
+                    </p>
+                    <p class="cgv_content">
+                        La Société se réserve le droit de refuser une commande en cas de manquement du Client à l'une de ses obligations, et plus généralement, de refuser toute commande présentant un caractère anormal ou incomplet pour quelque raison que ce soit. La commande n'est définitive qu'après confirmation par la Société. La Société confirmera au Client l'acceptation de sa commande par mail ou, le cas échéant, son refus dans les 48 heures ouvrables suivant la saisie de sa commande sur Internet.
+
+                        Pour toute modification de commande (adresse de facturation, adresse de livraison, date de livraison ou contenu de la commande) ou d’annulation de commande effectuée par le Client, celui-ci devra prendre contact avec le Service Clients Internet au plus tard 2 jours ouvrés avant la date de livraison souhaitée, par courrier électronique : gateauxdemotions@conticini.fr ou par téléphone : 01.43.20.04.99. En cas d’annulation de commande dans ces délais, le Client disposera d’un avoir du montant correspondant sera transmis par e-mail au Client. Aucun remboursement ne pourra avoir lieu.
+
+                        Le Service Clients Internet est joignable du lundi au vendredi de 9h à 17h.
+                    </p>
+
+                <h2 class="cgv_title_small">LES ATELIERS</h2>
+                    <p class="cgv_content">
+                        La Société propose notamment des formations en pâtisserie, en cuisine ou autres formules. Durant les ateliers, les Clients ne réalisent pas eux-mêmes leurs desserts.
+
+                        Ces services ont lieu à l’endroit indiqué par la Société, soit dans ses propres locaux, soit dans des locaux avec lesquels la Société a passé un accord. Ces services sont proposés dans la limite des places disponibles et les cours sont dispensés en langue française. La Société se dégage de toute responsabilité en cas de mauvaise compréhension d’un cours par des Clients dont la langue maternelle n’est pas le français.
+
+                        Chaque cours proposé à la vente sur le site www.philippeconticini.fr fait l’objet d’une présentation indiquant sa dénomination, sa composition, son prix, ainsi que ses dates et horaires. Par ailleurs les recettes élaborées pendant les cours ne sont pas contractuelles mais données à titre indicatif en fonction du marché et de la saison. Les recettes distribuées pendant le cours constituent la propriété exclusive de la Société.
+
+                        Les cours et ateliers sont valables un an à compter de la prise de commande.
+                    </p>
+
+                <h2 class="cgv_title_small">PRIX ET MOYENS DE PAIEMENT</h2>
+                    <p class="cgv_content">
+                        Les prix indiqués s’entendent en Euros TTC. La TVA incluse est la TVA française applicable au jour de la commande.
+                        Si le taux de TVA venait à être modifié, ces changements pourront être répercutés sur le prix des articles sans que le Client en soit préalablement informé. Toutefois les prix ne pourront être modifiés une fois la commande confirmée.
+                    </p>
+
+                <h2 class="cgv_title_small">RÉCLAMATIONS ET LITIGES</h2>
+                    <p class="cgv_content">
+                        Les réclamations ou contestations seront toujours reçues avec une bienveillance attentive, la bonne foi étant toujours présumée chez celui qui prend la peine d’exposer le litige.
+
+                        A la réception des produits, le Client devra s'assurer de la conformité de la livraison avec sa commande. Toute réclamation devra, pour être prise en compte, intervenir dans les 48 heures suivant la réception, compte tenu du caractère périssable des produits. Les dommages éventuels doivent faire l’objet de réserves précises, datées et signées, sur le bordereau de livraison.
+
+                        Les réclamations sont à adresser par voie postale à l’adresse : CONTICINI SAS, 103, rue de Grenelle – 75007 Paris, ou par courrier électronique à l’adresse gateauxdemotions@conticini.frpour les questions relatives aux produits et à l’adresse ateliers@conticini.fr.
+
+                        Après analyse et si acceptation de la réclamation par la Société, un geste commercial ou un avoir sera proposé au Client.
+
+                        En cas d’annulation d’un cours ou atelier à l'initiative de la Société, hors cas de force majeure, la Société proposera au Client un cours ou atelier ultérieur dans les six prochains mois. Si le Client est dans l’impossibilité de s’y rendre, la Société remboursera le prix du cours ou atelier.
+                    </p>
+
+                <h2 class="cgv_title_small">PROPRIÉTÉ INTELLECTUELLE ET INTERDICTION</h2>
+                    <p class="cgv_content">
+                        La structure, la mise en page, la charte graphique, les textes, la base de donnée, les images, les photographies, les sons, les vidéos et tout autre élément composant le Site sont et restent la propriété intellectuelle et exclusive de la Société et sont protégés par le droit d'auteur. Les marques, les noms commerciaux et les logos figurant sur ce site sont des marques déposées.
+
+                        La reproduction, la rediffusion ou l’utilisation à quelque titre que ce soit, même partiellement, des éléments du Site sont soumis à l’autorisation expresse et préalable de la Société, titulaire de l’ensemble des droits de propriété intellectuelle. L’utilisateur qui dispose d’un site Internet et qui désire placer sur son site un lien simple renvoyant directement au site www.philippeconticini.fr doit préalablement solliciter l’autorisation de la Société.
+
+                        Le Client ne doit en aucun cas revendre les produits qui sont destinés à son usage personnel ou à celui de la personne destinataire de sa commande.
+                    </p>
+
+                <h2 class="cgv_title_small">PROTECTION DES DONNÉES PERSONNELLES</h2>
+                    <p class="cgv_content">
+                        En commandant via le Site, le Client consent à l'utilisation par la Société des données nominatives le concernant. Ces données sont nécessaires pour assurer le bon traitement des commandes. L’ensemble de ces informations est traité avec la plus grande rigueur et la plus grande discrétion.
+
+                        La Société s’engage à ne pas divulguer à des tiers les informations communiquées par le Client sur le Site. Celles-ci sont confidentielles. Elles ne seront utilisées que pour le traitement de la commande et pour renforcer et personnaliser la communication notamment par l'envoi de la newsletter de CONTICINI SAS.
+
+                        Conformément à la législation en vigueur, le Client bénéficie d’un droit d’accès et de rectification et de suppression des données qui le concernent. Pour exercer ce droit et obtenir communication des informations, le Client peut contacter la Société à contact@conticini.fr
+                    </p>
+
+                <h2 class="cgv_title_small">INDÉPENDANCE DES CLAUSES</h2>
+                    <p class="cgv_content">
+                        Si l'une des présentes conditions générales devait être déclarée inapplicable ou est invalidée pour une quelconque raison, cette invalidité n'affectera pas l'application ou la validité des autres dispositions des conditions générales, celle invalidée ou jugée inapplicable étant alors remplacée par la disposition la plus proche possible.
+                    </p>
+
+                <h2 class="cgv_title_small">FORCE MAJEURE</h2>
+                    <p class="cgv_content">
+                        Ni la Société, ni le Client ne saurait être tenu responsable en cas d’inexécution, de non-exécution ou de retard dans l’exécution de l’une de ses obligations décrites dans les présentes C.G.V qui aurait pour origine un cas de force majeure, telle que définie par les tribunaux.
+                    </p>
+
+                <h2 class="cgv_title_small">DROIT APPLICABLE</h2>
+                    <p class="cgv_content">
+                        Les présentes conditions générales sont régies exclusivement par la loi française. La langue du présent contrat est la langue française. En cas de traduction, seule la version française fait foi.
+                        Tout litige sera de la compétence du Tribunal de Commerce de Paris une fois les voies amiables épuisées. La responsabilité de la Société ne saurait être engagée en cas de non-respect de la réglementation d’un pays étranger où les produits commercialisés sur ce Site sont livrés.
+                    </p>
+
+            </div>
+        </div>
+
+     {% endblock %}

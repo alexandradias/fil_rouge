@@ -1,0 +1,34 @@
+{#-> la … extends me permets d'appeler le fichier partiel
+-> qui se situe dans le dossier baseAdmin de ma section templates
+-> ce fichier regroupe le 'header' et le 'footer' présent sur toutes les pages de mon site#}
+{% extends 'baseAdmin/base_admin_insert_update_delete.html.twig' %}
+
+    {# j'intègre le contenu de ma page entre le 'block' et le 'endblock'#}
+     {% block content %}
+         <h1 class="h1Update">Update Product</h1>
+         <hr class="hrTopUpdate">
+         <hr class="hrTopUpdate">
+
+        {# <div class="h1Update">{{ 'visuel produit' }}</div>#}
+
+
+        <table class="table">
+
+                 <tr class="tr">
+
+                     <td> <img src="{{ asset('assets/img/'~ product.image)}}" alt="image produit"></td>
+                     <td class="update_nomPdt"> {{ product.NomPdt }} </td>
+                     <td class="update_description"> {{ product.DescriptionPdt }} </td>
+                     <td class="update_tarif"> {{ product.TarifsTtcPdt }} </td>
+
+                     <td>
+                         <a href={#"{{ path('UpdateProduct', { 'id': product.id }) }}"#}>
+                         <div class="icon_valid"><img src="{{ asset('assets/icon/valid_small.svg') }}" alt="icon valid"/></div>
+                         {#update#}
+                         </a>
+                     </td>
+                 </tr>
+
+         </table>
+
+     {% endblock %}

@@ -1,0 +1,27 @@
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+@import "variableAdmin";
+
+
+
+
+/*_________________________________ SLIDE PRODUCTS*/
+
+.products{
+
+  width: 100%;
+  margin-top: 20em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product_bloc{
+  border:solid 2px black;
+  height: 150px;
+  margin: 50px;
+  padding: 100px;
+}
+
+/*_________________________________ SLIDE PRODUCTS END*/

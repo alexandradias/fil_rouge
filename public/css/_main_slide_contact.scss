@@ -1,0 +1,44 @@
+/*_________________________________ SLIDE CONTACT*/
+
+.contact_content{
+  width: 100%;
+  border-style: none;
+  /*display: flex;
+  justify-content: space-between;
+  align-items: center;*/
+
+}
+
+.contact{
+  /*border:solid 2px black;*/
+
+  text-align: center;
+  font-family: Adam, Helvetica, sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding-top: 150px;
+}
+
+.contact p{
+  font-family: Adam, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+
+}
+
+#nom{
+  padding: 10px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 20px;
+  border-style: none;
+  display: inline-block;
+  text-align: left;
+  height: 100%;
+}
+
+hr{
+  width: 70%;
+}
+
+/*_________________________________ SLIDE CONTACT END*/

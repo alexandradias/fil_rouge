@@ -54,7 +54,7 @@ class Products
     //________________________________________________________________________
     //cree un champs pour intégrer mes images
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=false)
      */
     private $image;
 

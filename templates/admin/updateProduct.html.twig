@@ -5,14 +5,25 @@
 
     {# j'intègre le contenu de ma page entre le 'block' et le 'endblock'#}
      {% block content %}
-         <h1 class="h1Update">Update Product</h1>
+
+         <div class="back_content">
+             <a href="javascript:history.go(-1)">
+                 <img src="{{ asset('assets/icon/back_small.svg') }}" alt="icon back"/>
+             </a>
+             {#-> j'intègre un titre à ma page#}
+             <h1 class="h1Update">UpdateProduct</h1>
+         </div>
          <hr class="hrTopUpdate">
          <hr class="hrTopUpdate">
+
+         {#<h1 class="h1Update">Update Product</h1>
+         <hr class="hrTopUpdate">
+         <hr class="hrTopUpdate">#}
 
         {# <div class="h1Update">{{ 'visuel produit' }}</div>#}
 
 
-        <table class="table">
+        {#<table class="table">
 
                  <tr class="tr">
 
@@ -22,13 +33,79 @@
                      <td class="update_tarif"> {{ product.TarifsTtcPdt }} </td>
 
                      <td>
-                         <a href={#"{{ path('UpdateProduct', { 'id': product.id }) }}"#}>
+                         <a href=#}{#"{{ path('UpdateProduct', { 'id': product.id }) }}"#}{#>
                          <div class="icon_valid"><img src="{{ asset('assets/icon/valid_small.svg') }}" alt="icon valid"/></div>
-                         {#update#}
+                         #}{#update#}{#
                          </a>
                      </td>
                  </tr>
 
-         </table>
+         </table>#}
+         {#{{ form(formProductView) }}#}
+
+
+         {{ form_start(formProductView)}}
+
+         {#-> je crée une class form qui me permets de styliser le formulaire#}
+         <div class="form_update">
+
+
+             {#-> la fonction twig 'form_label' permet de créer un label#}
+             {# -> la fonction twig 'form_widget' permet de créer un champ de formulaire#}
+
+
+             {{ form_label(formProductView.NomPdt, 'Nom', {'label_attr': {'class': 'form_content_label'}}) }}
+             {{ form_widget(formProductView.NomPdt, { 'attr': {'class': "form_content",'placeholder': "Votre nom de produit"} }) }}
+
+
+             <hr class="hrInsert_update">
+
+             {{ form_label(formProductView.descriptionShortPdt, 'Description courte du produit', {'label_attr': {'class': 'form_content_label'}}) }}
+             {{ form_widget(formProductView.descriptionShortPdt, { 'attr': {'class': "form_content",'placeholder': "Votre description courte du produit"} }) }}
+
+             <hr class="hrInsert_update">
+
+             {{ form_label(formProductView.DescriptionPdt, 'Description du produit', {'label_attr': {'class': 'form_content_label'}}) }}
+             {{ form_widget(formProductView.DescriptionPdt, { 'attr': {'class': "form_content",'placeholder': "Votre description produit"} }) }}
+
+             <hr class="hrInsert_update">
+
+             {{ form_label(formProductView.compositionPdt, 'Composition du produit', {'label_attr': {'class': 'form_content_label'}}) }}
+             {{ form_widget(formProductView.compositionPdt, { 'attr': {'class': "form_content",'placeholder': "Votre composition du produit"} }) }}
+
+             <hr class="hrInsert_update">
+
+             {{ form_label(formProductView.PhotoPdt, 'Votre visuel', {'label_attr': {'class': 'form_content_label'}}) }}
+             {{ form_widget(formProductView.PhotoPdt, { 'attr': {'class': "form_content",'placeholder': "URL de votre image"} }) }}
+
+             <hr class="hrInsert_update">
+
+             {{ form_label(formProductView.image, 'Image', {'label_attr': {'class': 'form_content_label'}}) }}
+             {{ form_widget(formProductView.image, { 'attr': {'class': "form_content",'placeholder': "Votre image"} }) }}
+
+             <hr class="hrInsert_update">
+
+             {{ form_label(formProductView.TarifsHtPdt, 'Tarif HT', {'label_attr': {'class': 'form_content_label'}}) }}
+             {{ form_widget(formProductView.TarifsHtPdt, { 'attr': {'class': "form_content",'placeholder': "Votre tarif HT"} }) }}
+
+             <hr class="hrInsert_update">
+
+             {{ form_label(formProductView.TvaPdt, 'TVA', {'label_attr': {'class': 'form_content_label'}}) }}
+             {{ form_widget(formProductView.TvaPdt, { 'attr': {'class': "form_content",'placeholder': "Montant TVA"} }) }}
+
+             <hr class="hrInsert_update">
+
+             {{ form_label(formProductView.TarifsTtcPdt, 'Tarif TTC', {'label_attr': {'class': 'form_content_label'}}) }}
+             {{ form_widget(formProductView.TarifsTtcPdt, { 'attr': {'class': "form_content",'placeholder': "Votre tarif TTC"} }) }}
+
+
+
+             <hr class="hrInsert_update">
+
+             {{ form_widget(formProductView.enregistrer, { 'attr': {'class': "form_content_submit"} }) }}
+
+         </div>
+
+         {{ form_end(formProductView)}}
 
      {% endblock %}

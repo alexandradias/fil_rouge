@@ -4,14 +4,16 @@
     {# j'intègre le contenu de ma page entre le 'block' et le 'endblock'#}
      {% block content %}
 
-         <div class="modal">
-             {#Je récupère les messages flash pour les afficher#}
-             {% for messages in app.flashes %}
-                 {% for message in messages %}
-                     {{ message }}
-                 {% endfor %}
-             {% endfor %}
-         </div>
+         {#message flash / ce message s'affiche seulement si l'action est validée#}
+         {% if app.flashes %}
+             <div class="content_modal">
+                 <div class="modal">
+                     <p> Votre message a bien été envoyé, merci ! Nous y répondrons dès que possible.</p>
+                 </div>
+             </div>
+
+         {% endif %}
+
 
            <div class="slide">
                <p class="text_slide">Lorem ipsum dolor sit amet, <br>

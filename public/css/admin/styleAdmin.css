@@ -245,8 +245,7 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   /* margin-left: 400px;*/ }
 
 .form_content {
-  font-family: 'Adam';
-  src: url("../font/adam.otf") format("opentype");
+  font-family: 'Roboto', sans-serif;
   margin-top: 10px;
   margin-bottom: 30px;
   width: 50%; }
@@ -506,6 +505,21 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   width: 100%;
   align-items: center; }
 
+.form_update {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* margin-left: 400px;*/ }
+
+.hrInsert_update {
+  width: 800px;
+  height: 1px;
+  background-color: #90a39d;
+  border: none;
+  /*margin-top: 30px;*/
+  /*margin-bottom: 30px;*/ }
+
 /*___________________________________________________________________________
 //FORMULAIRE deleteproduct*/
 .h1Delete {
@@ -530,5 +544,66 @@ On appelle la variable à la place de la valeur dans nos class ou id */
 .icon_delete img {
   margin-left: 10px;
   margin-top: 0; }
+
+/*____________________________________________________________________________________________________________________*/
+/*MEDIAQUERIES ADMIN*/
+/*_______HOME ADMIN________*/
+/*FORMAT PHONE*/
+@media screen and (max-width: 780px) {
+  .header {
+    height: 100px; }
+
+  .logoAdmin {
+    width: 30%;
+    margin: 0; }
+
+  .logoAdmin img {
+    width: 100%; }
+
+  .insert {
+    width: 40%;
+    margin: 20px; }
+
+  .insert img {
+    margin-bottom: 30px; }
+
+  .top_admin {
+    right: 20%; } }
+/*ARROW IPAD*/
+@media only screen and (min-width: 800px) and (max-width: 1024px) {
+  .top_admin {
+    right: 10%; } }
+/*FORM INSERT PRODUCT*/
+/*FORMAT PHONE*/
+@media screen and (max-width: 780px) {
+  .form_content {
+    width: 80%; }
+
+  .form_content_label {
+    width: 80%; }
+
+  .h1 {
+    font-family: 'Adam';
+    src: url("../font/adam.otf") format("opentype");
+    font-size: 20px;
+    margin-bottom: 20px; }
+
+  .back_content img {
+    width: 20%; }
+
+  .mainAdmin {
+    padding: 30px 0; }
+
+  .foot_line {
+    text-align: center;
+    font-size: small;
+    margin: 0; } }
+/*FORMAT IPAD*/
+@media only screen and (min-width: 800px) and (max-width: 1024px) {
+  .form_content {
+    width: 70%; }
+
+  .form_content_label {
+    width: 70%; } }
 
 /*# sourceMappingURL=styleAdmin.css.map */

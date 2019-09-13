@@ -150,6 +150,56 @@ ________________________________________________________________________________
             /* -> la méthode handleResquest récupère les infos de la requête*/
             $form->handleRequest($request);
 
+            //pour ajouter une image
+            /** @var UploadedFile $imageFile */
+            $imageFile = $form['image']->getData();
+            $imageFile2 = $form['PhotoPdt']->getData();
+
+            // Condition nécessaire car le champ 'image' n'est pas requis
+            // donc le fichier doit être traité que s'il est téléchargé
+            if ($imageFile || $imageFile2)
+            {
+                if($imageFile)
+                {
+                    $originalFilename = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
+                    // Nécessaire pour inclure le nom du fichier en tant qu'URL + sécurité + nom unique
+                    $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9] remove; Lower()', $originalFilename);
+                    $newFilename = $safeFilename . '-' . uniqid() . '.' . $imageFile->guessExtension();
+
+                    try{
+                        $imageFile->move(
+                            $this->getParameter('article_images'),
+                            $newFilename
+                        );
+                    } catch (FileException $e) {
+                        // ... handle exception if something happens during file upload
+                    }
+                    //met à jour le champ image
+                    $product->setImage($newFilename);
+                }
+
+                if($imageFile2)
+                {
+                    /*crée le nom de mon autre champ image*/
+                    $originalFilename2 = pathinfo($imageFile2->getClientOriginalName(), PATHINFO_FILENAME);
+                    // Nécessaire pour inclure le nom du fichier en tant qu'URL + sécurité + nom unique
+                    $safeFilename2 = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9] remove; Lower()', $originalFilename2);
+                    $newFilename2 = $safeFilename2 . '-' . uniqid() . '.' . $imageFile2->guessExtension();
+
+                    // Déplace le fichier dans le dossier des images d'articles
+                    try {
+                        $imageFile2->move(
+                            $this->getParameter('article_images'),
+                            $newFilename2
+                        );
+                    } catch (FileException $e) {
+                        // ... handle exception if something happens during file upload
+                    }
+                    $product->setPhotoPdt($newFilename2);
+                }
+
+            }
+
             /*-> PERSIST => On enregistre l'entité créée*/
             /*-> FLUSH => envoie les modifications à la BDD, avant cette action de flush rien n'est rempli dans la base*/
             $entityManager->persist($product);
@@ -174,18 +224,67 @@ ________________________________________________________________________________
      * @Route ("/admin/update_product/{id}", name = "UpdateProduct")
      */
 
-    public function formUpdateProduct( Request $request, EntityManagerInterface $entityManager, $id, ProductsRepository $productsRepository)
+    public function formUpdateProduct(Request $request, EntityManagerInterface $entityManager, $id, ProductsRepository $productsRepository )
     {
-        /*$product contient toutes les infos du produit et non pas seulement l'id*/
-        $product = $productsRepository->find($id);
 
-        /*je retourne une réponse*/
+        /*-> Je déclare ma variable $product qui contient l'instance de la class products
+          -> le new me permet de créer un nouvel objet*/
+        $update = $productsRepository->find($id);
+        /*-> je crée une variable $form qui contient le formulaire qui va me permettre de créer un produit
+        via la classe 'createform'
+        -> la classe createform contient 2 paramètres=>
+        1 ->le nom du 'type' qui contient le schéma du formulaire (builder)
+        2 -> contient l'objet qui vient d'être créé donc instancié*/
+        $form = $this->createForm(ProductsType::class, $update);
+
+        /*-> je crée une vue*/
+        /*-> je crée la vue de mon formulaire que je renvoie plus bas via render*/
+        $formProductView = $form->createView();
+
+        /*-> si la méthode de la requête est POST cela veut dire qu'un formulaire a été soumis
+        donc la condition est validée (post=valid) => mon formulaire est envoyé mais pas encore récupéré*/
+        if ($request->isMethod('POST'))
+        {
+            /*-> je récupere les données envoyées*/
+            /*-> la méthode handleResquest  intercepte la requete  envoyé au serveur*/
+            /* -> la méthode handleResquest récupère les infos de la requête*/
+            $form->handleRequest($request);
+
+            /*-> PERSIST => On enregistre l'entité créée*/
+            /*-> FLUSH => envoie les modifications à la BDD, avant cette action de flush rien n'est rempli dans la base*/
+            $entityManager->persist($update);
+            $entityManager->flush();
+        }
+
+        /*-> je retourne une réponse*/
         return $this->render('admin/updateProduct.html.twig',
             [
-                /*envoie de la view du form au fichier twig*/
-                'product' => $product
+                /*-> envoi de la view du form au fichier twig*/
+                'formProductView' => $formProductView
             ]);
+
     }
+
+    /*//________________________________________________________________________________________________________________
+   //ROUTE->UPDATE PRODUIT COTE ADMINISTRATEUR*/
+
+
+    /*
+     * @Route ("/admin/update_product/{id}", name = "UpdateProduct")
+     */
+
+    /*public function formUpdateProduct( Request $request, EntityManagerInterface $entityManager, $id, ProductsRepository $productsRepository)
+    {*/
+        /*$product contient toutes les infos du produit et non pas seulement l'id*/
+        /*$product = $productsRepository->find($id);*/
+
+        /*je retourne une réponse*/
+       /* return $this->render('admin/updateProduct.html.twig',
+            [*/
+                /*envoie de la view du form au fichier twig*/
+              /*  'product' => $product
+            ]);
+    }*/
 
 
 

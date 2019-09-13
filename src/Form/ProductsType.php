@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Products;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -18,9 +19,41 @@ class ProductsType extends AbstractType
             ->add('DescriptionPdt')
             ->add('descriptionShortPdt')
             ->add('compositionPdt')
-            ->add('PhotoPdt')
+            ->add('PhotoPdt', FileType::class,[
+                'label' => 'Votre photo produit',
+                'mapped' => false,
+                'required'=> false,
+                'constraints' => [
+                    new File([
+                        'maxSize'=> '1024k',
+                        'mimeTypes'=> [
+                            'application/jpg', 'application/png',
+                            'application/x-jpg', 'application/x-png',
+                        ],
+                        'mimeTypesMessage' => 'Merci d\'importer une image au format .jpg ou .png',
+                    ])
+                ]
+            ])
             /*j'ajoute un champ image en plus de la photo produit dans le cas où le client aimerait 2 images différentes*/
-            ->add('image')
+            ->add('image', FileType::class,[
+                'label' => 'Votre image',
+                'mapped' => false,
+                'required'=> false,
+                'constraints' => [
+                    new File([
+                        'maxSize'=> '1024k',
+                        'mimeTypes'=> [
+                            'application/jpg', 'application/png',
+                            'application/x-jpg', 'application/x-png',
+                        ],
+                        'mimeTypesMessage' => 'Merci d\'importer une image au format .jpg ou .png',
+                    ])
+                ]
+            ])
+
+
+
+
             /*->add('image', FileType::class, [
                 'label' => 'Image (jpg file, png file)',
 

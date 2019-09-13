@@ -127,3 +127,25 @@
   margin-bottom: 30px;
   margin-top: 200px;
 }
+
+.modal{
+  color: white;
+  @include fontRoboto;
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  }
+
+
+.content_modal{
+  background-color: $vertClair;
+  margin: 0 auto;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translateX(-50%);
+  z-index: 2;
+}

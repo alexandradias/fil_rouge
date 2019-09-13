@@ -4,14 +4,17 @@
     {# j'intègre le contenu de ma page entre le 'block' et le 'endblock'#}
     {% block content %}
 
-        {#message flash#}
-        <div class="modal">
-            {% for messages in app.flashes %}
-                {%  for message in messages  %}
-                    {{ message }}
+        {#message flash / ce message ne s'affichera seulement en cas d'erreur#}
+        {% if app.flashes %}
+            <div class="modal">
+                {#Je récupère les messages flash pour les afficher#}
+                {% for messages in app.flashes %}
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
                 {% endfor %}
-            {% endfor %}
-        </div>
+            </div>
+        {% endif %}
         {#end message flash#}
 
         <div class="content_contact">

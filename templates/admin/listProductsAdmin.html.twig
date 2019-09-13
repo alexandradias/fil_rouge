@@ -8,14 +8,25 @@
 
          {#Je crée une condition afin d'appeler le titre à ma page selon l'action choisie#}
          {% if action =='update' %}
+             <div class="back_content">
+                 <a href="javascript:history.go(-1)">
+                     <img src="{{ asset('assets/icon/back_small.svg') }}" alt="icon back"/>
+                 </a>
+                 <h1 class="h1Update">Update Product</h1>
+             </div>
 
-             <h1 class="h1Update">Update Product</h1>
              <hr class="hrTopUpdate">
              <hr class="hrTopUpdate">
 
          {% elseif action == 'delete'%}
 
-             <h1 class="h1Delete">Delete Product</h1>
+             <div class="back_content">
+                 <a href="javascript:history.go(-1)">
+                     <img src="{{ asset('assets/icon/back_small.svg') }}" alt="icon back"/>
+                 </a>
+                 <h1 class="h1Delete">Delete Product</h1>
+             </div>
+
              <hr class="hrTopDelete">
              <hr class="hrTopDelete">
 

@@ -6,12 +6,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {#meta est utilisé pour donner des directives aux moteurs de recherche
+    La valeur index permet à la page d'être indexée et la valeur follow permet aux liens d'être suivis par les robots
+    et de transmettre de la popularité.#}
+    <meta name="robots" content="index, follow">
     <title>Projet fil rouge</title>
 
 
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset ('css/style.css') }}">
+    <link rel="icon" href="{{ asset('assets/icon/favicon_512.png') }}" />
 
 </head>
 

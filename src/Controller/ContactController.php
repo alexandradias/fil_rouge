@@ -56,7 +56,8 @@ class ContactController extends AbstractController
 
                 $this->addFlash('success', 'Votre message a bien été envoyé, merci ! Nous y répondrons dès que possible.');
 
-                return $this->redirect($request->getUri());
+                return $this->redirectToRoute('home');
+                /*return $this->redirect($request->getUri());*/
 
             } else {
 

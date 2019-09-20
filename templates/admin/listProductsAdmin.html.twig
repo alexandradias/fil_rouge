@@ -6,6 +6,19 @@
     {# j'intègre le contenu de ma page entre le 'block' et le 'endblock'#}
      {% block content %}
 
+         {#message flash / ce message ne s'affichera seulement en cas d'erreur#}
+         {% if app.flashes %}
+             <div class="modal">
+                 {#Je récupère les messages flash pour les afficher#}
+                 {% for messages in app.flashes %}
+                     {% for message in messages %}
+                         {{ message }}
+                     {% endfor %}
+                 {% endfor %}
+             </div>
+         {% endif %}
+         {#end message flash#}
+
          {#Je crée une condition afin d'appeler le titre à ma page selon l'action choisie#}
          {% if action =='update' %}
              <div class="back_content">

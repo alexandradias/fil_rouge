@@ -24,8 +24,8 @@ class HomeAdminController extends AbstractController
    /* //________________________________________________________________________________________________________________
     //ROUTE->HOME COTE ADMINISTRATEUR*/
 
-    /*//je crée ma route qui sera visible depuis les vues administrateur*/
-    /*//celles-ci seront accessible avec interface login*/
+    /*//je crée ma route qui sera visible depuis la vue administrateur*/
+    /*//celles-ci sera accessible avec une interface login*/
     /**
      * @Route("/admin/", name="homeAdmin")
      *
@@ -113,7 +113,7 @@ ________________________________________________________________________________
      */
 
     /*->je déclare ma méthode formInsertProduct*/
-    /*-> Je pourrai l'appeler depuis mon fichier 'twig' grâce à la fonction PATH qui est liée à ma route*/
+    /*-> Je pourrais l'appeler depuis mon fichier 'twig' grâce à la fonction PATH qui est liée à ma route*/
 
                                        /* -> les paramètres de la méthode formInsertProduct
                                              sont : request et entityManager
@@ -161,20 +161,26 @@ ________________________________________________________________________________
             {
                 if($imageFile)
                 {
+                    /*Je récupère son nom d'origine avec $originalFilename
+                     * pathinfo est une fonction qui prend en paramètre le nom d'origine de l'image et son chemin*/
                     $originalFilename = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
                     // Nécessaire pour inclure le nom du fichier en tant qu'URL + sécurité + nom unique
                     $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9] remove; Lower()', $originalFilename);
+                    /*$newFilename-> est le nom final*/
                     $newFilename = $safeFilename . '-' . uniqid() . '.' . $imageFile->guessExtension();
 
                     try{
+                        /*il essaye de déplacer le fichier image dans le dossier indiqué
+                        par la méthode getParameter qui a en parmètre le nom ->'article_images'*/
                         $imageFile->move(
                             $this->getParameter('article_images'),
                             $newFilename
                         );
+                        /* dans le cas d'un disfonctionnement le catch de capturer l'exception*/
                     } catch (FileException $e) {
-                        // ... handle exception if something happens during file upload
+
                     }
-                    //met à jour le champ image
+                    /*met à jour la propriété image de l'instance de la classe Products */
                     $product->setImage($newFilename);
                 }
 
@@ -307,6 +313,9 @@ ________________________________________________________________________________
         /*// j'utilise la méthode remove() de l'entityManager en spécifiant le produit à supprimer*/
         $entityManager->remove($product);
         $entityManager->flush();
+
+        /*$this->addFlash('success', 'Votre produit a bien été supprimer');*/
+
 
        return $this -> redirectToRoute('ListProducts',[
         'action' => 'delete'

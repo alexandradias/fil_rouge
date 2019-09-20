@@ -58,11 +58,11 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   right: 0;
   font-size: 90%;
   padding: 30px;
-  color: #959690; }
+  color: #646253; }
 
 .menu a {
   text-decoration: none;
-  color: #646253;
+  /*color:#646253;*/
   margin-left: 50px; }
 
 .menu a:active {
@@ -75,10 +75,9 @@ On appelle la variable à la place de la valeur dans nos class ou id */
 
 .menu a:hover {
   text-decoration: none;
-  color: #a20000; }
-
-ul {
-  list-style-type: none; }
+  color: #a20000;
+  /*background-color: rgba(255,255,255,0.2);
+  height: 150px;*/ }
 
 /*____________________________________________________________________________________________________________________*/
 /*MENU ATELIER*/
@@ -324,13 +323,13 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   height: 20%;
   width: 100%;
   position: absolute;
-  font-size: 25px;
+  font-size: 23px;
   text-align: left;
   color: white;
   font-family: Minimal, Helvetica, sans-serif;
   padding-left: 5%;
   padding-bottom: 3%;
-  line-height: 35px; }
+  line-height: 30px; }
 
 .iframe {
   margin-bottom: 100px; }
@@ -640,7 +639,7 @@ On appelle la variable à la place de la valeur dans nos class ou id */
 
 .products a {
   text-decoration: none;
-  color: #646253; }
+  color: white; }
 
 .products a :hover {
   color: #90a39d; }
@@ -663,7 +662,8 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   margin-left: 10px;
   margin-bottom: 20px;
   text-transform: uppercase;
-  white-space: pre; }
+  white-space: pre;
+  color: #646253; }
 
 .product_bloc_description {
   font-size: 15px;
@@ -673,10 +673,11 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   margin-bottom: 10px;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: pre; }
+  white-space: pre;
+  color: #646253; }
 
 .product_bloc_tarif {
-  margin: O auto;
+  /*margin: 0 auto;*/
   padding: 0;
   text-overflow: ellipsis;
   overflow: hidden; }

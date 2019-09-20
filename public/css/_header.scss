@@ -57,12 +57,12 @@
   right: 0;
   font-size: 90%;
   padding:30px;
-  color:#959690;
+  color:$kakiColor;
 }
 
 .menu a{
   text-decoration: none;
-  color:#646253;
+  /*color:#646253;*/
   margin-left: 50px;
 }
 
@@ -78,12 +78,13 @@
 
 .menu a:hover{
   text-decoration: none;
-  color:#a20000;
+  color:$redColor;
+  /*background-color: rgba(255,255,255,0.2);
+  height: 150px;*/
+
 }
 
-ul{
-  list-style-type: none;
-}
+
 
 
 /*____________________________________________________________________________________________________________________*/

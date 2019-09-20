@@ -85,7 +85,7 @@
 
 .products a{
   text-decoration: none;
-  color: $kakiColor;
+  color: white;
 }
 
 .products a :hover{
@@ -112,6 +112,7 @@
    margin-bottom: 20px;
    text-transform: uppercase;
    white-space: pre;
+   color: $kakiColor;
 
  }
 
@@ -124,10 +125,11 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: pre;
+  color: $kakiColor;
 }
 
 .product_bloc_tarif{
-  margin: O auto;
+  /*margin: 0 auto;*/
   padding: 0;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -161,7 +163,6 @@
 .price_ring a{
   background-color: $kakiColor;
   width: 100%;
-
   border-radius: 100%;
   color: white;
   margin: 0 10px;

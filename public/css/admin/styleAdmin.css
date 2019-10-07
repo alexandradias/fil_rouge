@@ -24,7 +24,6 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   justify-content: center;
   background-color: #5b6f6d;
   align-items: center;
-  /*position: fixed;*/
   z-index: 1; }
 
 .logoAdmin {
@@ -35,9 +34,9 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   width: 100%; }
 
 .text_header {
-  font-family: Minimal, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-align: right;
-  color: #959690;
+  color: #90a39d;
   margin-right: 10%;
   font-size: 20px; }
 
@@ -113,7 +112,7 @@ On appelle la variable à la place de la valeur dans nos class ou id */
 
 .insert {
   vertical-align: top;
-  color: #90a39e;
+  color: #90a39d;
   width: 18%;
   margin: 50px;
   text-align: center; }
@@ -264,8 +263,7 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   width: 300px; }
 
 .form_content_label {
-  font-family: 'Adam';
-  src: url("../font/adam.otf") format("opentype");
+  font-family: 'Roboto', sans-serif;
   margin-top: 30px;
   width: 50%;
   text-transform: uppercase; }

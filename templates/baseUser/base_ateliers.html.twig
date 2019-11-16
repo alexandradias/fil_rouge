@@ -35,7 +35,7 @@
             </a>
         </div>
 
-        <div class="menu_atelier">
+        <nav class="menu_atelier">
 
             <div><a href="{{ path ('home') }}"> HOME </a></div>
 
@@ -43,12 +43,12 @@
 
             <div><a href="{{ path ('productsByCategorie', {'categorie': 'chocolat'}) }}"> CHOCOLATS </a></div>
 
-            <div><a href="{{ path ('productsByCategorie', {'categorie': 'glace'}) }}"> GLACES </a></div>
+           {# <div><a href="{{ path ('productsByCategorie', {'categorie': 'glace'}) }}"> GLACES </a></div>#}
 
-            <div><a href="{{ path ('ateliersByCategorie', {'categorie': 'atelier'}) }}"> ATELIERS </a></div>
+           {# <div><a href="{{ path ('ateliersByCategorie', {'categorie': 'atelier'}) }}"> ATELIERS </a></div>#}
 
 
-        </div>
+        </nav>
     </div>
 
 
@@ -81,11 +81,11 @@
             <li><a href="{{ path ('productsByCategorie', {'categorie': 'patisserie'}) }}"> PATISSERIES </a></li>
             <br>
             <li><a href="{{ path ('productsByCategorie', {'categorie': 'chocolat'}) }}"> CHOCOLATS </a></li>
-            <br>
+           {# <br>
             <li><a href="{{ path ('productsByCategorie', {'categorie': 'glace'}) }}"> GLACES </a></li>
             <br>
             <li><a href="{{ path ('ateliersByCategorie', {'categorie': 'atelier'}) }}"> ATELIERS </a></li>
-            <br>
+            <br>#}
             {#  <li><a href="{{ path ('contact') }}"> CONTACT </a></li>#}
         </ul>
     </div>

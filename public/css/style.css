@@ -36,13 +36,6 @@ On appelle la variable à la place de la valeur dans nos class ou id */
 .logo1 img {
   width: 100%; }
 
-.burger1 {
-  width: 3%;
-  margin: 0 5% 0 0; }
-
-.burger1 img {
-  width: 100%; }
-
 .text_header1 {
   text-align: right;
   color: #959690;
@@ -79,6 +72,29 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   /*background-color: rgba(255,255,255,0.2);
   height: 150px;*/ }
 
+.burger {
+  width: 30px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: none;
+  z-index: 9; }
+
+.burger_line {
+  width: 100%;
+  height: 3px;
+  background-color: #646253;
+  margin-bottom: 6px; }
+
+/*.logo_burger{
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo_burger img{
+  width: 100%;
+}*/
 /*____________________________________________________________________________________________________________________*/
 /*MENU ATELIER*/
 .menu_atelier {
@@ -123,20 +139,10 @@ On appelle la variable à la place de la valeur dans nos class ou id */
 
 .logo2 {
   width: 100%;
-  margin: 0 0 0 5%;
-  justify-content: center; }
+  text-align: center; }
 
 .logo2 img {
-  width: 50%;
-  display: flex;
-  justify-content: center; }
-
-.burger2 {
-  width: 3%;
-  margin: 0 5% 0 0; }
-
-.burger2 img {
-  width: 100%; }
+  width: 50%; }
 
 /*____________________________________________________________________________________________________________________*/
 /*HEADER3*/
@@ -145,7 +151,8 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: rgba(149, 150, 144, 0.3);
+  background-color: rgba(255, 255, 255, 0.6);
+  /*background-color: rgba(149,150,144,0.3);*/
   align-items: center;
   position: fixed;
   z-index: 1; }
@@ -296,8 +303,11 @@ On appelle la variable à la place de la valeur dans nos class ou id */
 .slide img {
   width: 100%; }
 
+.img_home_ms {
+  display: none; }
+
 .text_slide {
-  height: 20%;
+  height: 30%;
   width: 100%;
   font-size: 25px;
   text-align: left;
@@ -308,6 +318,63 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   position: absolute;
   font-family: 'Minimal';
   src: url("../font/minimal.otf") format("opentype"); }
+
+.slide_products_saison {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  display: flex; }
+
+.slide_products_saison img {
+  width: 100%; }
+
+.text_slide_products_saison {
+  display: block;
+  height: 20%;
+  width: 100%;
+  font-size: 35px;
+  text-align: left;
+  color: #a20000;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  margin-top: 30px;
+  line-height: 35px;
+  position: absolute;
+  font-family: 'Minimal';
+  src: url("../font/minimal.otf") format("opentype");
+  z-index: 6; }
+
+.text_slide_products_saison_ms {
+  display: none; }
+
+.btn_products_saison {
+  width: 30%;
+  height: 30px;
+  background-color: #a20000;
+  color: white;
+  font-size: 25px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  text-align: center; }
+
+.btn_products_saison a {
+  text-decoration: none;
+  color: white; }
+
+.btn_products_saison a:hover {
+  text-decoration: none;
+  color: #646253; }
+
+.btn_products_saison_ms {
+  display: none; }
+
+.btn_products_saison_ms a {
+  display: none; }
+
+.btn_products_saison_ms a:hover {
+  display: none; }
 
 .portrait {
   width: 100%;
@@ -326,10 +393,14 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   font-size: 23px;
   text-align: left;
   color: white;
-  font-family: Minimal, Helvetica, sans-serif;
+  font-family: 'Minimal';
+  src: url("../font/minimal.otf") format("opentype");
   padding-left: 5%;
-  padding-bottom: 3%;
+  padding-bottom: 30%;
   line-height: 30px; }
+
+.text_portrait_ms {
+  display: none; }
 
 .iframe {
   margin-bottom: 100px; }
@@ -445,16 +516,17 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   /* margin: 10%;
    padding: 10%;*/ }
 
-.slide_product {
+/*.slide_product{
   width: 100%;
-  /* height: 70%;*/
+ !* height: 70%;*!
   position: relative;
   display: flex;
-  align-items: center; }
+  align-items: center;
+}
 
-.slide_product img {
-  width: 100%; }
-
+.slide_product img{
+  width: 100%;
+}*/
 .add_button {
   background-color: #5b6f6d;
   color: white;
@@ -558,7 +630,40 @@ On appelle la variable à la place de la valeur dans nos class ou id */
 .content_order2 img {
   width: 20%; }
 
-/*_______________________________________*/
+/*______________________________________PARTIE SMARTPHONE_*/
+.slide_product_ms {
+  display: none; }
+
+.text_product_ms {
+  display: none; }
+
+.bloc_text_product_ms {
+  display: none; }
+
+.global_ms {
+  display: none; }
+
+.content_ms {
+  display: none; }
+
+.back_ms {
+  display: none; }
+
+.product_composition_ms {
+  display: none; }
+
+.product_description_ms {
+  display: none; }
+
+.bloc_text_ms {
+  display: none; }
+
+.product_composition_ms {
+  display: none; }
+
+.product_description_ms {
+  display: none; }
+
 /*____________________________________________________________________________________________________________________*/
 /*VARIABLES IMPORTÉES*/
 /*VARIABLE*/
@@ -710,10 +815,52 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   border-radius: 100%;
   color: white;
   margin: 0 10px;
-  padding: 0;
   display: flex;
   justify-content: center;
   font-size: 15px; }
+
+/*___________________________________________________________________PARTIE SMARTPHONE*/
+.products_ms {
+  display: none; }
+
+.products_ms a {
+  display: none; }
+
+.products_ms a :hover {
+  display: none; }
+
+.product_bloc_ms {
+  display: none; }
+
+.price_ms {
+  display: none; }
+
+.product_bloc_nomPdt_ms {
+  display: none; }
+
+.product_bloc_description_ms {
+  display: none; }
+
+.product_bloc_tarif_ms {
+  display: none; }
+
+.product_bloc_ms img {
+  display: none; }
+
+.price_ring_ms {
+  display: none; }
+
+.price_ms {
+  display: none; }
+
+.price_ring_ms a {
+  display: none; }
+
+.slide_products_ms {
+  display: none; }
+
+.slide_products_ms img {
+  display: none; }
 
 /*_________________________________ PRODUCTS END*/
 /*____________________________________________________________________________________________________________________*/
@@ -971,14 +1118,422 @@ On appelle la variable à la place de la valeur dans nos class ou id */
 /*_________________________________ FOOTER END*/
 @media screen and (max-width: 600px) {
   .header1 {
-    height: 10px;
-    width: 100vw;
+    display: none; }
+
+  .header2 {
+    display: none; }
+
+  .header3 {
+    display: none; }
+
+  .header4 {
+    display: none; }
+
+  #media_display {
+    display: none; }
+
+  .burger {
+    display: block; }
+
+  .sidebar {
+    width: 80%;
+    right: 0;
+    top: 20px;
+    z-index: 10; }
+
+  .img_home_ml {
+    display: none; }
+
+  .img_home_ms {
+    width: 100%;
+    object-fit: cover;
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    background-color: #5d706e;
+    align-items: center; }
+
+  .img_home_ms img {
+    width: 100%; }
+
+  .text_slide {
+    display: none;
+    /*font-size: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: $kakiColor;
+    padding: 55px;
+    justify-content: center;
+    top: 10%;
+    z-index: 3;*/ }
+
+  .text_slide_products_saison {
+    display: none; }
+
+  .text_slide_products_saison_ms {
+    display: block;
+    height: 20%;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    color: #a20000;
+    padding: 0;
+    margin-top: 350px;
+    line-height: 40px;
+    position: absolute;
+    font-family: 'Minimal';
+    src: url("../font/minimal.otf") format("opentype");
+    z-index: 6; }
+
+  .btn_products_saison {
+    display: none; }
+
+  .btn_products_saison a {
+    display: none; }
+
+  .btn_products_saison a:hover {
+    display: none; }
+
+  .btn_products_saison_ms {
+    display: block;
+    width: 80%;
+    height: 40px;
+    background-color: #a20000;
+    color: white;
+    font-size: 25px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto; }
+
+  .btn_products_saison_ms a {
+    display: block;
+    text-decoration: none;
+    color: white; }
+
+  .text_portrait {
+    display: none; }
+
+  .text_portrait_ms {
+    display: block;
+    /*height: 20%;*/
+    width: 100%;
+    position: absolute;
+    font-size: 18px;
+    text-align: justify;
+    color: black;
+    margin-top: 200px;
+    font-family: 'Minimal';
+    src: url("../font/minimal.otf") format("opentype");
+    padding-left: 20%;
+    padding-right: 20%;
+    line-height: 20px;
+    z-index: 7; }
+
+  .btn_products_saison_ms a:hover {
+    display: block;
+    text-decoration: none;
+    color: #646253; }
+
+  /*__________________________________________________________________PRODUCTS__*/
+  .slide_products_ms {
+    display: block;
+    height: 100%;
+    position: relative;
     align-items: center;
-    position: fixed;
-    z-index: 1; } }
+    top: 0; }
+
+  .slide_products_ms img {
+    display: block;
+    width: 100%; }
+
+  .text_products_ms {
+    display: block;
+    top: 72%;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    color: #646253;
+    padding-top: 5%;
+    margin: 0 auto;
+    position: absolute;
+    font-family: 'Adam';
+    src: url("../font/adam.otf") format("opentype");
+    letter-spacing: 10px;
+    text-transform: uppercase; }
+
+  .bloc_text_products_ms {
+    display: block;
+    height: 40px;
+    width: 100%;
+    margin-top: 10%;
+    background-color: rgba(255, 255, 255, 0.7); }
+
+  .product_bloc_title_ms {
+    display: block;
+    font-family: 'Adam';
+    src: url("../font/adam.otf") format("opentype");
+    letter-spacing: 20px;
+    color: #959690;
+    font-size: 40px;
+    margin-bottom: 5%;
+    margin-top: 10%;
+    text-align: center;
+    text-transform: uppercase; }
+
+  .products_ms {
+    display: block;
+    width: 100%;
+    text-decoration: none; }
+
+  .products_ms a {
+    display: block;
+    text-decoration: none; }
+
+  .products_ms a :hover {
+    display: block; }
+
+  .product_bloc_ms {
+    display: block;
+    /*border:solid 1px #959690;*/
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    width: 100%;
+    /*height: 600px;*/
+    text-overflow: ellipsis;
+    overflow: hidden; }
+
+  .product_bloc_ms img {
+    display: block;
+    width: 100%; }
+
+  .product_bloc_nomPdt_ms {
+    display: block;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    white-space: pre;
+    color: #646253; }
+
+  .product_bloc_description_ms {
+    display: block;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre;
+    color: #646253; }
+
+  .price_ring_ms {
+    display: block;
+    background-color: #646253;
+    width: 100%;
+    height: 30%;
+    color: white;
+    padding: 0;
+    margin: 0px 0px 20px 0px;
+    text-align: center;
+    font-size: 30px; }
+
+  .price_ms {
+    display: block;
+    width: 100%; }
+
+  .price_ring_ms a {
+    display: block;
+    background-color: #646253;
+    width: 100%;
+    border-radius: 100%;
+    color: white;
+    margin: 0 10px;
+    justify-content: center;
+    font-size: 15px; }
+
+  /*___________________________________________________________________PRODUCT_*/
+  .slide_product_ms {
+    display: block;
+    width: 100%;
+    position: relative; }
+
+  .slide_product_ms img {
+    display: block;
+    width: 140%; }
+
+  .text_product_ms {
+    display: block;
+    top: 72%;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #646253;
+    padding-top: 5%;
+    margin: 0 auto;
+    position: absolute;
+    font-family: 'Adam';
+    src: url("../font/adam.otf") format("opentype");
+    letter-spacing: 15px;
+    text-transform: uppercase; }
+
+  .bloc_text_product_ms {
+    display: block;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 14px;
+    padding-top: 4px;
+    background-color: rgba(255, 255, 255, 0.7); }
+
+  .global_ms {
+    display: block;
+    margin-top: 2%;
+    /*margin-bottom: 20%;*/ }
+
+  .content_ms {
+    display: block;
+    width: 100%;
+    margin: 0 auto; }
+
+  .content_ms a img p {
+    display: block;
+    margin-top: 5%;
+    margin-bottom: 0;
+    width: 100%; }
+
+  .content_ms p {
+    margin-bottom: 0; }
+
+  .back_ms {
+    display: block;
+    width: 15%;
+    margin: 0 auto;
+    padding-top: 10%;
+    z-index: 20; }
+
+  .back_ms img {
+    display: block;
+    width: 100%; }
+
+  .product_composition_ms {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    color: #90a39d;
+    margin-top: 10%;
+    padding: 1%; }
+
+  .bloc_text_ms p {
+    margin-bottom: 0; }
+
+  .product_description_ms {
+    display: block;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #90a39d;
+    margin-top: 2%;
+    white-space: pre-wrap;
+    padding: 2%; }
+
+  .bloc_text_ms {
+    display: block;
+    vertical-align: top;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    width: 100%;
+    text-align: center; }
+
+  .bloc_text_ms a :hover {
+    display: block; }
+
+  /*___________________________________________________________________PARTIE desktop*/
+  /*___________________________________________________________________PRODUCTS_*/
+  .products {
+    display: none; }
+
+  .products a {
+    display: none; }
+
+  .products a :hover {
+    display: none; }
+
+  .product_bloc {
+    display: none; }
+
+  .price {
+    display: none; }
+
+  .product_bloc_nomPdt {
+    display: none; }
+
+  .product_bloc_description {
+    display: none; }
+
+  .product_bloc_tarif {
+    display: none; }
+
+  .product_bloc img {
+    display: none; }
+
+  .product_bloc_title {
+    display: none; }
+
+  .price_ring {
+    display: none; }
+
+  .price {
+    display: none; }
+
+  .price_ring a {
+    display: none; }
+
+  .slide_products {
+    display: none; }
+
+  /*___________________________________________________________________PRODUCT_*/
+  .slide_product {
+    display: none; }
+
+  .text_product {
+    display: none; }
+
+  .bloc_text_product {
+    display: none; }
+
+  .global {
+    display: none; }
+
+  .content {
+    display: none; }
+
+  .back {
+    display: none; }
+
+  .product_composition {
+    display: none; }
+
+  .product_description {
+    display: none; }
+
+  .bloc_text {
+    display: none; }
+
+  .product_composition {
+    display: none; }
+
+  .product_description {
+    display: none; } }
 /*____________________________________________________________________________________________________________________*/
 /*VARIABLES IMPORTÉES*/
 /*VARIABLE*/
@@ -1017,7 +1572,8 @@ On appelle la variable à la place de la valeur dans nos class ou id */
 .cgv_content {
   margin: 0 0 0 100px;
   font-family: 'Roboto', sans-serif;
-  text-align: justify; }
+  text-align: justify;
+  line-height: 150%; }
 
 .hr_cgv {
   width: 85%;
@@ -1025,6 +1581,9 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   background-color: #90a39d;
   border: none;
   margin-top: -7px; }
+
+#cgv_end {
+  padding-bottom: 100px; }
 
 /*____________________________________________________________________________________________________________________*/
 /*VARIABLES IMPORTÉES*/

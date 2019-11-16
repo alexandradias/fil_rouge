@@ -35,22 +35,22 @@
             </a>
         </div>
 
-        <div class="menu">
+        <nav class="menu">
 
             <div><a href="{{ path ('home') }}"> HOME </a></div>
 
-            <div><a href="{{ path ('productsByCategorie', {'categorie': 'patisserie'}) }}"> PATISSERIES </a></div>
+            <div><a href="{{ path ('productsByCategorie', {'categorie': 'patisseries'}) }}"> PATISSERIES </a></div>
 
-            <div><a href="{{ path ('productsByCategorie', {'categorie': 'chocolat'}) }}"> CHOCOLATS </a></div>
+            <div><a href="{{ path ('productsByCategorie', {'categorie': 'chocolats'}) }}"> CHOCOLATS </a></div>
 
-            <div><a href="{{ path ('productsByCategorie', {'categorie': 'glace'}) }}"> GLACES </a></div>
+            <div><a href="{{ path ('productsByCategorie', {'categorie': 'buches'}) }}"> BUCHES </a></div>
 
             {#<div><a href="{{ path ('productsByCategorie', {'categorie': 'atelier'}) }}"> ATELIERS </a></div>#}
 
-            <div><a href="{{ path ('ateliersByCategorie') }}"> ATELIERS </a></div>
+            {#<div><a href="{{ path ('ateliersByCategorie') }}"> ATELIERS </a></div>#}
 
 
-        </div>
+        </nav>
     </div>
 
 
@@ -75,19 +75,24 @@
         {% block content %}
         {% endblock %}
     </div>
+    <div class="burger">
+        <div class="burger_line"></div>
+        <div class="burger_line"></div>
+        <div class="burger_line"></div>
+    </div>
 
     <div class="sidebar">
         <ul>
             <li><a href="{{ path ('home') }}"> HOME </a></li>
             <br>
-            <li><a href="{{ path ('productsByCategorie', {'categorie': 'patisserie'}) }}"> PATISSERIES </a></li>
+            <li><a href="{{ path ('productsByCategorie', {'categorie': 'patisseries'}) }}"> PATISSERIES </a></li>
             <br>
-            <li><a href="{{ path ('productsByCategorie', {'categorie': 'chocolat'}) }}"> CHOCOLATS </a></li>
+            <li><a href="{{ path ('productsByCategorie', {'categorie': 'chocolats'}) }}"> CHOCOLATS </a></li>
             <br>
-            <li><a href="{{ path ('productsByCategorie', {'categorie': 'glace'}) }}"> GLACES </a></li>
-            <br>
+            <li><a href="{{ path ('productsByCategorie', {'categorie': 'buches'}) }}"> BUCHES </a></li>
+            {#<br>
             <div><a href="{{ path ('ateliersByCategorie', {'categorie': 'atelier'}) }}"> ATELIERS </a></div>
-            <br>
+            <br>#}
             {#  <li><a href="{{ path ('contact') }}"> CONTACT </a></li>#}
         </ul>
      </div>
@@ -106,7 +111,11 @@
 
     <div class="foot">
         {#//je mets en place les 3 sections#}
-        <div class="img_foot"><img src="{{ asset('assets/icon/contact.svg') }}" alt="contact"></div>
+        <div class="img_foot">
+            <a href="{{ path ('contact') }}">
+                <div><img src="{{ asset('assets/icon/contact.svg') }}" alt="contact"></div>
+            </a>
+        </div>
 
         <div class="img_foot">
             <a href="{{ path ('cgv') }}">

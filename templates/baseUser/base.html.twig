@@ -30,32 +30,28 @@
 
 {#//Mon header fait parti d'un fichier partiel ce qui me permettra de l'appeler sur chacune de mes pages grâce à 'extends'#}
 <header>
+
+
     <div  class="header1">
             <div class="logo1">
                 <a href="{{ path ('home') }}">
                     <img src="{{ asset('assets/logo/logo_1000.svg') }}" alt="logo Anne Lamour Patisserie">
                 </a>
             </div>
-            {#<div class="text_header1">
-                <p>De toutes les passions, la seule vraiment respectable me parait être la gourmandise.</p>
-                <p>Guy De Maupassant</p>
-            </div>#}
-            {#<div class="burger1"><img src="{{ asset('assets/icon/burger_1000.png') }}" alt="menu burger"></div>#}
-           {# <div class="img_header"> <img src="{{ asset('assets/img/slide_1.png') }}" alt="slide1_home"/></div>#}
-        <div class="menu">
+
+        <nav class="menu">
 
                 <div><a href="{{ path ('home') }}"> HOME </a></div>
 
-                <div><a href="{{ path ('productsByCategorie', {'categorie': 'patisserie'}) }}"> PATISSERIES </a></div>
+                <div><a href="{{ path ('productsByCategorie', {'categorie': 'patisseries'}) }}"> PATISSERIES </a></div>
 
-                <div><a href="{{ path ('productsByCategorie', {'categorie': 'chocolat'}) }}"> CHOCOLATS </a></div>
+                <div><a href="{{ path ('productsByCategorie', {'categorie': 'chocolats'}) }}"> CHOCOLATS </a></div>
 
-                <div><a href="{{ path ('productsByCategorie', {'categorie': 'glace'}) }}"> GLACES </a></div>
+                <div><a href="{{ path ('productsByCategorie', {'categorie': 'buches'}) }}"> BUCHES </a></div>
 
-                <div><a href="{{ path ('ateliersByCategorie', {'categorie': 'atelier'}) }}"> ATELIERS </a></div>
+                {#<div><a href="{{ path ('ateliersByCategorie', {'categorie': 'atelier'}) }}"> ATELIERS </a></div>#}
 
-
-        </div>
+        </nav>
     </div>
 
     <div  class="header2">
@@ -78,18 +74,24 @@
             {% endblock %}
         </div>
 
+    <div class="burger">
+            <div class="burger_line"></div>
+            <div class="burger_line"></div>
+            <div class="burger_line"></div>
+    </div>
+
     <div class="sidebar">
         <ul>
             <li><a href="{{ path ('home') }}"> HOME </a></li>
             <br>
-            <li><a href="{{ path ('productsByCategorie', {'categorie': 'patisserie'}) }}"> PATISSERIES </a></li>
+            <li><a href="{{ path ('productsByCategorie', {'categorie': 'patisseries'}) }}"> PATISSERIES </a></li>
             <br>
-            <li><a href="{{ path ('productsByCategorie', {'categorie': 'chocolat'}) }}"> CHOCOLATS </a></li>
+            <li><a href="{{ path ('productsByCategorie', {'categorie': 'chocolats'}) }}"> CHOCOLATS </a></li>
             <br>
-            <li><a href="{{ path ('productsByCategorie', {'categorie': 'glace'}) }}"> GLACES </a></li>
-            <br>
-            <div><a href="{{ path ('ateliersByCategorie', {'categorie': 'atelier'}) }}"> ATELIERS </a></div>
-            <br>
+            <li><a href="{{ path ('productsByCategorie', {'categorie': 'buches'}) }}"> BUCHES </a></li>
+           {# <br>#}
+            {#<div><a href="{{ path ('ateliersByCategorie', {'categorie': 'atelier'}) }}"> ATELIERS </a></div>#}
+            {#<br>#}
           {#  <li><a href="{{ path ('contact') }}"> CONTACT </a></li>#}
         </ul>
     </div>
@@ -122,7 +124,7 @@
             </a>
         </div>
         <div class="img_foot">
-            <a href="{{'https://www.instagram.com/lamour.anne/?hl=fr'}}" target="{{ 'blank' }}">
+            <a href="{{'https://www.instagram.com/anne_lamour_patisserie/?hl=fr'}}" target="{{ 'blank' }}">
             <img src="{{ asset('assets/icon/instagram.svg')}}" alt="instagram">
             </a>
         </div>

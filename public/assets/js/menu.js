@@ -8,22 +8,26 @@ var hauteur = 400; // 400px, c'est le nombre de pixels à partir duquel je décl
 
 $(document).ready(function()
 {
-    $(window).scroll(function ()
+    console.log($(window).width());
+    /*if(document.getElementById('media_display').style.display=='block')*/
+    if($(window).width()> 600) {
+        $(window).scroll(function ()
 
-    {//Au scroll dans la fenetre je déclenche la fonction
+        {//Au scroll dans la fenetre je déclenche la fonction
 
-        if ($(this).scrollTop() > hauteur)
-        {
-            //si je défile de plus de 400px (variable "hauteur") pixels du haut vers le bas ici 400px
-            $('.header1').fadeOut(1000); // On masque le 1
-            $('.header2').fadeIn(1000); // On affiche le 2
+            if ($(this).scrollTop() > hauteur)
+            {
+                //si je défile de plus de 400px (variable "hauteur") pixels du haut vers le bas ici 400px
+                $('.header1').fadeOut(1000); // On masque le 1
+                $('.header2').fadeIn(1000); // On affiche le 2
 
-        } else
-        {
-            $('.header2').fadeOut(1000);
-            $('.header1').fadeIn(1000);
-        }
-    });
+            } else
+            {
+                $('.header2').fadeOut(1000);
+                $('.header1').fadeIn(1000);
+            }
+        });
+    }
 });
 
 
@@ -37,24 +41,27 @@ var hauteur = 400; // 400px, c'est le nombre de pixels à partir duquel je décl
 
 $(document).ready(function()
 {
-    $(window).scroll(function ()
+    console.log($(window).width());
+    /*if(document.getElementById('media_display').style.display=='block')*/
+    if($(window).width()> 600) {
+        $(window).scroll(function ()
 
-    {//Au scroll dans la fenetre je déclenche la fonction
+        {//Au scroll dans la fenetre je déclenche la fonction
 
-        if ($(this).scrollTop() > hauteur)
-        {
-            //si je défile de plus de 400px (variable "hauteur") pixels du haut vers le bas ici 400px
-            $('.header3').fadeOut(1000); // On masque le 1
-            $('.header4').fadeIn(1000); // On affiche le 2
+            if ($(this).scrollTop() > hauteur)
+            {
+                //si je défile de plus de 400px (variable "hauteur") pixels du haut vers le bas ici 400px
+                $('.header3').fadeOut(1000); // On masque le 1
+                $('.header4').fadeIn(1000); // On affiche le 2
 
-        } else
-        {
-            $('.header4').fadeOut(1000);
-            $('.header3').fadeIn(1000);
-        }
-    });
+            } else
+            {
+                $('.header3').fadeOut(1000);
+                $('.header4').fadeIn(1000);
+            }
+        });
+    }
 });
-
 
 /*____________________________________________________________________________________________________________________*/
 /*Je crée une variable avec une condition pour faire apparaitre un second menu au scroll*/
@@ -84,7 +91,17 @@ $(document).ready(function()
     });
 });
 
+/*_________BURGER____________________________________________________________________________________________________*/
 
+
+$(document).ready(function() {
+
+    $('.burger').hover(function () {
+
+        $('.sidebar').toggle('slow');
+
+    });
+});
 
 /*____________________________________________________________________________________________________________________*/
 /*Je crée une variable avec une condition pour faire apparaitre mon menu sidebar au scroll de la page*/
@@ -94,21 +111,24 @@ var hauteur = 800; // 800px, c'est le nombre de pixels à partir duquel je déci
 
 $(document).ready(function()
 {
-    $(window).scroll(function ()
-    {//Au scroll dans la fenetre je déclenche la fonction
+    if($(window).width()> 600){
+        $(window).scroll(function ()
+        {//Au scroll dans la fenetre je déclenche la fonction
 
-        if ($(this).scrollTop() > hauteur)
-        {
-            //si je défile de plus de 800px (variable "hauteur") pixels du haut la sidebar apparait
-            //je l'a fait apparaitre lentement
+            if ($(this).scrollTop() > hauteur)
+            {
+                //si je défile de plus de 800px (variable "hauteur") pixels du haut la sidebar apparait
+                //je l'a fait apparaitre lentement
 
-            $('.sidebar').fadeIn(1000); // la sidebar apparait
+                $('.sidebar').fadeIn(1000); // la sidebar apparait
 
-        } else
-        {
-            $('.sidebar').fadeOut(1000); // la sidebar disparait
-        }
-    });
+            } else
+            {
+                $('.sidebar').fadeOut(1000); // la sidebar disparait
+            }
+        });
+    }
+
 });
 
 
@@ -284,6 +304,20 @@ $(document).ready(function(){
 
 });
 
+
+
+
+/*$(document).ready(function() {
+
+    $('.burger').hover(function () {
+
+        $('.sidebar').show('slow');
+
+    }, function () {
+
+        $('.sidebar').hide('slow');
+    });
+});*/
 
 
 

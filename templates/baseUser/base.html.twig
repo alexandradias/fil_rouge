@@ -59,7 +59,17 @@
             <div class="logo2"><img src="{{ asset('assets/logo/logo_w_1000.svg') }}" alt="logo Anne Lamour Patisserie"></div>
         </a>
     </div>
-    <div class="bloc_white"></div>
+    <div id="bloc_white"></div>
+
+    {#___________________________________________________________________PARTIE SMARTPHONE#}
+
+    <div id="header1_ms">
+        <div id="logo1_ms">
+            <a href="{{ path ('home') }}">
+                <img src="{{ asset('assets/logo/logo_1000.svg') }}" alt="logo Anne Lamour Patisserie">
+            </a>
+        </div>
+    </div>
 
 </header>
 {#//--------------------------------------------------------------------------------------------------------HEADER USER END#}
@@ -91,13 +101,14 @@
             <li><a href="{{ path ('productsByCategorie', {'categorie': 'buches'}) }}"> BUCHES </a></li>
            {# <br>#}
             {#<div><a href="{{ path ('ateliersByCategorie', {'categorie': 'atelier'}) }}"> ATELIERS </a></div>#}
-            {#<br>#}
-          {#  <li><a href="{{ path ('contact') }}"> CONTACT </a></li>#}
+            {#<br>
+            <li><a href="{{ path ('contact') }}"> CONTACT </a></li>#}
         </ul>
     </div>
     {#j'intègre un icon arrowtop qui va me permettre de remonter vers le haut de ma page
     son action sera généré depuis mon fichier.js#}
     <div class="top"><img src="{{ asset('assets/icon/arrow_top.svg') }}" alt="icon arrow-top"></div>
+    <div class="top_ms"><img src="{{ asset('assets/icon/arrow_top.svg') }}" alt="icon arrow-top"></div>
 
 </main>
 
@@ -106,29 +117,54 @@
 {#//______________________________________________________________________________________________________FOOTER START#}
 
 {#//je mets en place le footer, celui ci fait parti du fichier partiel => présent sur toutes mes vues#}
-<footer class="footer">
+<footer>
 
-    {#<div class="cgv">
-        <p>Conditions générales de vente</p>
-    </div>#}
-    <div class="foot">
-        {#//je mets en place les 3 sections#}
-        <div class="img_foot">
-            <a href="{{ path ('contact') }}">
-                <div><img src="{{ asset('assets/icon/contact.svg') }}" alt="contact"></div>
-            </a>
+    <section  class="footer">
+        <div class="foot">
+            {#//je mets en place les 3 sections#}
+            <div class="img_foot">
+                <a href="{{ path ('contact') }}">
+                    <div><img src="{{ asset('assets/icon/contact.svg') }}" alt="contact"></div>
+                </a>
+            </div>
+            <div class="img_foot">
+                <a href="{{ path ('cgv') }}">
+                    <img src="{{ asset('assets/icon/cgv.svg') }}" alt="conditions générales de vente">
+                </a>
+            </div>
+            <div class="img_foot">
+                <a href="{{'https://www.instagram.com/anne_lamour_patisserie/?hl=fr'}}" target="{{ 'blank' }}">
+                    <img src="{{ asset('assets/icon/instagram.svg')}}" alt="instagram">
+                </a>
+            </div>
         </div>
-        <div class="img_foot">
-            <a href="{{ path ('cgv') }}">
-                <img src="{{ asset('assets/icon/cgv.svg') }}" alt="conditions générales de vente">
-            </a>
-        </div>
-        <div class="img_foot">
-            <a href="{{'https://www.instagram.com/anne_lamour_patisserie/?hl=fr'}}" target="{{ 'blank' }}">
-            <img src="{{ asset('assets/icon/instagram.svg')}}" alt="instagram">
-            </a>
-        </div>
-    </div>
+    </section>
+
+
+
+    {#___________________________________________________________________PARTIE SMARTPHONE#}
+    <section  class="footer_ms">
+
+       <div class="foot_ms">
+            {#//je mets en place les 3 sections#}
+            <div class="img_foot_ms">
+                <a href="{{ path ('contact') }}">
+                    <img src="{{ asset('assets/icon/contact.svg') }}" alt="contact">
+                </a>
+            </div>
+            <div class="img_foot_ms">
+                <a href="{{ path ('cgv') }}">
+                    <img src="{{ asset('assets/icon/cgv.svg') }}" alt="conditions générales de vente">
+                </a>
+            </div>
+            <div class="img_foot_ms">
+                <a href="{{'https://www.instagram.com/anne_lamour_patisserie/?hl=fr'}}" target="{{ 'blank' }}">
+                    <img src="{{ asset('assets/icon/instagram.svg')}}" alt="instagram">
+                </a>
+            </div>
+       </div>
+
+    </section>
 
 </footer>
 {#//------------------------------------------------------------------------------------------------------------FOOTER END#}

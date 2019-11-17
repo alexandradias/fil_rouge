@@ -26,7 +26,7 @@
   .sidebar {
     width: 80%;
     right: 0;
-    top: 20px;
+    top: 0;
     z-index: 10;
   }
 
@@ -333,9 +333,9 @@
 
   .back_ms{
     display: block;
-    width: 15%;
+    width: 10%;
     margin: 0 auto;
-    padding-top: 10%;
+    padding-top: 15%;
     z-index: 20;
   }
 
@@ -386,7 +386,178 @@
     display: block;
   }
 
-  /*___________________________________________________________________PARTIE desktop*/
+  /*___________________________________________________________________LOGO_HOME_*/
+
+  #header1_ms{
+    display: block;
+    /*width: calc(100vw - 30px);*/
+    width: 100%;
+    position: fixed;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+    background-color: rgba(255,255,255,0.7);
+    z-index: 5;
+  }
+
+  #logo1_ms{
+    display: block;
+    width: 35%;
+  }
+
+  #logo1_ms img{
+    display: block;
+    width: 100%;
+    margin-left: 80%;
+  }
+
+  /*___________________________________________________________________TOP_ARROW_*/
+
+  .top{
+    display: none;
+  }
+
+  .top_ms{
+    display: block;
+    height: 30px;
+    position:fixed;
+    right: 5%;
+    top: 80%;
+    margin-right:3%;
+    z-index: 99;
+  }
+
+  /*___________________________________________________________________FOOTER_*/
+
+  .footer_ms{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    /*margin:0;
+    padding:0;*/
+    height: 20%;
+    width: 100%;
+    /*background-color: $footerColor;*/
+    position: fixed;
+    bottom: 10%;
+    left: 70%;
+   /* @include centreImage;*/
+   /* @include fontAdam;*/
+  }
+
+  .foot_ms {
+    display: inline-block;
+    width: 15%;
+    margin: 10%;
+    right: 0;
+    padding-bottom: 10%;
+  }
+
+  .foot_ms img{
+    display: block;
+    width: 100%;
+    margin: 10%;
+    padding-bottom: 10%;
+
+  }
+
+  .img_foot_ms {
+    display: block;
+    margin-left:20px;
+  }
+
+  .img_foot_ms img{
+    display: block;
+  }
+
+  /*___________________________________________________________________CONTACT_*/
+  .content_contact_ms{
+    display: block;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $vertfonceColor;
+    margin-bottom: 100px;
+    z-index: 100;
+  }
+
+  .back_content_contact_ms{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+  }
+
+  .back_content_contact_ms img{
+    display: block;
+    width: 30%;
+    margin-left: 0;
+    z-index: 100;
+  }
+
+  .h1_contact_ms{
+    display: block;
+    @include fontAdam;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    color: $kakiColor;
+    z-index: 100;
+
+  }
+
+  .hrTop_contact_ms{
+    display: block;
+    width: 800px;
+    height: 1px;
+    background-color: $vertClair;
+    border:none;
+    margin-top: -7px;
+    z-index: 100;
+  }
+
+  .form_contact_ms{
+    display: block;
+    @include fontRoboto;
+    z-index: 100;
+  }
+
+  #CGV {
+    width: 100%;
+
+  }
+
+  #cgv_title {
+    display: block;
+    padding-top: 90px;
+    padding-bottom: 30px;
+    margin: 0;
+    @include fontAdam;
+    letter-spacing: 20px;
+    color:$kakiColor;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  #cgv_title_small{
+    margin: 5%;
+    @include fontRoboto;
+    letter-spacing: 10px;
+    color:$vertTendre;
+    font-size: 20px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  #cgv_content{
+    margin: 5%;
+    @include fontRoboto;
+    text-align: justify;
+    line-height: 150%;
+  }
+  /*____________________________________________________________________________________________________PARTIE desktop*/
 
   /*___________________________________________________________________PRODUCTS_*/
   .products{
@@ -488,6 +659,79 @@
   }
 
   .product_description{
+    display: none;
+  }
+
+  /*___________________________________________________________________LOGO_HOME_*/
+
+  .header1{
+    display: none;
+  }
+
+  .logo1{
+    display: none;
+  }
+
+  .logo1 img{
+    display: none;
+  }
+
+  .menu{
+    display: none;
+  }
+
+  .header2{
+    display: none;
+  }
+
+  .logo2{
+    display: none;
+  }
+
+  #bloc_white{
+    display: none;
+  }
+
+  /*___________________________________________________________________FOOTER_*/
+
+  .footer{
+    display: none;
+  }
+
+  .foot{
+    display: none;
+  }
+
+  .img_foot{
+    display: none;
+  }
+
+  .img_foot img{
+    display: none;
+  }
+
+  /*___________________________________________________________________CONTACT_*/
+  .content_contact{
+    display: none;
+  }
+
+  .back_content_contact{
+    display: none;
+  }
+
+  .h1_contact{
+    display: none;
+  }
+
+  .hrTop_contact{
+    display: none;
+  }
+
+  .form_contact{
+    display: none;
+  }
+
+  .hrInsert_contact{
     display: none;
   }
 }

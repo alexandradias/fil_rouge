@@ -22,7 +22,6 @@
 }
 
 .logo1{
-
   width: 15%;
   margin:0 0 0 5%;
 }
@@ -196,7 +195,7 @@
   z-index: 1;
 }
 
-.bloc_white{
+#bloc_white{
   height:90px;
   width: 100%;
   background-color: white;
@@ -237,3 +236,33 @@
   margin: 0 auto;
   z-index: 1;
 }
+
+
+
+/*______________________________________PARTIE SMARTPHONE_*/
+
+
+#header1_ms{
+  display: none;
+}
+
+#logo1_ms{
+  display: none;
+}
+
+/*
+.menu_ms{
+  display: none;
+}
+
+.header2_ms{
+  display: none;
+}
+
+.logo2_ms{
+  display: none;
+}
+
+.bloc_white_ms{
+  display: none;
+}*/

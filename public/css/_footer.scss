@@ -16,7 +16,6 @@
   background-color: $footerColor;
   position: fixed;
   bottom: 0;
-
   @include centreImage;
   @include fontAdam;
 }
@@ -43,3 +42,21 @@
 
 
 /*_________________________________ FOOTER END*/
+
+
+
+.footer_ms{
+  display: none;
+}
+
+.foot_ms{
+  display: none;
+}
+
+.foot_ms img{
+  display: none;
+}
+
+.img_foot_ms{
+  display: none;
+}

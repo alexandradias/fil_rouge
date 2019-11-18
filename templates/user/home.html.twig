@@ -6,8 +6,8 @@
 
          {#message flash / ce message s'affiche seulement si l'action est validée#}
          {% if app.flashes %}
-             <div class="content_modal">
-                 <div class="modal">
+             <div class="content_modal" id="content_modal_ms">
+                 <div class="modal" id="modal_ms">
                      <p> Votre message a bien été envoyé, merci ! Nous y répondrons dès que possible.</p>
                  </div>
              </div>

@@ -6,7 +6,7 @@
 
         {#message flash / ce message ne s'affichera seulement en cas d'erreur#}
         {% if app.flashes %}
-            <div class="modal">
+            <div class="modal" id="modal_ms">
                 {#Je récupère les messages flash pour les afficher#}
                 {% for messages in app.flashes %}
                     {% for message in messages %}
@@ -16,23 +16,23 @@
             </div>
         {% endif %}
         {#end message flash#}
-    <section  class="content_contact">
+    <section  class="content_contact" id="content_contact_ms">
         <div>
 
-                <div class="back_content_contact">
+                <div class="back_content_contact" id="back_content_contact_ms">
 
-                    <h1 class="h1_contact">Contact</h1>
+                    <h1 class="h1_contact" id="h1_contact_ms">Contact</h1>
                 </div>
 
-                <hr class="hrTop_contact">
-                <hr class="hrTop_contact">
+                <hr class="hrTop_contact" id="hrTop_contact_ms">
+                <hr class="hrTop_contact" id="hrTop_contact_ms">
 
 
                     {#-> la fonction twig 'form_start' démarre le formulaire#}
                     {{ form_start(formContactView)}}
 
                     {#-> je crée une class form qui me permets de styliser le formulaire de contact#}
-                    <div class="form_contact">
+                    <div class="form_contact" id="form_contact_ms">
 
 
                         {#-> la fonction twig 'form_label' permet de créer un label#}
@@ -43,25 +43,25 @@
                         {{ form_widget(formContactView.Nom, { 'attr': {'class': "form_content",'placeholder': "Votre nom"} }) }}
 
 
-                        <hr class="hrInsert_contact">
+                        <hr class="hrInsert_contact" id="hrInsert_contact_ms">
 
                         {{ form_label(formContactView.Prenom, 'Prénom', {'label_attr': {'class': 'form_content_label'}}) }}
                         {{ form_widget(formContactView.Prenom, { 'attr': {'class': "form_content",'placeholder': "Votre prénom"} }) }}
 
 
-                        <hr class="hrInsert_contact">
+                        <hr class="hrInsert_contact" id="hrInsert_contact_ms">
 
                         {{ form_label(formContactView.Email, 'Email', {'label_attr': {'class': 'form_content_label'}}) }}
                         {{ form_widget(formContactView.Email, { 'attr': {'class': "form_content",'placeholder': "Votre email"} }) }}
 
 
-                        <hr class="hrInsert_contact">
+                        <hr class="hrInsert_contact" id="hrInsert_contact_ms">
 
                         {{ form_label(formContactView.Message, 'Message', {'label_attr': {'class': 'form_content_label'}}) }}
                         {{ form_widget(formContactView.Message, { 'attr': {'class': "form_content",'placeholder': "Votre message"} }) }}
 
 
-                        <hr class="hrInsert_contact">
+                        <hr class="hrInsert_contact" id="hrInsert_contact_ms">
 
                         {{ form_widget(formContactView.envoyer, { 'attr': {'class': "form_content_submit"} }) }}
 
@@ -72,7 +72,7 @@
         </div>
     </section>
         {#___________________________________________________________________PARTIE SMARTPHONE#}
-    <section class="content_contact_ms">
+    {#<section class="content_contact_ms">
         <div>
 
             <div class="back_content_contact_ms">
@@ -84,15 +84,15 @@
             <hr class="hrTop_contact_ms">
 
 
-            {#-> la fonction twig 'form_start' démarre le formulaire#}
+            #}{#-> la fonction twig 'form_start' démarre le formulaire#}{#
             {{ form_start(formContactView)}}
 
-            {#-> je crée une class form qui me permets de styliser le formulaire de contact#}
+            #}{#-> je crée une class form qui me permets de styliser le formulaire de contact#}{#
             <div class="form_contact_ms">
 
 
-                {#-> la fonction twig 'form_label' permet de créer un label#}
-                {# -> la fonction twig 'form_widget' permet de créer un champ de formulaire#}
+                #}{#-> la fonction twig 'form_label' permet de créer un label#}{#
+                #}{# -> la fonction twig 'form_widget' permet de créer un champ de formulaire#}{#
 
 
                 {{ form_label(formContactView.Nom, 'Nom', {'label_attr': {'class': 'form_content_label'}}) }}
@@ -127,6 +127,6 @@
 
         </div>
     </section>
-
+#}
 
     {% endblock %}

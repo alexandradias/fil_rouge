@@ -23,11 +23,12 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: rgba(149, 150, 144, 0.3);
+  background-color: rgba(149, 150, 144, 0.4);
   /*background-color: rgba(93,112,110,0.3);*/
   align-items: center;
+  font-weight: bolder;
   position: fixed;
-  z-index: 1; }
+  z-index: 33; }
 
 .logo1 {
   width: 15%;
@@ -49,7 +50,7 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   letter-spacing: 9px;
   display: flex;
   right: 0;
-  font-size: 90%;
+  /*font-size: 90%;*/
   padding: 30px;
   color: #646253; }
 
@@ -78,7 +79,7 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   top: 20px;
   right: 20px;
   display: none;
-  z-index: 9; }
+  z-index: 99; }
 
 .burger_line {
   width: 100%;
@@ -1111,7 +1112,7 @@ On appelle la variable à la place de la valeur dans nos class ou id */
 /*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/
 /*____________________________________________________________________________________________________________________*/
 /*FOOTER*/
-.footer {
+#footer {
   margin: 0;
   padding: 0;
   height: 80px;
@@ -1143,7 +1144,7 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   left: 0; }
 
 /*_________________________________ FOOTER END*/
-.footer_ms {
+#footer_ms {
   display: none; }
 
 .foot_ms {
@@ -1156,6 +1157,10 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   display: none; }
 
 @media screen and (max-width: 600px) {
+  body {
+    margin: 0;
+    padding-top: 0; }
+
   .header1 {
     display: none; }
 
@@ -1178,7 +1183,7 @@ On appelle la variable à la place de la valeur dans nos class ou id */
     width: 80%;
     right: 0;
     top: 0;
-    z-index: 10; }
+    z-index: 99; }
 
   .img_home_ml {
     display: none; }
@@ -1237,7 +1242,7 @@ On appelle la variable à la place de la valeur dans nos class ou id */
     height: 40px;
     background-color: #a20000;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     letter-spacing: 10px;
     text-transform: uppercase;
     justify-content: center;
@@ -1283,6 +1288,7 @@ On appelle la variable à la place de la valeur dans nos class ou id */
 
   .slide_products_ms img {
     display: block;
+    margin-top: -1%;
     width: 100%; }
 
   .text_products_ms {
@@ -1501,118 +1507,205 @@ On appelle la variable à la place de la valeur dans nos class ou id */
     display: block;
     /*width: calc(100vw - 30px);*/
     width: 100%;
-    position: fixed;
     padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 2%;
-    background-color: rgba(255, 255, 255, 0.7);
-    z-index: 5; }
+    /* position: fixed;
+     padding-top: 1%;
+     padding-bottom: 1%;
+     padding-left: 2%;
+     background-color: rgba(255,255,255,0.7);
+     z-index: 33;*/ }
 
   #logo1_ms {
     display: block;
-    width: 35%; }
+    width: 100%;
+    margin-top: -1%;
+    position: fixed;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    /* padding-left: 2%;*/
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 33; }
 
   #logo1_ms img {
     display: block;
-    width: 100%;
-    margin-left: 80%; }
+    top: 0;
+    width: 35%;
+    margin-left: 33%;
+    z-index: 33; }
 
   /*___________________________________________________________________TOP_ARROW_*/
-  .top {
-    display: none; }
+  /*.top{
+    display: none;
+  }
 
-  .top_ms {
+  .top_ms{
     display: block;
     height: 30px;
-    position: fixed;
+    position:fixed;
     right: 5%;
     top: 80%;
-    margin-right: 3%;
-    z-index: 99; }
+    margin-right:3%;
 
+  }*/
   /*___________________________________________________________________FOOTER_*/
-  .footer_ms {
-    display: block;
+  #footer_ms {
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     /*margin:0;
     padding:0;*/
-    height: 20%;
+    /*height: 20%;*/
     width: 100%;
-    /*background-color: $footerColor;*/
+    background-color: rgba(255, 255, 255, 0.2);
     position: fixed;
-    bottom: 10%;
-    left: 70%;
+    bottom: -0.5%;
+    z-index: 50;
+    /*left: 70%;*/
     /* @include centreImage;*/
     /* @include fontAdam;*/ }
 
   .foot_ms {
-    display: inline-block;
-    width: 15%;
-    margin: 10%;
-    right: 0;
-    padding-bottom: 10%; }
+    display: inline-flex;
+    width: 50%;
+    margin: 1%;
+    /*padding-bottom: 1%;*/ }
 
   .foot_ms img {
     display: block;
     width: 100%;
-    margin: 10%;
-    padding-bottom: 10%; }
+    padding: 15%;
+    /*margin: 10%;*/
+    /*padding-bottom: 10%;*/ }
 
   .img_foot_ms {
     display: block;
-    margin-left: 20px; }
+    text-align: center;
+    /*margin-left:20px;*/ }
 
   .img_foot_ms img {
     display: block; }
 
   /*___________________________________________________________________CONTACT_*/
-  .content_contact_ms {
+  #content_contact_ms {
     display: block;
-    width: 50%;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    /*justify-content: center;
+    align-items: center;*/
     flex-direction: column;
     color: #5b6f6d;
     margin-bottom: 100px;
-    z-index: 100; }
+    /*z-index: 100;*/ }
 
-  .back_content_contact_ms {
+  #content_contact_ms button {
+    display: block;
+    width: 100%; }
+
+  #back_content_contact_ms {
     display: block;
     align-items: center;
     justify-content: center;
-    z-index: 100; }
+    /*z-index: 100;*/ }
 
-  .back_content_contact_ms img {
+  #back_content_contact_ms img {
     display: block;
-    width: 30%;
+    width: 100%;
     margin-left: 0;
-    z-index: 100; }
+    /*z-index: 100;*/ }
 
-  .h1_contact_ms {
-    display: block;
-    font-family: 'Adam';
-    src: url("../font/adam.otf") format("opentype");
-    text-transform: uppercase;
-    font-size: 30px;
-    text-align: center;
-    color: #646253;
-    z-index: 100; }
+  #h1_contact_ms {
+    margin: 2% 0 0 0;
+    padding-top: 25%;
+    padding-bottom: 5%; }
 
-  .hrTop_contact_ms {
+  #hrInsert_contact {
+    width: 100%;
+    height: 1px;
+    background-color: #90a39d;
+    border: none;
+    margin: 0;
+    /*margin-top: 30px;*/
+    /*margin-bottom: 30px;*/ }
+
+  #hrTop_contact_ms {
     display: block;
-    width: 800px;
+    width: 100%;
     height: 1px;
     background-color: #a0b2a4;
     border: none;
     margin-top: -7px;
-    z-index: 100; }
+    /* z-index: 100;*/ }
 
-  .form_contact_ms {
+  #form_contact_ms {
     display: block;
+    margin-left: 2%;
+    margin-right: 2%;
     font-family: 'Roboto', sans-serif;
-    z-index: 100; }
+    /*z-index: 100;*/ }
 
+  #contact_Nom {
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    height: 100px; }
+
+  #contact_Prenom {
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    height: 100px; }
+
+  #contact_Email {
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    height: 100px; }
+
+  #contact_Message {
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    height: 200px; }
+
+  #contact_Envoyer {
+    text-align: center;
+    background-color: #a20000;
+    margin: 0 auto;
+    width: 10%; }
+
+  .form_content_submit {
+    font-family: 'Adam';
+    src: url("../font/adam.otf") format("opentype");
+    color: white;
+    text-align: center;
+    padding: 6px;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    margin-top: 50px;
+    background-color: #5b6f6d;
+    border-radius: 3px;
+    width: 100%; }
+
+  /*___________________________________________________________________MODAL ENVOI MAIL*/
+  #modal_ms {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    display: flex; }
+
+  #content_modal_ms {
+    background-color: #a0b2a4;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; }
+
+  /*___________________________________________________________________CGV*/
   #CGV {
     width: 100%; }
 
@@ -1623,18 +1716,19 @@ On appelle la variable à la place de la valeur dans nos class ou id */
     margin: 0;
     font-family: 'Adam';
     src: url("../font/adam.otf") format("opentype");
-    letter-spacing: 20px;
+    letter-spacing: 10px;
     color: #646253;
-    font-size: 40px;
+    font-size: 130%;
     text-align: center;
     text-transform: uppercase; }
 
   #cgv_title_small {
     margin: 5%;
+    padding-top: 10px;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 10px;
     color: #90a39d;
-    font-size: 20px;
+    font-size: 100%;
     text-align: left;
     text-transform: uppercase; }
 
@@ -1643,6 +1737,16 @@ On appelle la variable à la place de la valeur dans nos class ou id */
     font-family: 'Roboto', sans-serif;
     text-align: justify;
     line-height: 150%; }
+
+  #hr_cgv {
+    width: 85%;
+    height: 1px;
+    background-color: #90a39d;
+    border: none;
+    margin-top: -7px; }
+
+  #cgv_end {
+    margin: 5%; }
 
   /*____________________________________________________________________________________________________PARTIE desktop*/
   /*___________________________________________________________________PRODUCTS_*/
@@ -1745,7 +1849,7 @@ On appelle la variable à la place de la valeur dans nos class ou id */
     display: none; }
 
   /*___________________________________________________________________FOOTER_*/
-  .footer {
+  #footer {
     display: none; }
 
   .foot {
@@ -1758,23 +1862,29 @@ On appelle la variable à la place de la valeur dans nos class ou id */
     display: none; }
 
   /*___________________________________________________________________CONTACT_*/
-  .content_contact {
-    display: none; }
-
-  .back_content_contact {
-    display: none; }
-
-  .h1_contact {
-    display: none; }
-
-  .hrTop_contact {
-    display: none; }
-
-  .form_contact {
-    display: none; }
-
-  .hrInsert_contact {
-    display: none; } }
+  /*  .content_contact{
+      display: none;
+    }
+  
+    .back_content_contact{
+      display: none;
+    }
+  
+    .h1_contact{
+      display: none;
+    }
+  
+    .hrTop_contact{
+      display: none;
+    }
+  
+    .form_contact{
+      display: none;
+    }
+  
+    .hrInsert_contact{
+      display: none;
+    }*/ }
 /*____________________________________________________________________________________________________________________*/
 /*VARIABLES IMPORTÉES*/
 /*VARIABLE*/
@@ -1960,24 +2070,29 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   z-index: 2; }
 
 /*______________________________________PARTIE SMARTPHONE_*/
-.content_contact_ms {
-  display: none; }
+/*.content_contact_ms{
+  display: none;
+}
 
-.back_content_contact_ms {
-  display: none; }
+.back_content_contact_ms{
+  display: none;
+}
 
-.h1_contact_ms {
-  display: none; }
+.h1_contact_ms{
+  display: none;
+}
 
-.hrTop_contact_ms {
-  display: none; }
+.hrTop_contact_ms{
+  display: none;
+}
 
-.form_contact_ms {
-  display: none; }
+.form_contact_ms{
+  display: none;
+}
 
-.hrInsert_contact_ms {
-  display: none; }
-
+.hrInsert_contact_ms{
+  display: none;
+}*/
 /*____________________________________________________________________________________________________________________*/
 /*MEDIAQUERIES*/
 /*@media screen and (max-width: 768px) {

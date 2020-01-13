@@ -86,7 +86,7 @@ ________________________________________________________________________________
             [
                 /*-> envoi de la view du form au fichier twig*/
                 'products' => $products,
-                'action' => $action,
+                'action' => $action
 
             ]);
 
@@ -210,6 +210,10 @@ ________________________________________________________________________________
             /*-> FLUSH => envoie les modifications à la BDD, avant cette action de flush rien n'est rempli dans la base*/
             $entityManager->persist($product);
             $entityManager->flush();
+
+            // message flash de validation
+            $this->addFlash('Success', 'L\'enregistrement a bien été effectué');
+
         }
 
         /*-> je retourne une réponse*/
@@ -256,18 +260,27 @@ ________________________________________________________________________________
             /* -> la méthode handleResquest récupère les infos de la requête*/
             $form->handleRequest($request);
 
+
             /*-> PERSIST => On enregistre l'entité créée*/
             /*-> FLUSH => envoie les modifications à la BDD, avant cette action de flush rien n'est rempli dans la base*/
             $entityManager->persist($update);
             $entityManager->flush();
+
+            /*Permets de revenir à ma list produit en mettant les modifications à jour,
+            retour sur la page liste product avec comme action update, avec passage de parametre action=update*/
+            return $this -> redirectToRoute('ListProducts',[
+                'action' => 'update'
+            ]);
+
         }
 
         /*-> je retourne une réponse*/
+       /* return $this->redirectToRoute('admin/updateProduct.html.twig');*/
         return $this->render('admin/updateProduct.html.twig',
-            [
-                /*-> envoi de la view du form au fichier twig*/
-                'formProductView' => $formProductView
-            ]);
+        [
+            /*-> envoi de la view du form au fichier twig*/
+            'formProductView' => $formProductView
+        ]);
 
     }
 

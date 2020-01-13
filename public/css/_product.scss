@@ -95,6 +95,15 @@
   color:$vertTendre;
   margin:0;
 }
+.product_composition_small_text{
+  @include fontRoboto;
+  letter-spacing: 1px;
+  font-size: 10px;
+  text-align: center;
+  font-weight: bold;
+  color:$vertTendre;
+  margin:0;
+}
 
 .product_description{
   font-size: 15px;

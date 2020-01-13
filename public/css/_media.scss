@@ -1,4 +1,4 @@
-@media screen and (max-width: 600px) {
+@media screen and /*(max-width: 960px)*/(max-width: 640px) /*, screen and (max-height: 700px)*/ {
   body{
     margin:0;
     padding-top:0;
@@ -8,7 +8,7 @@
     display: none;
   }
 
-  .header2{
+  #header2{
     display: none;
   }
 
@@ -435,13 +435,13 @@
   }
 
   .top_ms{
-    display: block;
     height: 30px;
+    display:flex;
     position:fixed;
-    right: 5%;
+    right: 20px;
     top: 80%;
-    margin-right:3%;
-
+    margin-right:30px;
+    z-index: 110;
   }*/
 
   /*___________________________________________________________________FOOTER_*/
@@ -854,3 +854,4 @@
     display: none;
   }*/
 }
+

@@ -41,7 +41,8 @@
 
 
 .menu {
-  @include fontAdam;
+  font-family: Adam, Helvetica, sans-serif;
+  font-weight: bolder;
   letter-spacing: 9px;
   display:flex;
   right: 0;
@@ -52,6 +53,7 @@
 
 .menu a{
   text-decoration: none;
+  color:$kakiColor;
   /*color:#646253;*/
   margin-left: 50px;
 }
@@ -140,7 +142,7 @@
 /*____________________________________________________________________________________________________________________*/
 /*HEADER2*/
 
-.header2{
+#header2{
   height:90px;
   width: 100%;
   display: flex;
@@ -154,12 +156,12 @@
 }
 
 .logo2{
-  width: 100%;
+  width: 180px;
   text-align: center;
 }
 
 .logo2 img{
-  width: 50%;
+  width: 100%;
 }
 
 

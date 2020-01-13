@@ -98,17 +98,20 @@
   @include fontRoboto;
   letter-spacing: 2px;
   margin: 0 20px 50px 20px;
-  width: 25%;
-  height: 500px;
+  width: 300px;
+  /*width: 25%;*/
+  /*height: 500px;*/
   text-overflow: ellipsis;
   overflow: hidden;
+  padding-bottom: 20px;
 }
 
 .product_bloc_nomPdt{
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-left: 10px;
-  margin-bottom: 20px;
+  margin: 0 10px 20px 10px;
+  /*margin-left: 10px;
+  margin-bottom: 20px;*/
   text-transform: uppercase;
   white-space: pre;
   color: $kakiColor;
@@ -118,8 +121,9 @@
   font-size: 15px;
   padding-top: 10px;
   padding-bottom: 20px;
-  margin-left: 10px;
-  margin-bottom: 10px;
+  margin : 0 10px 10px 10px;
+  /*margin-left: 10px;
+  margin-bottom: 10px;*/
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: pre;
@@ -139,7 +143,7 @@
   padding: 10%;*/
 }
 
-.price_ring{
+/*.price_ring{
   background-color: $kakiColor;
   width: 18%;
   height: 11%;
@@ -150,7 +154,18 @@
   display: flex;
   justify-content: center;
   font-size: 15px;
+}*/
+.price_ring{
+  background-color:  #646253;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  margin-left: 3%;
 }
+
 
 .price{
   width: 100%;

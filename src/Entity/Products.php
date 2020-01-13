@@ -42,7 +42,7 @@ class Products
     private $TvaPdt;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=12)
      */
     private $TarifsTtcPdt;
 
@@ -155,12 +155,12 @@ class Products
         return $this;
     }
 
-    public function getTarifsTtcPdt(): ?int
+    public function getTarifsTtcPdt(): ?string
     {
         return $this->TarifsTtcPdt;
     }
 
-    public function setTarifsTtcPdt(int $TarifsTtcPdt): self
+    public function setTarifsTtcPdt(string $TarifsTtcPdt): self
     {
         $this->TarifsTtcPdt = $TarifsTtcPdt;
 

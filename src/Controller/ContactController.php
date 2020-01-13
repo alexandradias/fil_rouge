@@ -37,7 +37,7 @@ class ContactController extends AbstractController
             if ($form->isSubmitted() && $form->isValid()) {
                 $message = (new \Swift_Message('Nouveau message'))
                     ->setFrom($contact->getEmail())
-                    ->setTo('annelamourpatisserie@gmail.com')
+                    ->setTo('annelamourpatisseries@gmail.com')
                     ->setBody(
                         $this->renderView(
                             'user/_mail.html.twig', [

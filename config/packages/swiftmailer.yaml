@@ -1,7 +1,7 @@
 swiftmailer:
     encryption: ssl
-    auth_mode:  login
-    host:      smtp.gmail.com
-    username:  annelamourpatisserie@gmail.com
-    password:  mouche2013&
+    auth_mode: login
+    host: smtp.gmail.com
+    username: annelamourpatisseries@gmail.com
+    password: mouche2013&
     transport: gmail

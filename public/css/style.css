@@ -1,5 +1,12 @@
 @charset "UTF-8";
-/*@import "font";*/
+/*____________________________________________________________________________________________________________________*/
+/*FONT*/
+@font-face {
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype"); }
+@font-face {
+  font-family: 'Minimal';
+  src: url("../font/minimal.otf") format("opentype"); }
 /*____________________________________________________________________________________________________________________*/
 /*BODY*/
 * {
@@ -45,8 +52,8 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   /*@include fontMinimal;*/ }
 
 .menu {
-  font-family: 'Adam';
-  src: url("../font/adam.otf") format("opentype");
+  font-family: Adam, Helvetica, sans-serif;
+  font-weight: bolder;
   letter-spacing: 9px;
   display: flex;
   right: 0;
@@ -56,6 +63,7 @@ On appelle la variable à la place de la valeur dans nos class ou id */
 
 .menu a {
   text-decoration: none;
+  color: #646253;
   /*color:#646253;*/
   margin-left: 50px; }
 
@@ -126,7 +134,7 @@ On appelle la variable à la place de la valeur dans nos class ou id */
 
 /*____________________________________________________________________________________________________________________*/
 /*HEADER2*/
-.header2 {
+#header2 {
   height: 90px;
   width: 100%;
   display: flex;
@@ -139,11 +147,11 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   z-index: 1; }
 
 .logo2 {
-  width: 100%;
+  width: 180px;
   text-align: center; }
 
 .logo2 img {
-  width: 50%; }
+  width: 100%; }
 
 /*____________________________________________________________________________________________________________________*/
 /*HEADER3*/
@@ -269,9 +277,10 @@ ul {
   height: 30px;
   display: flex;
   position: fixed;
-  right: 5%;
+  right: 80px;
   top: 80%;
-  margin-right: 30px; }
+  margin-right: 30px;
+  z-index: 110; }
 
 .top_ms {
   display: none; }
@@ -518,6 +527,15 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  color: #90a39d;
+  margin: 0; }
+
+.product_composition_small_text {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  font-size: 10px;
   text-align: center;
   font-weight: bold;
   color: #90a39d;
@@ -783,16 +801,19 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   font-family: 'Roboto', sans-serif;
   letter-spacing: 2px;
   margin: 0 20px 50px 20px;
-  width: 25%;
-  height: 500px;
+  width: 300px;
+  /*width: 25%;*/
+  /*height: 500px;*/
   text-overflow: ellipsis;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 20px; }
 
 .product_bloc_nomPdt {
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-left: 10px;
-  margin-bottom: 20px;
+  margin: 0 10px 20px 10px;
+  /*margin-left: 10px;
+  margin-bottom: 20px;*/
   text-transform: uppercase;
   white-space: pre;
   color: #646253; }
@@ -801,8 +822,9 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   font-size: 15px;
   padding-top: 10px;
   padding-bottom: 20px;
-  margin-left: 10px;
-  margin-bottom: 10px;
+  margin: 0 10px 10px 10px;
+  /*margin-left: 10px;
+  margin-bottom: 10px;*/
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: pre;
@@ -819,8 +841,8 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   /* margin: 10%;
    padding: 10%;*/ }
 
-.price_ring {
-  background-color: #646253;
+/*.price_ring{
+  background-color: $kakiColor;
   width: 18%;
   height: 11%;
   border-radius: 100%;
@@ -829,7 +851,17 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   padding: 0;
   display: flex;
   justify-content: center;
-  font-size: 15px; }
+  font-size: 15px;
+}*/
+.price_ring {
+  background-color: #646253;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  margin-left: 3%; }
 
 .price {
   width: 100%;
@@ -1135,7 +1167,8 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   width: 100%; }
 
 .img_foot {
-  margin-left: 20px; }
+  margin-left: 20px;
+  width: 100%; }
 
 .cgv {
   font-family: Helvetica,sans-serif;
@@ -1156,7 +1189,7 @@ On appelle la variable à la place de la valeur dans nos class ou id */
 .img_foot_ms {
   display: none; }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
   body {
     margin: 0;
     padding-top: 0; }
@@ -1164,7 +1197,7 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   .header1 {
     display: none; }
 
-  .header2 {
+  #header2 {
     display: none; }
 
   .header3 {
@@ -1539,13 +1572,13 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   }
 
   .top_ms{
-    display: block;
     height: 30px;
+    display:flex;
     position:fixed;
-    right: 5%;
+    right: 20px;
     top: 80%;
-    margin-right:3%;
-
+    margin-right:30px;
+    z-index: 110;
   }*/
   /*___________________________________________________________________FOOTER_*/
   #footer_ms {

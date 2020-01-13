@@ -62,7 +62,9 @@
                     <p class="product_description">{{ product.CompositionPdt }}</p>
                     <p class="product_composition">{{ 'Ses Mensurations' }}</p>
                     <p class="product_description">{{ product.descriptionShortPdt }}</p>
-                    {#<p class="product_tarif">{{ product.TarifsTtcPdt }} €</p>#}
+                    <p class="product_composition">{{ 'Son Tarif' }}</p>
+                    <p class="product_composition_small_text">{{ '(à partir de)' }}</p>
+                    <p class="product_tarif">{{ product.TarifsTtcPdt }} €</p>
 
                     {#<a href="{{ path('productValid', {'id': product.id}) }}">
                         <button type="submit" class="add_button">

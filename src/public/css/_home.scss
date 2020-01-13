@@ -1,0 +1,146 @@
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+@import "variable_mixin";
+
+
+
+
+
+
+/*____________________________________________________________________________________________________________________*/
+/*MAIN*/
+
+.main{
+  width: 100%;
+}
+
+/*_________________________________ SLIDE HOME*/
+.slide{
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.slide img{
+  width: 100%;
+}
+
+.img_home_ms{
+  display: none;
+}
+
+.text_slide{
+  height: 30%;
+  width: 100%;
+  font-size: 25px;
+  text-align: left;
+  color: #959690;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  line-height: 35px;
+  position: absolute;
+  @include fontMinimal;
+}
+
+.slide_products_saison{
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+}
+
+.slide_products_saison img{
+  width: 100%;
+}
+
+.text_slide_products_saison{
+   display: block;
+   height: 20%;
+   width: 100%;
+   font-size: 35px;
+   text-align: left;
+   color: $redColor;
+   padding-left: 5%;
+   padding-bottom: 5%;
+   margin-top: 30px;
+   line-height: 35px;
+   position: absolute;
+   @include fontMinimal;
+   z-index: 6;
+}
+
+.text_slide_products_saison_ms{
+  display: none;
+}
+
+.btn_products_saison {
+  width: 30%;
+  height: 30px;
+  background-color: $redColor;
+  color: white;
+  font-size: 25px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn_products_saison a{
+  text-decoration: none;
+  color:white;
+}
+
+.btn_products_saison a:hover{
+  text-decoration: none;
+  color: $kakiColor;
+}
+
+.btn_products_saison_ms{
+  display: none;
+}
+
+.btn_products_saison_ms a{
+  display: none;
+}
+.btn_products_saison_ms a:hover{
+  display: none;
+}
+
+.portrait{
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.portrait img{
+  width: 100%;
+}
+
+.text_portrait{
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  font-size: 23px;
+  text-align: left;
+  color: white;
+  @include fontMinimal;
+  padding-left: 5%;
+  padding-bottom: 30%;
+  line-height: 30px;
+}
+
+.text_portrait_ms{
+  display: none;
+}
+
+.iframe{
+  margin-bottom: 100px;
+}
+
+
+/*_________________________________ SLIDE HOME END*/

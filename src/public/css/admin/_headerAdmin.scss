@@ -1,0 +1,35 @@
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+@import "variableAdmin";
+
+
+
+/*____________________________________________________________________________________________________________________*/
+/*HEADER*/
+
+.header{
+  height:150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $vertfonceColor;
+  align-items: center;
+  z-index: 1;
+}
+
+.logoAdmin{
+  width: 15%;
+  margin:0;
+}
+
+.logoAdmin img{
+  width: 100%;
+}
+
+.text_header{
+  @include fontRoboto;
+  text-align: right;
+  color:$vertTendre;
+  margin-right: 10%;
+  font-size: 20px;
+}

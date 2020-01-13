@@ -1,0 +1,95 @@
+/*____________________________________________________________________________________________________________________*/
+/*SIDEBAR*/
+
+.sidebar {
+  /*height: calc(100vh - 150px);*/
+  width: 20%;
+  background-color: #959690;
+  font-family: Adam, Helvetica, sans-serif;
+  letter-spacing: 9px;
+  display:flex;
+  position:fixed;
+  right: 0;
+  top: 40%;
+  font-size: 90%;
+  padding:30px;
+}
+
+.sidebar a{
+  text-decoration: none;
+  color:white;
+}
+
+.sidebar a:active{
+  text-decoration: none;
+  color:$redColor;
+}
+
+.sidebar a:visited{
+  text-decoration: none;
+  color:white;
+}
+
+.sidebar a:hover{
+  text-decoration: none;
+  color:$redColor;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.top{
+  height: 30px;
+  display:flex;
+  position:fixed;
+  right: 80px;
+  top: 80%;
+  margin-right:30px;
+  z-index: 110;
+}
+
+.top_ms{
+  display: none;
+}
+
+
+
+
+
+/*____________________________________________________________________________________________________________________*/
+/*SIDEBAR 2*/
+
+.sidebar2 {
+  /*height: calc(100vh - 150px);*/
+  width: 20%;
+  background-color: #959690;
+  font-family: Adam, Helvetica, sans-serif;
+  letter-spacing: 9px;
+  display:flex;
+  position:fixed;
+  right: 0;
+  top: 40%;
+  font-size: 90%;
+  padding:30px;
+}
+
+.sidebar2 a{
+  text-decoration: none;
+  color:white;
+}
+
+.sidebar2 a:active{
+  text-decoration: none;
+  color:#a20000;
+}
+
+.sidebar2 a:visited{
+  text-decoration: none;
+  color:white;
+}
+
+.sidebar2 a:hover{
+  text-decoration: none;
+  color:#a20000;
+}

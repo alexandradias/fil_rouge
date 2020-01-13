@@ -1,0 +1,2197 @@
+@charset "UTF-8";
+/*____________________________________________________________________________________________________________________*/
+/*FONT*/
+@font-face {
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype"); }
+@font-face {
+  font-family: 'Minimal';
+  src: url("../font/minimal.otf") format("opentype"); }
+/*____________________________________________________________________________________________________________________*/
+/*BODY*/
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding-top: 0; }
+
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+/*VARIABLE*/
+/*je crée mes variable pour mon css (feuille de style)
+On appelle la variable à la place de la valeur dans nos class ou id */
+/*$footerColor: rgba(149,150,144,0.4);*/
+/*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/
+/*____________________________________________________________________________________________________________________*/
+/*HEADER1*/
+.header1 {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(149, 150, 144, 0.4);
+  /*background-color: rgba(93,112,110,0.3);*/
+  align-items: center;
+  font-weight: bolder;
+  position: fixed;
+  z-index: 33; }
+
+.logo1 {
+  width: 15%;
+  margin: 0 0 0 5%; }
+
+.logo1 img {
+  width: 100%; }
+
+.text_header1 {
+  text-align: right;
+  color: #959690;
+  margin-right: 10%;
+  font-size: 20px;
+  /*@include fontMinimal;*/ }
+
+.menu {
+  font-family: Adam, Helvetica, sans-serif;
+  font-weight: bolder;
+  letter-spacing: 9px;
+  display: flex;
+  right: 0;
+  /*font-size: 90%;*/
+  padding: 30px;
+  color: #646253; }
+
+.menu a {
+  text-decoration: none;
+  color: #646253;
+  /*color:#646253;*/
+  margin-left: 50px; }
+
+.menu a:active {
+  text-decoration: none;
+  color: #646253; }
+
+.menu a:visited {
+  text-decoration: none;
+  color: #646253; }
+
+.menu a:hover {
+  text-decoration: none;
+  color: #a20000;
+  /*background-color: rgba(255,255,255,0.2);
+  height: 150px;*/ }
+
+.burger {
+  width: 30px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: none;
+  z-index: 99; }
+
+.burger_line {
+  width: 100%;
+  height: 3px;
+  background-color: #646253;
+  margin-bottom: 6px; }
+
+/*.logo_burger{
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo_burger img{
+  width: 100%;
+}*/
+/*____________________________________________________________________________________________________________________*/
+/*MENU ATELIER*/
+.menu_atelier {
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  letter-spacing: 9px;
+  display: flex;
+  right: 0;
+  font-size: 90%;
+  padding: 30px; }
+
+.menu_atelier a {
+  text-decoration: none;
+  color: white;
+  margin-left: 50px; }
+
+.menu_atelier a:active {
+  text-decoration: none;
+  color: white; }
+
+.menu_atelier a:visited {
+  text-decoration: none;
+  color: white; }
+
+.menu_atelier a:hover {
+  text-decoration: none;
+  color: #a20000; }
+
+/*____________________________________________________________________________________________________________________*/
+/*HEADER2*/
+#header2 {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(149, 150, 144, 0.5);
+  /*background-color: rgba(93,112,110,0.7);*/
+  /*background-color: rgba(149,150,144,0.7);*/
+  align-items: center;
+  position: fixed;
+  z-index: 1; }
+
+.logo2 {
+  width: 180px;
+  text-align: center; }
+
+.logo2 img {
+  width: 100%; }
+
+/*____________________________________________________________________________________________________________________*/
+/*HEADER3*/
+.header3 {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.6);
+  /*background-color: rgba(149,150,144,0.3);*/
+  align-items: center;
+  position: fixed;
+  z-index: 1; }
+
+/*____________________________________________________________________________________________________________________*/
+/*HEADER4*/
+.header4 {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(149, 150, 144, 0.5);
+  /*background-color: rgba(93,112,110,0.7);*/
+  /*background-color: rgba(149,150,144,0.7);*/
+  align-items: center;
+  position: fixed;
+  margin: 0 auto;
+  z-index: 1; }
+
+#bloc_white {
+  height: 90px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0; }
+
+/*____________________________________________________________________________________________________________________*/
+/*HEADER5*/
+.header5 {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(149, 150, 144, 0.5);
+  /*background-color: rgba(93,112,110,0.3);*/
+  align-items: center;
+  position: fixed;
+  z-index: 1; }
+
+/*____________________________________________________________________________________________________________________*/
+/*HEADER6*/
+.header6 {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(149, 150, 144, 0.5);
+  /*background-color: rgba(93,112,110,0.7);*/
+  /*background-color: rgba(149,150,144,0.7);*/
+  align-items: center;
+  position: fixed;
+  margin: 0 auto;
+  z-index: 1; }
+
+/*______________________________________PARTIE SMARTPHONE_*/
+#header1_ms {
+  display: none; }
+
+#logo1_ms {
+  display: none; }
+
+/*
+.menu_ms{
+  display: none;
+}
+
+.header2_ms{
+  display: none;
+}
+
+.logo2_ms{
+  display: none;
+}
+
+.bloc_white_ms{
+  display: none;
+}*/
+/*____________________________________________________________________________________________________________________*/
+/*SIDEBAR*/
+.sidebar {
+  /*height: calc(100vh - 150px);*/
+  width: 20%;
+  background-color: #959690;
+  font-family: Adam, Helvetica, sans-serif;
+  letter-spacing: 9px;
+  display: flex;
+  position: fixed;
+  right: 0;
+  top: 40%;
+  font-size: 90%;
+  padding: 30px; }
+
+.sidebar a {
+  text-decoration: none;
+  color: white; }
+
+.sidebar a:active {
+  text-decoration: none;
+  color: #a20000; }
+
+.sidebar a:visited {
+  text-decoration: none;
+  color: white; }
+
+.sidebar a:hover {
+  text-decoration: none;
+  color: #a20000; }
+
+ul {
+  list-style-type: none; }
+
+.top {
+  height: 30px;
+  display: flex;
+  position: fixed;
+  right: 80px;
+  top: 80%;
+  margin-right: 30px;
+  z-index: 110; }
+
+.top_ms {
+  display: none; }
+
+/*____________________________________________________________________________________________________________________*/
+/*SIDEBAR 2*/
+.sidebar2 {
+  /*height: calc(100vh - 150px);*/
+  width: 20%;
+  background-color: #959690;
+  font-family: Adam, Helvetica, sans-serif;
+  letter-spacing: 9px;
+  display: flex;
+  position: fixed;
+  right: 0;
+  top: 40%;
+  font-size: 90%;
+  padding: 30px; }
+
+.sidebar2 a {
+  text-decoration: none;
+  color: white; }
+
+.sidebar2 a:active {
+  text-decoration: none;
+  color: #a20000; }
+
+.sidebar2 a:visited {
+  text-decoration: none;
+  color: white; }
+
+.sidebar2 a:hover {
+  text-decoration: none;
+  color: #a20000; }
+
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+/*VARIABLE*/
+/*je crée mes variable pour mon css (feuille de style)
+On appelle la variable à la place de la valeur dans nos class ou id */
+/*$footerColor: rgba(149,150,144,0.4);*/
+/*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/
+/*____________________________________________________________________________________________________________________*/
+/*MAIN*/
+.main {
+  width: 100%; }
+
+/*_________________________________ SLIDE HOME*/
+.slide {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  align-items: center; }
+
+.slide img {
+  width: 100%; }
+
+.img_home_ms {
+  display: none; }
+
+.text_slide {
+  height: 30%;
+  width: 100%;
+  font-size: 25px;
+  text-align: left;
+  color: #959690;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  line-height: 35px;
+  position: absolute;
+  font-family: 'Minimal';
+  src: url("../font/minimal.otf") format("opentype"); }
+
+.slide_products_saison {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  display: flex; }
+
+.slide_products_saison img {
+  width: 100%; }
+
+.text_slide_products_saison {
+  display: block;
+  height: 20%;
+  width: 100%;
+  font-size: 35px;
+  text-align: left;
+  color: #a20000;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  margin-top: 30px;
+  line-height: 35px;
+  position: absolute;
+  font-family: 'Minimal';
+  src: url("../font/minimal.otf") format("opentype");
+  z-index: 6; }
+
+.text_slide_products_saison_ms {
+  display: none; }
+
+.btn_products_saison {
+  width: 30%;
+  height: 30px;
+  background-color: #a20000;
+  color: white;
+  font-size: 25px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  text-align: center; }
+
+.btn_products_saison a {
+  text-decoration: none;
+  color: white; }
+
+.btn_products_saison a:hover {
+  text-decoration: none;
+  color: #646253; }
+
+.btn_products_saison_ms {
+  display: none; }
+
+.btn_products_saison_ms a {
+  display: none; }
+
+.btn_products_saison_ms a:hover {
+  display: none; }
+
+.portrait {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  align-items: center; }
+
+.portrait img {
+  width: 100%; }
+
+.text_portrait {
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  font-size: 23px;
+  text-align: left;
+  color: white;
+  font-family: 'Minimal';
+  src: url("../font/minimal.otf") format("opentype");
+  padding-left: 5%;
+  padding-bottom: 30%;
+  line-height: 30px; }
+
+.text_portrait_ms {
+  display: none; }
+
+.iframe {
+  margin-bottom: 100px; }
+
+/*_________________________________ SLIDE HOME END*/
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+/*VARIABLE*/
+/*je crée mes variable pour mon css (feuille de style)
+On appelle la variable à la place de la valeur dans nos class ou id */
+/*$footerColor: rgba(149,150,144,0.4);*/
+/*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/
+/*_________________________________ TOP PRODUCT*/
+.slide_product {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  display: flex;
+  align-items: center; }
+
+.slide_product img {
+  width: 100%; }
+
+.text_slide_product {
+  height: 20%;
+  width: 100%;
+  top: 55%;
+  font-size: 25px;
+  text-align: left;
+  color: white;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  line-height: 35px;
+  position: absolute;
+  font-family: 'Minimal';
+  src: url("../font/minimal.otf") format("opentype"); }
+
+.text_product {
+  top: 72%;
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #646253;
+  padding-top: 5%;
+  margin: 0 auto;
+  position: absolute;
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  /*white-space: pre-line;*/ }
+
+.bloc_text_product {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 14px;
+  padding-top: 4px;
+  background-color: rgba(255, 255, 255, 0.7); }
+
+/*_________________________________ PRODUCT*/
+.product_title {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 15px;
+  color: #959690;
+  font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  justify-content: center; }
+
+.bloc_text {
+  vertical-align: top;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+
+.bloc_text a :hover {
+  color: #a20000; }
+
+.product_composition {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  color: #90a39d;
+  margin: 0; }
+
+.product_composition_small_text {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  font-size: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #90a39d;
+  margin: 0; }
+
+.product_description {
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #90a39d;
+  margin: 10px 0 40px 0;
+  white-space: pre-wrap; }
+
+.product_tarif {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #646253; }
+
+.product img {
+  width: 100%;
+  /* margin: 10%;
+   padding: 10%;*/ }
+
+/*.slide_product{
+  width: 100%;
+ !* height: 70%;*!
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.slide_product img{
+  width: 100%;
+}*/
+.add_button {
+  background-color: #5b6f6d;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  font-size: 20px;
+  /*margin-bottom: 200px;*/
+  padding: 5px;
+  width: 100%;
+  margin: 0 auto; }
+
+/*PARTIE VALID DU PRODUCT*/
+/*_______________________________________*/
+.bouton_content1 a button {
+  background-color: #5b6f6d;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  font-size: 20px;
+  padding: 5px;
+  margin: 2px auto;
+  width: 100%; }
+
+.bouton_content2 a button {
+  background-color: #a20000;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  font-size: 20px;
+  padding: 5px;
+  margin: 2px auto;
+  width: 100%; }
+
+.bouton_content1 a :hover {
+  color: #a20000; }
+
+.bouton_content2 a :hover {
+  color: #5b6f6d; }
+
+/*_______________________________________*/
+.back {
+  width: 5%;
+  margin-left: 5%; }
+
+.back img {
+  width: 100%; }
+
+.content a img p {
+  display: flex;
+  margin-top: 5%;
+  width: 100%; }
+
+.content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto; }
+
+.global {
+  margin-top: 2%;
+  margin-bottom: 20%; }
+
+/*PARTIE COMMANDE (ORDER)*/
+/*_______________________________________*/
+.order {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column; }
+
+.content_order {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #90a39d;
+  font-size: 20px;
+  margin-top: 200px;
+  margin-bottom: 0;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: center; }
+
+.content_order2 {
+  width: 50%;
+  font-family: 'Roboto', sans-serif;
+  color: #90a39d;
+  font-size: 20px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: center; }
+
+.content_order2 img {
+  width: 20%; }
+
+/*______________________________________PARTIE SMARTPHONE_*/
+.slide_product_ms {
+  display: none; }
+
+.text_product_ms {
+  display: none; }
+
+.bloc_text_product_ms {
+  display: none; }
+
+.global_ms {
+  display: none; }
+
+.content_ms {
+  display: none; }
+
+.back_ms {
+  display: none; }
+
+.product_composition_ms {
+  display: none; }
+
+.product_description_ms {
+  display: none; }
+
+.bloc_text_ms {
+  display: none; }
+
+.product_composition_ms {
+  display: none; }
+
+.product_description_ms {
+  display: none; }
+
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+/*VARIABLE*/
+/*je crée mes variable pour mon css (feuille de style)
+On appelle la variable à la place de la valeur dans nos class ou id */
+/*$footerColor: rgba(149,150,144,0.4);*/
+/*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/
+/*_________________________________ TOP PRODUCTS*/
+.slide_products {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  display: flex;
+  align-items: center; }
+
+.slide_products img {
+  width: 100%; }
+
+.text_slide_products {
+  height: 20%;
+  width: 100%;
+  top: 55%;
+  font-size: 25px;
+  text-align: left;
+  color: white;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  line-height: 35px;
+  position: absolute;
+  font-family: 'Minimal';
+  src: url("../font/minimal.otf") format("opentype"); }
+
+.text_products {
+  top: 72%;
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #646253;
+  padding-top: 5%;
+  margin: 0 auto;
+  position: absolute;
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  /*white-space: pre-line;*/ }
+
+.bloc_text_products {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 14px;
+  padding-top: 4px;
+  background-color: rgba(255, 255, 255, 0.7); }
+
+/*_________________________________ PRODUCTS*/
+.product_bloc_title {
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  letter-spacing: 20px;
+  color: #959690;
+  font-size: 40px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+  text-transform: uppercase; }
+
+.products {
+  vertical-align: top;
+  /*width: 90%;*/
+  /*margin-top: 20em;*/
+  display: flex;
+  justify-content: space-around;
+  /*align-items: center;*/
+  flex-wrap: wrap;
+  width: 80%; }
+
+.products a {
+  text-decoration: none;
+  color: white; }
+
+.products a :hover {
+  color: #90a39d; }
+
+.product_bloc {
+  vertical-align: top;
+  border: solid 1px #959690;
+  /*@include fontMinimal;*/
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 2px;
+  margin: 0 20px 50px 20px;
+  width: 300px;
+  /*width: 25%;*/
+  /*height: 500px;*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-bottom: 20px; }
+
+.product_bloc_nomPdt {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0 10px 20px 10px;
+  /*margin-left: 10px;
+  margin-bottom: 20px;*/
+  text-transform: uppercase;
+  white-space: pre;
+  color: #646253; }
+
+.product_bloc_description {
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin: 0 10px 10px 10px;
+  /*margin-left: 10px;
+  margin-bottom: 10px;*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre;
+  color: #646253; }
+
+.product_bloc_tarif {
+  /*margin: 0 auto;*/
+  padding: 0;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.product_bloc img {
+  width: 100%;
+  /* margin: 10%;
+   padding: 10%;*/ }
+
+/*.price_ring{
+  background-color: $kakiColor;
+  width: 18%;
+  height: 11%;
+  border-radius: 100%;
+  color: white;
+  margin: 0 10px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+}*/
+.price_ring {
+  background-color: #646253;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  margin-left: 3%; }
+
+.price {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
+.price_ring a {
+  background-color: #646253;
+  width: 100%;
+  border-radius: 100%;
+  color: white;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  font-size: 15px; }
+
+/*___________________________________________________________________PARTIE SMARTPHONE*/
+.products_ms {
+  display: none; }
+
+.products_ms a {
+  display: none; }
+
+.products_ms a :hover {
+  display: none; }
+
+.product_bloc_ms {
+  display: none; }
+
+.price_ms {
+  display: none; }
+
+.product_bloc_nomPdt_ms {
+  display: none; }
+
+.product_bloc_description_ms {
+  display: none; }
+
+.product_bloc_tarif_ms {
+  display: none; }
+
+.product_bloc_ms img {
+  display: none; }
+
+.price_ring_ms {
+  display: none; }
+
+.price_ms {
+  display: none; }
+
+.price_ring_ms a {
+  display: none; }
+
+.slide_products_ms {
+  display: none; }
+
+.slide_products_ms img {
+  display: none; }
+
+/*_________________________________ PRODUCTS END*/
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+/*VARIABLE*/
+/*je crée mes variable pour mon css (feuille de style)
+On appelle la variable à la place de la valeur dans nos class ou id */
+/*$footerColor: rgba(149,150,144,0.4);*/
+/*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/
+/*_________________________________ TOP ATELIERS*/
+.slide_ateliers {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  display: flex;
+  align-items: center; }
+
+.slide_ateliers img {
+  width: 100%; }
+
+.text_slide_ateliers {
+  height: 20%;
+  width: 100%;
+  top: 55%;
+  font-size: 25px;
+  text-align: left;
+  color: white;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  line-height: 35px;
+  position: absolute;
+  font-family: 'Minimal';
+  src: url("../font/minimal.otf") format("opentype"); }
+
+.text_ateliers {
+  top: 72%;
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #646253;
+  padding-top: 5%;
+  margin: 0 auto;
+  position: absolute;
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  /*white-space: pre-line;*/ }
+
+.bloc_text_ateliers {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 14px;
+  padding-top: 4px;
+  background-color: rgba(255, 255, 255, 0.7); }
+
+/*_________________________________ ATELIERS*/
+.ateliers {
+  vertical-align: top;
+  /*width: 90%;*/
+  /*margin-top: 20em;*/
+  display: flex;
+  justify-content: space-around;
+  /*align-items: center;*/
+  flex-wrap: wrap;
+  width: 80%; }
+
+.ateliers a {
+  text-decoration: none; }
+
+.ateliers a :hover {
+  color: #90a39d; }
+
+.product_bloc_title_atelier {
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  letter-spacing: 20px;
+  color: #959690;
+  font-size: 40px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+  text-transform: uppercase; }
+
+.product_bloc_atelier {
+  vertical-align: top;
+  border: solid 1px #959690;
+  /*@include fontMinimal;*/
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 2px;
+  margin: 0 20px 50px 20px;
+  width: 25%;
+  height: 500px;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.product_bloc_atelier a {
+  color: #646253; }
+
+.product_bloc_nomPdt_atelier {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  white-space: pre; }
+
+.product_bloc_description_short_atelier {
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre; }
+
+.price_ring_atelier {
+  background-color: #646253;
+  width: 18%;
+  height: 11%;
+  border-radius: 100%;
+  color: white;
+  margin: 0 10px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 15px; }
+
+.price_atelier {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white; }
+
+.price_atelier a {
+  color: white; }
+
+.price_ring_atelier {
+  background-color: #646253;
+  /*width: 100%;*/
+  text-decoration: none;
+  border-radius: 100%;
+  color: white;
+  margin: 0 10px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 15px; }
+
+.price_ring_atelier a :hover {
+  color: #90a39d; }
+
+.product_bloc_tarif_atelier {
+  margin: O auto;
+  padding: 0;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.product_bloc_atelier img {
+  width: 100%;
+  /* margin: 10%;
+   padding: 10%;*/ }
+
+/*_________________________________ SLIDE CONTACT*/
+.contact_content {
+  width: 100%;
+  border-style: none;
+  /*display: flex;
+  justify-content: space-between;
+  align-items: center;*/ }
+
+.contact {
+  /*border:solid 2px black;*/
+  text-align: center;
+  font-family: Adam, Helvetica, sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding-top: 150px; }
+
+.contact p {
+  font-family: Adam, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 15px; }
+
+#nom {
+  padding: 10px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 20px;
+  border-style: none;
+  display: inline-block;
+  text-align: left;
+  height: 100%; }
+
+hr {
+  width: 70%; }
+
+/*_________________________________ SLIDE CONTACT END*/
+/*//___________________________________________________________________________
+//FORMULAIRE*/
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+
+.form_content {
+  font-family: Adam, Helvetica, sans-serif;
+  margin: 50px;
+  width: 100%;
+  border-style: none; }
+
+/*_________________________________ FORMULAIRE END*/
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+/*VARIABLE*/
+/*je crée mes variable pour mon css (feuille de style)
+On appelle la variable à la place de la valeur dans nos class ou id */
+/*$footerColor: rgba(149,150,144,0.4);*/
+/*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/
+/*____________________________________________________________________________________________________________________*/
+/*FOOTER*/
+#footer {
+  margin: 0;
+  padding: 0;
+  height: 80px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype"); }
+
+.foot {
+  display: flex;
+  width: 15%; }
+
+.foot img {
+  width: 100%; }
+
+.img_foot {
+  margin-left: 20px;
+  width: 100%; }
+
+.cgv {
+  font-family: Helvetica,sans-serif;
+  font-size: 10px;
+  color: #90a39d;
+  left: 0; }
+
+/*_________________________________ FOOTER END*/
+#footer_ms {
+  display: none; }
+
+.foot_ms {
+  display: none; }
+
+.foot_ms img {
+  display: none; }
+
+.img_foot_ms {
+  display: none; }
+
+@media screen and (max-width: 640px) {
+  body {
+    margin: 0;
+    padding-top: 0; }
+
+  .header1 {
+    display: none; }
+
+  #header2 {
+    display: none; }
+
+  .header3 {
+    display: none; }
+
+  .header4 {
+    display: none; }
+
+  #media_display {
+    display: none; }
+
+  .burger {
+    display: block; }
+
+  .sidebar {
+    width: 80%;
+    right: 0;
+    top: 0;
+    z-index: 99; }
+
+  .img_home_ml {
+    display: none; }
+
+  .img_home_ms {
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    display: flex;
+    align-items: center; }
+
+  .img_home_ms img {
+    width: 100%; }
+
+  .text_slide {
+    display: none;
+    /*font-size: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: $kakiColor;
+    padding: 55px;
+    justify-content: center;
+    top: 10%;
+    z-index: 3;*/ }
+
+  .text_slide_products_saison {
+    display: none; }
+
+  .text_slide_products_saison_ms {
+    display: block;
+    height: 20%;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    color: #a20000;
+    padding: 0;
+    margin-top: 350px;
+    line-height: 40px;
+    position: absolute;
+    font-family: 'Minimal';
+    src: url("../font/minimal.otf") format("opentype");
+    z-index: 6; }
+
+  .btn_products_saison {
+    display: none; }
+
+  .btn_products_saison a {
+    display: none; }
+
+  .btn_products_saison a:hover {
+    display: none; }
+
+  .btn_products_saison_ms {
+    display: block;
+    width: 80%;
+    height: 40px;
+    background-color: #a20000;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto; }
+
+  .btn_products_saison_ms a {
+    display: block;
+    text-decoration: none;
+    color: white; }
+
+  .text_portrait {
+    display: none; }
+
+  .text_portrait_ms {
+    display: block;
+    /*height: 20%;*/
+    width: 100%;
+    position: absolute;
+    font-size: 18px;
+    text-align: justify;
+    color: black;
+    margin-top: 200px;
+    font-family: 'Minimal';
+    src: url("../font/minimal.otf") format("opentype");
+    padding-left: 20%;
+    padding-right: 20%;
+    line-height: 20px;
+    z-index: 7; }
+
+  .btn_products_saison_ms a:hover {
+    display: block;
+    text-decoration: none;
+    color: #646253; }
+
+  /*__________________________________________________________________PRODUCTS__*/
+  .slide_products_ms {
+    display: block;
+    height: 100%;
+    position: relative;
+    align-items: center;
+    top: 0; }
+
+  .slide_products_ms img {
+    display: block;
+    margin-top: -1%;
+    width: 100%; }
+
+  .text_products_ms {
+    display: block;
+    top: 72%;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    color: #646253;
+    padding-top: 5%;
+    margin: 0 auto;
+    position: absolute;
+    font-family: 'Adam';
+    src: url("../font/adam.otf") format("opentype");
+    letter-spacing: 10px;
+    text-transform: uppercase; }
+
+  .bloc_text_products_ms {
+    display: block;
+    height: 40px;
+    width: 100%;
+    margin-top: 10%;
+    background-color: rgba(255, 255, 255, 0.7); }
+
+  .product_bloc_title_ms {
+    display: block;
+    font-family: 'Adam';
+    src: url("../font/adam.otf") format("opentype");
+    letter-spacing: 20px;
+    color: #959690;
+    font-size: 40px;
+    margin-bottom: 5%;
+    margin-top: 10%;
+    text-align: center;
+    text-transform: uppercase; }
+
+  .products_ms {
+    display: block;
+    width: 100%;
+    text-decoration: none; }
+
+  .products_ms a {
+    display: block;
+    text-decoration: none; }
+
+  .products_ms a :hover {
+    display: block; }
+
+  .product_bloc_ms {
+    display: block;
+    /*border:solid 1px #959690;*/
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    width: 100%;
+    /*height: 600px;*/
+    text-overflow: ellipsis;
+    overflow: hidden; }
+
+  .product_bloc_ms img {
+    display: block;
+    width: 100%; }
+
+  .product_bloc_nomPdt_ms {
+    display: block;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    white-space: pre;
+    color: #646253; }
+
+  .product_bloc_description_ms {
+    display: block;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre;
+    color: #646253; }
+
+  .price_ring_ms {
+    display: block;
+    background-color: #646253;
+    width: 100%;
+    height: 30%;
+    color: white;
+    padding: 0;
+    margin: 0px 0px 20px 0px;
+    text-align: center;
+    font-size: 30px; }
+
+  .price_ms {
+    display: block;
+    width: 100%; }
+
+  .price_ring_ms a {
+    display: block;
+    background-color: #646253;
+    width: 100%;
+    border-radius: 100%;
+    color: white;
+    margin: 0 10px;
+    justify-content: center;
+    font-size: 15px; }
+
+  /*___________________________________________________________________PRODUCT_*/
+  .slide_product_ms {
+    display: block;
+    width: 100%;
+    position: relative; }
+
+  .slide_product_ms img {
+    display: block;
+    width: 140%; }
+
+  .text_product_ms {
+    display: block;
+    top: 72%;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #646253;
+    padding-top: 5%;
+    margin: 0 auto;
+    position: absolute;
+    font-family: 'Adam';
+    src: url("../font/adam.otf") format("opentype");
+    letter-spacing: 15px;
+    text-transform: uppercase; }
+
+  .bloc_text_product_ms {
+    display: block;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 14px;
+    padding-top: 4px;
+    background-color: rgba(255, 255, 255, 0.7); }
+
+  .global_ms {
+    display: block;
+    margin-top: 2%;
+    /*margin-bottom: 20%;*/ }
+
+  .content_ms {
+    display: block;
+    width: 100%;
+    margin: 0 auto; }
+
+  .content_ms a img p {
+    display: block;
+    margin-top: 5%;
+    margin-bottom: 0;
+    width: 100%; }
+
+  .content_ms p {
+    margin-bottom: 0; }
+
+  .back_ms {
+    display: block;
+    width: 10%;
+    margin: 0 auto;
+    padding-top: 15%;
+    z-index: 20; }
+
+  .back_ms img {
+    display: block;
+    width: 100%; }
+
+  .product_composition_ms {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    color: #90a39d;
+    margin-top: 10%;
+    padding: 1%; }
+
+  .bloc_text_ms p {
+    margin-bottom: 0; }
+
+  .product_description_ms {
+    display: block;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #90a39d;
+    margin-top: 2%;
+    white-space: pre-wrap;
+    padding: 2%; }
+
+  .bloc_text_ms {
+    display: block;
+    vertical-align: top;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    width: 100%;
+    text-align: center; }
+
+  .bloc_text_ms a :hover {
+    display: block; }
+
+  /*___________________________________________________________________LOGO_HOME_*/
+  #header1_ms {
+    display: block;
+    /*width: calc(100vw - 30px);*/
+    width: 100%;
+    padding-top: 1%;
+    /* position: fixed;
+     padding-top: 1%;
+     padding-bottom: 1%;
+     padding-left: 2%;
+     background-color: rgba(255,255,255,0.7);
+     z-index: 33;*/ }
+
+  #logo1_ms {
+    display: block;
+    width: 100%;
+    margin-top: -1%;
+    position: fixed;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    /* padding-left: 2%;*/
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 33; }
+
+  #logo1_ms img {
+    display: block;
+    top: 0;
+    width: 35%;
+    margin-left: 33%;
+    z-index: 33; }
+
+  /*___________________________________________________________________TOP_ARROW_*/
+  /*.top{
+    display: none;
+  }
+
+  .top_ms{
+    height: 30px;
+    display:flex;
+    position:fixed;
+    right: 20px;
+    top: 80%;
+    margin-right:30px;
+    z-index: 110;
+  }*/
+  /*___________________________________________________________________FOOTER_*/
+  #footer_ms {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /*margin:0;
+    padding:0;*/
+    /*height: 20%;*/
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: fixed;
+    bottom: -0.5%;
+    z-index: 50;
+    /*left: 70%;*/
+    /* @include centreImage;*/
+    /* @include fontAdam;*/ }
+
+  .foot_ms {
+    display: inline-flex;
+    width: 50%;
+    margin: 1%;
+    /*padding-bottom: 1%;*/ }
+
+  .foot_ms img {
+    display: block;
+    width: 100%;
+    padding: 15%;
+    /*margin: 10%;*/
+    /*padding-bottom: 10%;*/ }
+
+  .img_foot_ms {
+    display: block;
+    text-align: center;
+    /*margin-left:20px;*/ }
+
+  .img_foot_ms img {
+    display: block; }
+
+  /*___________________________________________________________________CONTACT_*/
+  #content_contact_ms {
+    display: block;
+    width: 100%;
+    /*justify-content: center;
+    align-items: center;*/
+    flex-direction: column;
+    color: #5b6f6d;
+    margin-bottom: 100px;
+    /*z-index: 100;*/ }
+
+  #content_contact_ms button {
+    display: block;
+    width: 100%; }
+
+  #back_content_contact_ms {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    /*z-index: 100;*/ }
+
+  #back_content_contact_ms img {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    /*z-index: 100;*/ }
+
+  #h1_contact_ms {
+    margin: 2% 0 0 0;
+    padding-top: 25%;
+    padding-bottom: 5%; }
+
+  #hrInsert_contact {
+    width: 100%;
+    height: 1px;
+    background-color: #90a39d;
+    border: none;
+    margin: 0;
+    /*margin-top: 30px;*/
+    /*margin-bottom: 30px;*/ }
+
+  #hrTop_contact_ms {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #a0b2a4;
+    border: none;
+    margin-top: -7px;
+    /* z-index: 100;*/ }
+
+  #form_contact_ms {
+    display: block;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-family: 'Roboto', sans-serif;
+    /*z-index: 100;*/ }
+
+  #contact_Nom {
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    height: 100px; }
+
+  #contact_Prenom {
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    height: 100px; }
+
+  #contact_Email {
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    height: 100px; }
+
+  #contact_Message {
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    height: 200px; }
+
+  #contact_Envoyer {
+    text-align: center;
+    background-color: #a20000;
+    margin: 0 auto;
+    width: 10%; }
+
+  .form_content_submit {
+    font-family: 'Adam';
+    src: url("../font/adam.otf") format("opentype");
+    color: white;
+    text-align: center;
+    padding: 6px;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    margin-top: 50px;
+    background-color: #5b6f6d;
+    border-radius: 3px;
+    width: 100%; }
+
+  /*___________________________________________________________________MODAL ENVOI MAIL*/
+  #modal_ms {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    display: flex; }
+
+  #content_modal_ms {
+    background-color: #a0b2a4;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; }
+
+  /*___________________________________________________________________CGV*/
+  #CGV {
+    width: 100%; }
+
+  #cgv_title {
+    display: block;
+    padding-top: 90px;
+    padding-bottom: 30px;
+    margin: 0;
+    font-family: 'Adam';
+    src: url("../font/adam.otf") format("opentype");
+    letter-spacing: 10px;
+    color: #646253;
+    font-size: 130%;
+    text-align: center;
+    text-transform: uppercase; }
+
+  #cgv_title_small {
+    margin: 5%;
+    padding-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 10px;
+    color: #90a39d;
+    font-size: 100%;
+    text-align: left;
+    text-transform: uppercase; }
+
+  #cgv_content {
+    margin: 5%;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    line-height: 150%; }
+
+  #hr_cgv {
+    width: 85%;
+    height: 1px;
+    background-color: #90a39d;
+    border: none;
+    margin-top: -7px; }
+
+  #cgv_end {
+    margin: 5%; }
+
+  /*____________________________________________________________________________________________________PARTIE desktop*/
+  /*___________________________________________________________________PRODUCTS_*/
+  .products {
+    display: none; }
+
+  .products a {
+    display: none; }
+
+  .products a :hover {
+    display: none; }
+
+  .product_bloc {
+    display: none; }
+
+  .price {
+    display: none; }
+
+  .product_bloc_nomPdt {
+    display: none; }
+
+  .product_bloc_description {
+    display: none; }
+
+  .product_bloc_tarif {
+    display: none; }
+
+  .product_bloc img {
+    display: none; }
+
+  .product_bloc_title {
+    display: none; }
+
+  .price_ring {
+    display: none; }
+
+  .price {
+    display: none; }
+
+  .price_ring a {
+    display: none; }
+
+  .slide_products {
+    display: none; }
+
+  /*___________________________________________________________________PRODUCT_*/
+  .slide_product {
+    display: none; }
+
+  .text_product {
+    display: none; }
+
+  .bloc_text_product {
+    display: none; }
+
+  .global {
+    display: none; }
+
+  .content {
+    display: none; }
+
+  .back {
+    display: none; }
+
+  .product_composition {
+    display: none; }
+
+  .product_description {
+    display: none; }
+
+  .bloc_text {
+    display: none; }
+
+  .product_composition {
+    display: none; }
+
+  .product_description {
+    display: none; }
+
+  /*___________________________________________________________________LOGO_HOME_*/
+  .header1 {
+    display: none; }
+
+  .logo1 {
+    display: none; }
+
+  .logo1 img {
+    display: none; }
+
+  .menu {
+    display: none; }
+
+  .header2 {
+    display: none; }
+
+  .logo2 {
+    display: none; }
+
+  #bloc_white {
+    display: none; }
+
+  /*___________________________________________________________________FOOTER_*/
+  #footer {
+    display: none; }
+
+  .foot {
+    display: none; }
+
+  .img_foot {
+    display: none; }
+
+  .img_foot img {
+    display: none; }
+
+  /*___________________________________________________________________CONTACT_*/
+  /*  .content_contact{
+      display: none;
+    }
+  
+    .back_content_contact{
+      display: none;
+    }
+  
+    .h1_contact{
+      display: none;
+    }
+  
+    .hrTop_contact{
+      display: none;
+    }
+  
+    .form_contact{
+      display: none;
+    }
+  
+    .hrInsert_contact{
+      display: none;
+    }*/ }
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+/*VARIABLE*/
+/*je crée mes variable pour mon css (feuille de style)
+On appelle la variable à la place de la valeur dans nos class ou id */
+/*$footerColor: rgba(149,150,144,0.4);*/
+/*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/
+/*____________________________________________________________________________________________________________________*/
+/*CGV*/
+.CGV {
+  width: 78%;
+  margin: 0;
+  padding-top: 50px; }
+
+.cgv_title {
+  padding-top: 200px;
+  padding-bottom: 30px;
+  margin: 0;
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  letter-spacing: 20px;
+  color: #646253;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.cgv_title_small {
+  margin: 50px 0 50px 100px;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 10px;
+  color: #90a39d;
+  font-size: 20px;
+  text-align: left;
+  text-transform: uppercase; }
+
+.cgv_content {
+  margin: 0 0 0 100px;
+  font-family: 'Roboto', sans-serif;
+  text-align: justify;
+  line-height: 150%; }
+
+.hr_cgv {
+  width: 85%;
+  height: 1px;
+  background-color: #90a39d;
+  border: none;
+  margin-top: -7px; }
+
+#cgv_end {
+  padding-bottom: 100px; }
+
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+/*VARIABLE*/
+/*je crée mes variable pour mon css (feuille de style)
+On appelle la variable à la place de la valeur dans nos class ou id */
+/*$footerColor: rgba(149,150,144,0.4);*/
+/*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/
+/*//___________________________________________________________________________
+//FORMULAIRE CONTACT*/
+.content_contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #5b6f6d;
+  margin-bottom: 100px; }
+
+.form-contact {
+  font-family: 'Roboto', sans-serif; }
+
+.form_content {
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 50%; }
+
+.form_content_submit {
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  color: white;
+  text-align: center;
+  padding: 6px;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  margin-top: 50px;
+  background-color: #5b6f6d;
+  border-radius: 3px;
+  width: 800px; }
+
+.form_content_submit:hover {
+  background-color: #a20000; }
+
+.form_content_label {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 50%;
+  text-transform: uppercase; }
+
+#contact_Nom {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  width: 100%;
+  height: 100px; }
+
+#contact_Prenom {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  width: 100%;
+  height: 100px; }
+
+#contact_Email {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  width: 100%;
+  height: 100px; }
+
+#contact_Message {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  width: 100%;
+  height: 200px; }
+
+#contact_Envoyer {
+  text-align: center;
+  background-color: #a20000;
+  margin: 0 auto; }
+
+.hrInsert_contact {
+  width: 800px;
+  height: 1px;
+  background-color: #90a39d;
+  border: none;
+  /*margin-top: 30px;*/
+  /*margin-bottom: 30px;*/ }
+
+.hrTop_contact {
+  width: 800px;
+  height: 1px;
+  background-color: #a0b2a4;
+  border: none;
+  margin-top: -7px; }
+
+.back_content_contact {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.back_content_contact img {
+  width: 30%;
+  margin-left: 0; }
+
+.h1_contact {
+  font-family: 'Adam';
+  src: url("../font/adam.otf") format("opentype");
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  color: #646253;
+  margin-bottom: 30px;
+  margin-top: 200px; }
+
+.modal {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  display: flex; }
+
+.content_modal {
+  background-color: #a0b2a4;
+  margin: 0 auto;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; }
+
+/*______________________________________PARTIE SMARTPHONE_*/
+/*.content_contact_ms{
+  display: none;
+}
+
+.back_content_contact_ms{
+  display: none;
+}
+
+.h1_contact_ms{
+  display: none;
+}
+
+.hrTop_contact_ms{
+  display: none;
+}
+
+.form_contact_ms{
+  display: none;
+}
+
+.hrInsert_contact_ms{
+  display: none;
+}*/
+/*____________________________________________________________________________________________________________________*/
+/*MEDIAQUERIES*/
+/*@media screen and (max-width: 768px) {
+  .header1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    display: block;
+  }*/
+  /*.header1 {
+
+    display:block;
+    height:50px;
+  }
+
+  .menu{
+    display:none;
+  }
+
+  .logo1{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo1 img{
+    width: 10%;
+  }
+
+  .header2{
+    display:block;
+  }
+
+  .logo2{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo2 img{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .bloc_white{
+    height:20px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top:0;
+  }
+
+  .sidebar{
+    display:none;
+  }
+
+  .top{
+    display:none;
+  }
+}*/
+
+/*# sourceMappingURL=style.css.map */

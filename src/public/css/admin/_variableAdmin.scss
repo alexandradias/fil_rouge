@@ -1,0 +1,47 @@
+/*VARIABLE*/
+
+/*je crée mes variables pour mon css (feuille de style)
+On appelle la variable à la place de la valeur dans nos class ou id */
+
+$footerColor: rgba(255,255,255,0.2);
+/*$footerColor: rgba(149,150,144,0.4);*/
+$headerColor:rgba(93,112,110,0.3);
+$redColor: #a20000;
+$kakiColor: #646253;
+$vertfonceColor: #5b6f6d;
+$vertTendre:#90a39d;
+$vertClair: #a0b2a4;
+
+
+@mixin fontAdam {
+  font-family: 'Adam';
+  src:url('../font/adam.otf') format('opentype');
+}
+
+@mixin fontRoboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+@mixin fontBeth {
+  font-family: 'Beth Ellen', cursive;
+}
+
+@mixin fontMinimal {
+  font-family: 'Minimal';
+  src:url('../font/minimal.otf') format('opentype');
+}
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin centreImage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/

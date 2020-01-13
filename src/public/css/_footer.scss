@@ -1,0 +1,63 @@
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+@import "variable_mixin";
+
+
+
+
+/*____________________________________________________________________________________________________________________*/
+/*FOOTER*/
+
+#footer{
+  margin:0;
+  padding:0;
+  height: 80px;
+  width: 100%;
+  background-color: $footerColor;
+  position: fixed;
+  bottom: 0;
+  @include centreImage;
+  @include fontAdam;
+}
+
+.foot{
+  display: flex;
+  width: 15%;
+}
+
+.foot img{
+  width: 100%;
+}
+
+.img_foot{
+  margin-left:20px;
+  width: 100%;
+}
+
+.cgv{
+  font-family: Helvetica,sans-serif;
+  font-size: 10px;
+  color:#90a39d;
+  left:0;
+}
+
+
+/*_________________________________ FOOTER END*/
+
+
+
+#footer_ms{
+  display: none;
+}
+
+.foot_ms{
+  display: none;
+}
+
+.foot_ms img{
+  display: none;
+}
+
+.img_foot_ms{
+  display: none;
+}

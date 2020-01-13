@@ -1,0 +1,189 @@
+/*____________________________________________________________________________________________________________________*/
+/*VARIABLES IMPORTÉES*/
+@import "variableAdmin";
+
+
+
+
+/*___________________________________________________________________________
+//LIST PRODUCTS*/
+#table td{
+  vertical-align: middle;
+}
+
+.table{
+  margin-left:auto;
+  margin-right:auto;
+  /* border: solid 2px black;*/
+  width:60%;
+}
+
+.table tr{
+  border:0;
+  padding: 0;
+  /* @include fontMinimal;
+   letter-spacing: 2px;
+   width: 100%;*/
+}
+
+
+.table td{
+  border: 0;
+}
+
+.table img{
+  width: 60%;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+
+.tr{
+  @include fontRoboto;
+  margin:0;
+  padding: 0;
+}
+
+
+/*___________________________________________________________________________
+//FORMULAIRE updateproduct*/
+
+.h1Update{
+  @include fontAdam;
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  color: $kakiColor;
+  margin-bottom: 30px;
+}
+
+.hrTopUpdate{
+  width: 800px;
+  height: 1px;
+  background-color: $vertClair;
+  border:none;
+  margin-top: -7px;
+}
+
+.update_nomPdt{
+  @include fontRoboto;
+  text-transform: uppercase;
+  font-size: 18px;
+
+  /*width: 5%;*/
+}
+
+.update_description{
+  @include fontRoboto;
+  font-size: 15px;
+  width: 40%;
+}
+
+.update_tarif{
+  @include fontRoboto;
+  font-size: 15px;
+}
+
+.icon_update{
+  width: 40px;
+}
+
+.icon_update img{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.icon_valid{
+  width: 100%;
+  align-items: center;
+}
+
+.form_update{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* margin-left: 400px;*/
+  //border:solid 2px black;
+}
+
+.hrInsert_update{
+  width: 800px;
+  height: 1px;
+  background-color: $vertTendre;
+  border:none;
+  /*margin-top: 30px;*/
+  /*margin-bottom: 30px;*/
+}
+
+/*___________________________________________________________________________
+//FORMULAIRE deleteproduct*/
+
+
+
+.h1Delete{
+  @include fontAdam;
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  color: $kakiColor;
+  margin-bottom: 30px;
+}
+
+.hrTopDelete{
+  width: 800px;
+  height: 1px;
+  background-color: $vertClair;
+  border:none;
+  margin-top: -7px;
+}
+
+.icon_delete{
+  width: 70px;
+}
+
+.icon_delete img{
+  width: 100%;
+  margin-left: 10px;
+  margin-top: 0;
+}
+
+.modal_admin{
+  color: white;
+  @include fontRoboto;
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+}
+
+
+.content_modal_admin{
+  background-color: $vertClair;
+  margin: 0 auto;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translateX(-50%);
+  z-index: 2;
+}
+
+.btn_confirm{
+  background-color: $redColor;
+  color: white;
+  border-color: $redColor;
+}
+
+.btn_close{
+  background-color: $vertClair;
+  color: white;
+  border-color: $vertClair;
+}
+
+
+
+
+

@@ -1,0 +1,91 @@
+/*____________________________________________________________________________________________________________________*/
+/*MEDIAQUERIES ADMIN*/
+
+
+
+/*_______HOME ADMIN________*/
+
+/*FORMAT PHONE*/
+@media screen and (max-width: 780px) {
+  .header{
+    height:100px;
+  }
+
+  .logoAdmin{
+    width: 30%;
+    margin:0;
+  }
+
+  .logoAdmin img{
+    width: 100%;
+  }
+
+  .insert{
+    width: 40%;
+    margin: 20px;
+  }
+
+  .insert img{
+    margin-bottom: 30px;
+  }
+
+  .top_admin{
+    right: 20%;
+  }
+}
+
+
+/*ARROW IPAD*/
+@media only screen and (min-width : 800px) and (max-width: 1024px) {
+
+  .top_admin{
+    right: 10%;
+  }
+}
+
+
+/*FORM INSERT PRODUCT*/
+
+/*FORMAT PHONE*/
+@media screen and (max-width: 780px) {
+  .form_content{
+    width: 80%;
+  }
+
+  .form_content_label{
+    width: 80%;
+  }
+
+  .h1{
+    @include fontAdam;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .back_content img{
+    width: 20%;
+  }
+
+  .mainAdmin{
+    padding: 30px 0;
+  }
+
+  .foot_line{
+    text-align: center;
+    font-size: small;
+    margin: 0;
+  }
+}
+
+
+/*FORMAT IPAD*/
+@media only screen and (min-width : 800px) and (max-width: 1024px) {
+
+  .form_content{
+    width: 70%;
+  }
+
+  .form_content_label{
+    width: 70%;
+  }
+}

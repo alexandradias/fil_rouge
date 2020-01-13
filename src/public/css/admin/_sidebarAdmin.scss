@@ -1,0 +1,58 @@
+/*____________________________________________________________________________________________________________________*/
+/*SIDEBAR*/
+
+.sidebar {
+  /*height: calc(100vh - 150px);*/
+  background-color: #959690;
+  font-family: Adam, Helvetica, sans-serif;
+  letter-spacing: 9px;
+  display:flex;
+  position:fixed;
+  right: 0;
+  top: 50%;
+  font-size: 90%;
+  padding:30px;
+}
+
+.sidebar a{
+  text-decoration: none;
+  color:white;
+}
+
+.sidebar a:active{
+  text-decoration: none;
+  color:#a20000;
+}
+
+.sidebar a:visited{
+  text-decoration: none;
+  color:white;
+}
+
+.sidebar a:hover{
+  text-decoration: none;
+  color:#a20000;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.top_admin{
+  height: 30px;
+  display:flex;
+  position:fixed;
+  right: 5%;
+  top: 80%;
+  margin-right:30px;
+}
+
+.down_admin{
+  height: 30px;
+  display:flex;
+  position:fixed;
+  right: 5%;
+  top: 85%;
+  margin-right:30px;
+}
+

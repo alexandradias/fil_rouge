@@ -1,59 +1,130 @@
 {#la … extends me permets d'appeler le fichier partiel qui regroupe le 'header' et 'footer' présent sur toutes les pages de mon site#}
-{% extends 'baseUser/base_products.html.twig' %}
+{% extends 'baseUser/base.html.twig' %}
 
     {# j'intègre le contenu de ma page entre le 'block' et le 'endblock'#}
      {% block content %}
 
 
+          <section>
+               <div class="slide_products" >
 
-          <div class="slide_products">
+                    <div class="text_products">
+                         <div class="bloc_text_products">
+                              {{categorie}}
+                         </div>
+                    </div>
+                    <div>
 
-               <div class="text_products">
-                    <div class="bloc_text_products">
-                         {{categorie}}
+                         {% if categorie=="patisseries"%}
+                              <img src="{{ asset('assets/img/slide_patisserie.jpg') }}" alt="slide_patisseries_section"/>
+
+                         {% elseif categorie=="chocolats" %}
+                              <img src="{{ asset('assets/img/slide_chocolat.jpg') }}" alt="slide_chocolats_section"/>
+
+                         {% elseif categorie=="buches" %}
+                              <img src="{{ asset('assets/img/slide_buche.jpg') }}" alt="slide_buches_section"/>
+
+                         {% endif %}
+
+                       {#  {% switch categorie %}
+                              {% case "patisseries" %}
+                                   <img src="{{ asset('assets/img/slide1.png') }}" alt="slide_patisseries_section"/>
+                              {% case "chocolats" %}
+                                   <img src="{{ asset('assets/img/slide2.png') }}" alt="slide_chocolats_section"/>
+                              {% case "buches" %}
+                              <img src="{{ asset('assets/img/slide3.png') }}" alt="slide_buches_section"/>
+                         {% endswitch %}#}
+
+                         {#<img src="{{ asset('assets/img/slide1.jpg') }}" alt="slide_patisserie_chocolat_home"/>#}
                     </div>
                </div>
 
-               <p class="text_slide_products">Lorem ipsum dolor sit amet, <br>
-                    consectetur adipisicing elit.<br>
-                    Ab accusamus alias assumenda aut <br>
-                    blanditiis debitis deserunt digniss.
-               </p>
-               <div>
-                    <img src="{{ asset('assets/img/T2.jpg') }}" alt="slide_patisserie_chocolat_home"/>
+               <div class="product_bloc_title"></div>
+
+               {#____________________________________________________________________________________PARTIE SMARTPHONE#}
+
+               <div class="slide_products_ms" >
+
+                    <div class="text_products_ms">
+                         <div class="bloc_text_products_ms">
+                              {{categorie}}
+                         </div>
+                    </div>
+                    <div>
+
+                         {% if categorie=="patisseries"%}
+                              <img src="{{ asset('assets/img/slide_patisserie_ms.jpg') }}" alt="slide_patisseries_section"/>
+
+                         {% elseif categorie=="chocolats" %}
+                              <img src="{{ asset('assets/img/slide_chocolat_ms.jpg') }}" alt="slide_chocolats_section"/>
+
+                         {% elseif categorie=="buches" %}
+                              <img src="{{ asset('assets/img/slide_buche_ms.jpg') }}" alt="slide_buches_section"/>
+
+                         {% endif %}
+
+                    </div>
                </div>
 
-          </div>
+               <div class="product_bloc_title_ms"></div>
+               {#________________________________________________________________________________END PARTIE SMARTPHONE#}
 
-          <div class="product_bloc_title"></div>
+          </section>
 
-          <div class="products">
-               
+          <section>
+               <div class="products">
 
-              {% for product in products %}
 
-                    <div class="product_bloc">
-                         <a href="{{ path('product', {'id': product.id}) }}">
-                              <img src="{{ asset('assets/img/'~ product.image)}}" alt="image produit">
-                              <p class="product_bloc_nomPdt">{{ product.NomPdt }}</p>
-                              <p class="product_bloc_description">{{ product.DescriptionPdt }}</p>
-                         </a>
-                         <div class="price">
-                              <div class="price_ring">
-                                   <p class="product_bloc_tarif">{{ product.TarifsTtcPdt }} €</p>
-                              </div>
-                              <a href="{{ path('product', {'id': product.id}) }}"class="price_ring">
-                                        <p>{{ ('+') }} </p>
+                   {% for product in products %}
+
+                         <div class="product_bloc">
+                              <a href="{{ path('product', {'id': product.id}) }}">
+                                   <img src="{{ asset('assets/img/'~ product.image)}}" alt="image produit">
+                                   <p class="product_bloc_nomPdt">{{ product.NomPdt }}</p>
+                                   <p class="product_bloc_description">{{ product.DescriptionPdt }}</p>
                               </a>
+                              <div class="price">
+                                  <div class="price_ring">
+                                        <p class="product_bloc_tarif">{{ product.TarifsTtcPdt }} €</p>
+                                   </div>
+                                   <a href="{{ path('product', {'id': product.id}) }}"class="price_ring">
+                                             <p>{{ ('+') }} </p>
+                                   </a>
+                              </div>
                          </div>
 
+                    {% endfor %}
 
-                    </div>
+               </div>
+               {#___________________________________________________________________PARTIE SMARTPHONE#}
+               <div class="products_ms">
 
-               {% endfor %}
 
-          </div>
+                    {% for product in products %}
 
+                         <div class="product_bloc_ms">
+                              <a href="{{ path('product', {'id': product.id}) }}">
+                                   <img src="{{ asset('assets/img/'~ product.image)}}" alt="image produit">
+                                   <p class="product_bloc_nomPdt_ms">{{ product.NomPdt }}</p>
+                                   <p class="product_bloc_description_ms">{{ product.DescriptionPdt }}</p>
+                              </a>
+                              <div class="price_ms">
+                                   {# <div class="price_ring">
+                                         <p class="product_bloc_tarif">{{ product.TarifsTtcPdt }} €</p>
+                                    </div>#}
+                                   <a href="{{ path('product', {'id': product.id}) }}"class="price_ring_ms">
+                                        <p>{{ ('+') }} </p>
+                                   </a>
+                              </div>
+                         </div>
+
+                    {% endfor %}
+
+               </div>
+
+
+
+          </section>
 
      {% endblock %}
 

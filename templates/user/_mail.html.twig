@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,11 +8,13 @@
 </head>
 <body>
 
-<p>{% if prenom != '' %} {{ prenom }} {% endif %} {% if nom != '' %} {{ nom }} {% endif %}
-    vous a envoyé un message.
-</p>
+    <section>
+        <p>{% if prenom != '' %} {{ prenom }} {% endif %} {% if nom != '' %} {{ nom }} {% endif %}
+            vous a envoyé un message.
+        </p>
 
-<p>{{ message }}</p>
+        <p>{{ message }}</p>
+    </section>
 
 </body>
 </html>

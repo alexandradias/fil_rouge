@@ -24,8 +24,8 @@ class HomeAdminController extends AbstractController
    /* //________________________________________________________________________________________________________________
     //ROUTE->HOME COTE ADMINISTRATEUR*/
 
-    /*//je crée ma route qui sera visible depuis les vues administrateur*/
-    /*//celles-ci seront accessible avec interface login*/
+    /*//je crée ma route qui sera visible depuis la vue administrateur*/
+    /*//celles-ci sera accessible avec une interface login*/
     /**
      * @Route("/admin/", name="homeAdmin")
      *
@@ -86,7 +86,7 @@ ________________________________________________________________________________
             [
                 /*-> envoi de la view du form au fichier twig*/
                 'products' => $products,
-                'action' => $action,
+                'action' => $action
 
             ]);
 
@@ -113,7 +113,7 @@ ________________________________________________________________________________
      */
 
     /*->je déclare ma méthode formInsertProduct*/
-    /*-> Je pourrai l'appeler depuis mon fichier 'twig' grâce à la fonction PATH qui est liée à ma route*/
+    /*-> Je pourrais l'appeler depuis mon fichier 'twig' grâce à la fonction PATH qui est liée à ma route*/
 
                                        /* -> les paramètres de la méthode formInsertProduct
                                              sont : request et entityManager
@@ -161,20 +161,26 @@ ________________________________________________________________________________
             {
                 if($imageFile)
                 {
+                    /*Je récupère son nom d'origine avec $originalFilename
+                     * pathinfo est une fonction qui prend en paramètre le nom d'origine de l'image et son chemin*/
                     $originalFilename = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
                     // Nécessaire pour inclure le nom du fichier en tant qu'URL + sécurité + nom unique
                     $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9] remove; Lower()', $originalFilename);
+                    /*$newFilename-> est le nom final*/
                     $newFilename = $safeFilename . '-' . uniqid() . '.' . $imageFile->guessExtension();
 
                     try{
+                        /*il essaye de déplacer le fichier image dans le dossier indiqué
+                        par la méthode getParameter qui a en parmètre le nom ->'article_images'*/
                         $imageFile->move(
                             $this->getParameter('article_images'),
                             $newFilename
                         );
+                        /* dans le cas d'un disfonctionnement le catch de capturer l'exception*/
                     } catch (FileException $e) {
-                        // ... handle exception if something happens during file upload
+
                     }
-                    //met à jour le champ image
+                    /*met à jour la propriété image de l'instance de la classe Products */
                     $product->setImage($newFilename);
                 }
 
@@ -204,6 +210,10 @@ ________________________________________________________________________________
             /*-> FLUSH => envoie les modifications à la BDD, avant cette action de flush rien n'est rempli dans la base*/
             $entityManager->persist($product);
             $entityManager->flush();
+
+            // message flash de validation
+            $this->addFlash('Success', 'L\'enregistrement a bien été effectué');
+
         }
 
         /*-> je retourne une réponse*/
@@ -250,18 +260,84 @@ ________________________________________________________________________________
             /* -> la méthode handleResquest récupère les infos de la requête*/
             $form->handleRequest($request);
 
+            //pour ajouter une image
+            /** @var UploadedFile $imageFile */
+            $imageFile = $form['image']->getData();
+            $imageFile2 = $form['PhotoPdt']->getData();
+
+            // Condition nécessaire car le champ 'image' n'est pas requis
+            // donc le fichier doit être traité que s'il est téléchargé
+            if ($imageFile || $imageFile2)
+            {
+                if($imageFile)
+                {
+                    /*Je récupère son nom d'origine avec $originalFilename
+                     * pathinfo est une fonction qui prend en paramètre le nom d'origine de l'image et son chemin*/
+                    $originalFilename = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
+                    // Nécessaire pour inclure le nom du fichier en tant qu'URL + sécurité + nom unique
+                    $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9] remove; Lower()', $originalFilename);
+                    /*$newFilename-> est le nom final*/
+                    $newFilename = $safeFilename . '-' . uniqid() . '.' . $imageFile->guessExtension();
+
+                    try{
+                        /*il essaye de déplacer le fichier image dans le dossier indiqué
+                        par la méthode getParameter qui a en parmètre le nom ->'article_images'*/
+                        $imageFile->move(
+                            $this->getParameter('article_images'),
+                            $newFilename
+                        );
+                        /* dans le cas d'un disfonctionnement le catch de capturer l'exception*/
+                    } catch (FileException $e) {
+
+                    }
+                    /*met à jour la propriété image de l'instance de la classe Products */
+                    $update->setImage($newFilename);
+                }
+
+                if($imageFile2)
+                {
+                    /*crée le nom de mon autre champ image*/
+                    $originalFilename2 = pathinfo($imageFile2->getClientOriginalName(), PATHINFO_FILENAME);
+                    // Nécessaire pour inclure le nom du fichier en tant qu'URL + sécurité + nom unique
+                    $safeFilename2 = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9] remove; Lower()', $originalFilename2);
+                    $newFilename2 = $safeFilename2 . '-' . uniqid() . '.' . $imageFile2->guessExtension();
+
+                    // Déplace le fichier dans le dossier des images d'articles
+                    try {
+                        $imageFile2->move(
+                            $this->getParameter('article_images'),
+                            $newFilename2
+                        );
+                    } catch (FileException $e) {
+                        // ... handle exception if something happens during file upload
+                    }
+                    $update->setPhotoPdt($newFilename2);
+                }
+
+            }
+
+
+
             /*-> PERSIST => On enregistre l'entité créée*/
             /*-> FLUSH => envoie les modifications à la BDD, avant cette action de flush rien n'est rempli dans la base*/
             $entityManager->persist($update);
             $entityManager->flush();
+
+            /*Permets de revenir à ma list produit en mettant les modifications à jour,
+            retour sur la page liste product avec comme action update, avec passage de parametre action=update*/
+            return $this -> redirectToRoute('ListProducts',[
+                'action' => 'update'
+            ]);
+
         }
 
         /*-> je retourne une réponse*/
+       /* return $this->redirectToRoute('admin/updateProduct.html.twig');*/
         return $this->render('admin/updateProduct.html.twig',
-            [
-                /*-> envoi de la view du form au fichier twig*/
-                'formProductView' => $formProductView
-            ]);
+        [
+            /*-> envoi de la view du form au fichier twig*/
+            'formProductView' => $formProductView
+        ]);
 
     }
 
@@ -307,6 +383,9 @@ ________________________________________________________________________________
         /*// j'utilise la méthode remove() de l'entityManager en spécifiant le produit à supprimer*/
         $entityManager->remove($product);
         $entityManager->flush();
+
+        /*$this->addFlash('success', 'Votre produit a bien été supprimer');*/
+
 
        return $this -> redirectToRoute('ListProducts',[
         'action' => 'delete'

@@ -2,7 +2,9 @@
 
 namespace App\Form;
 
+use App\Entity\CategoriesPdt;
 use App\Entity\Products;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -16,6 +18,10 @@ class ProductsType extends AbstractType
     {
         $builder
             ->add('NomPdt')
+            ->add('categoriesPdt', EntityType::class,[
+                "class"=> CategoriesPdt::class,
+                "choice_label"=> "libelle_cat"
+            ])
             ->add('DescriptionPdt')
             ->add('descriptionShortPdt')
             ->add('compositionPdt')

@@ -29,7 +29,6 @@
   padding-bottom: 5%;
   line-height: 35px;
   position: absolute;
-
   @include fontMinimal;
 }
 
@@ -50,7 +49,6 @@
 }
 
 .bloc_text_product{
-
   height: 40px;
   width: 100%;
   margin-bottom: 20px;
@@ -97,6 +95,15 @@
   color:$vertTendre;
   margin:0;
 }
+.product_composition_small_text{
+  @include fontRoboto;
+  letter-spacing: 1px;
+  font-size: 10px;
+  text-align: center;
+  font-weight: bold;
+  color:$vertTendre;
+  margin:0;
+}
 
 .product_description{
   font-size: 15px;
@@ -122,9 +129,9 @@
    padding: 10%;*/
 }
 
-.slide_product{
+/*.slide_product{
   width: 100%;
- /* height: 70%;*/
+ !* height: 70%;*!
   position: relative;
   display: flex;
   align-items: center;
@@ -132,7 +139,7 @@
 
 .slide_product img{
   width: 100%;
-}
+}*/
 
 
 
@@ -255,5 +262,48 @@
 
 
 
-/*_______________________________________*/
+/*______________________________________PARTIE SMARTPHONE_*/
 
+.slide_product_ms{
+  display: none;
+}
+
+.text_product_ms{
+  display: none;
+}
+
+.bloc_text_product_ms{
+  display: none;
+}
+
+.global_ms{
+  display: none;
+}
+
+.content_ms{
+  display: none;
+}
+
+.back_ms{
+  display: none;
+}
+
+.product_composition_ms{
+  display: none;
+}
+
+.product_description_ms{
+  display: none;
+}
+
+.bloc_text_ms{
+  display: none;
+}
+
+.product_composition_ms{
+  display: none;
+}
+
+.product_description_ms{
+  display: none;
+}

@@ -6,6 +6,17 @@
     {# ->j'intègre le contenu de ma page entre le 'block' et le 'endblock'#}
      {% block content %}
 
+         {#message flash / ce message confirme insertion produit#}
+         {% for messages in app.flashes %}
+             {% for message in messages %}
+                 <div class="message">
+                     <div class="alert alert-success" >{{ message }}</div>
+                 </div>
+             {% endfor %}
+         {% endfor %}
+         {#end message flash#}
+
+
          <div class="back_content">
              <a href="{{ path('homeAdmin') }}">
                  <img src="{{ asset('assets/icon/back_small.svg') }}" alt="icon back"/>
@@ -31,6 +42,10 @@
                     {{ form_label(formProductView.NomPdt, 'Nom', {'label_attr': {'class': 'form_content_label'}}) }}
                     {{ form_widget(formProductView.NomPdt, { 'attr': {'class': "form_content",'placeholder': "Votre nom de produit"} }) }}
 
+                     <hr class="hrInsert">
+
+                     {{ form_label(formProductView.categoriesPdt, 'Catégorie', {'label_attr': {'class': 'form_content_label'}}) }}
+                     {{ form_widget(formProductView.categoriesPdt, { 'attr': {'class': "form_content",'placeholder': "Votre catégorie"}}) }}
 
                      <hr class="hrInsert">
 
@@ -86,3 +101,4 @@
 
 
      {% endblock %}
+

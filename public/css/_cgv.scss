@@ -38,6 +38,7 @@
   margin: 0 0 0 100px;
   @include fontRoboto;
   text-align: justify;
+  line-height: 150%;
 }
 
 .hr_cgv{
@@ -46,4 +47,8 @@
   background-color: $vertTendre;
   border:none;
   margin-top: -7px;
+}
+
+#cgv_end{
+  padding-bottom: 100px;
 }

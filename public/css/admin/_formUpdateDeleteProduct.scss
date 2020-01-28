@@ -7,6 +7,9 @@
 
 /*___________________________________________________________________________
 //LIST PRODUCTS*/
+#table td{
+  vertical-align: middle;
+}
 
 .table{
   margin-left:auto;
@@ -16,13 +19,16 @@
 }
 
 .table tr{
-  border:solid 1px #959690;
+  border:0;
   padding: 0;
   /* @include fontMinimal;
    letter-spacing: 2px;
-
    width: 100%;*/
+}
 
+
+.table td{
+  border: 0;
 }
 
 .table img{
@@ -79,10 +85,11 @@
 }
 
 .icon_update{
-  width: 150%;
+  width: 40px;
 }
 
 .icon_update img{
+  width: 100%;
   padding: 0;
   margin: 0;
 }
@@ -133,12 +140,47 @@
 }
 
 .icon_delete{
-  width: 150%;
+  width: 70px;
 }
 
 .icon_delete img{
+  width: 100%;
   margin-left: 10px;
   margin-top: 0;
+}
+
+.modal_admin{
+  color: white;
+  @include fontRoboto;
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+}
+
+
+.content_modal_admin{
+  background-color: $vertClair;
+  margin: 0 auto;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translateX(-50%);
+  z-index: 2;
+}
+
+.btn_confirm{
+  background-color: $redColor;
+  color: white;
+  border-color: $redColor;
+}
+
+.btn_close{
+  background-color: $vertClair;
+  color: white;
+  border-color: $vertClair;
 }
 
 

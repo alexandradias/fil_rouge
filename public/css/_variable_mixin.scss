@@ -38,6 +38,7 @@ $vertClair: #a0b2a4;
 
 @mixin centreImage{
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }

@@ -8,7 +8,7 @@
 /*____________________________________________________________________________________________________________________*/
 /*FOOTER*/
 
-.footer{
+#footer{
   margin:0;
   padding:0;
   height: 80px;
@@ -16,7 +16,6 @@
   background-color: $footerColor;
   position: fixed;
   bottom: 0;
-
   @include centreImage;
   @include fontAdam;
 }
@@ -32,6 +31,7 @@
 
 .img_foot{
   margin-left:20px;
+  width: 100%;
 }
 
 .cgv{
@@ -43,3 +43,21 @@
 
 
 /*_________________________________ FOOTER END*/
+
+
+
+#footer_ms{
+  display: none;
+}
+
+.foot_ms{
+  display: none;
+}
+
+.foot_ms img{
+  display: none;
+}
+
+.img_foot_ms{
+  display: none;
+}

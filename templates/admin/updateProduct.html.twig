@@ -11,7 +11,7 @@
                  <img src="{{ asset('assets/icon/back_small.svg') }}" alt="icon back"/>
              </a>
              {#-> j'intègre un titre à ma page#}
-             <h1 class="h1Update">UpdateProduct</h1>
+             <h1 class="h1Update">Update Product</h1>
          </div>
          <hr class="hrTopUpdate">
          <hr class="hrTopUpdate">
@@ -47,7 +47,7 @@
          {{ form_start(formProductView)}}
 
          {#-> je crée une class form qui me permets de styliser le formulaire#}
-         <div class="form_update">
+         <div class="form_update form_update_border">
 
 
              {#-> la fonction twig 'form_label' permet de créer un label#}
@@ -56,6 +56,11 @@
 
              {{ form_label(formProductView.NomPdt, 'Nom', {'label_attr': {'class': 'form_content_label'}}) }}
              {{ form_widget(formProductView.NomPdt, { 'attr': {'class': "form_content",'placeholder': "Votre nom de produit"} }) }}
+
+             <hr class="hrInsert_update">
+
+             {{ form_label(formProductView.categoriesPdt, 'Catégorie', {'label_attr': {'class': 'form_content_label'}}) }}
+             {{ form_widget(formProductView.categoriesPdt, { 'attr': {'class': "form_content",'placeholder': "Votre catégorie"}}) }}
 
 
              <hr class="hrInsert_update">

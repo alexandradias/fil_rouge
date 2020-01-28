@@ -14,12 +14,10 @@
   justify-content: center;
   background-color: $vertfonceColor;
   align-items: center;
-  /*position: fixed;*/
   z-index: 1;
 }
 
 .logoAdmin{
-
   width: 15%;
   margin:0;
 }
@@ -29,9 +27,9 @@
 }
 
 .text_header{
-  font-family: Minimal, Helvetica, sans-serif;
+  @include fontRoboto;
   text-align: right;
-  color:#959690;
+  color:$vertTendre;
   margin-right: 10%;
   font-size: 20px;
 }

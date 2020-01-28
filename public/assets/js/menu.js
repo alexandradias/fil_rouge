@@ -1,29 +1,38 @@
 /*____________________________________________________________________________________________________________________*/
 /*Je crée une variable avec une condition pour faire apparaitre un second menu au scroll*/
 
+/*if ($(document).width() > 750 && $(document).width()<1200)
+{
+    window.location.replace("http://www.annelamourpatisseries");
+}*/
 
 
-$('.header2').hide();  // d'abord, je masque le deuxième menu de navigation, qui porte la class "header2"
+
+$('#header2').hide();  // d'abord, je masque le deuxième menu de navigation, qui porte la class "header2"
 var hauteur = 400; // 400px, c'est le nombre de pixels à partir duquel je déclenche le tout
 
 $(document).ready(function()
 {
-    $(window).scroll(function ()
+    console.log($(window).width());
+    /*if(document.getElementById('media_display').style.display=='block')*/
+    if($(window).width()> 600) {
+        $(window).scroll(function ()
 
-    {//Au scroll dans la fenetre je déclenche la fonction
+        {//Au scroll dans la fenetre je déclenche la fonction
 
-        if ($(this).scrollTop() > hauteur)
-        {
-            //si je défile de plus de 400px (variable "hauteur") pixels du haut vers le bas ici 400px
-            $('.header1').fadeOut(1000); // On masque le 1
-            $('.header2').fadeIn(1000); // On affiche le 2
+            if ($(this).scrollTop() > hauteur)
+            {
+                //si je défile de plus de 400px (variable "hauteur") pixels du haut vers le bas ici 400px
+                $('.header1').fadeOut(1000); // On masque le 1
+                $('#header2').fadeIn(1000); // On affiche le 2
 
-        } else
-        {
-            $('.header2').fadeOut(1000);
-            $('.header1').fadeIn(1000);
-        }
-    });
+            } else
+            {
+                $('#header2').fadeOut(1000);
+                $('.header1').fadeIn(1000);
+            }
+        });
+    }
 });
 
 
@@ -37,24 +46,27 @@ var hauteur = 400; // 400px, c'est le nombre de pixels à partir duquel je décl
 
 $(document).ready(function()
 {
-    $(window).scroll(function ()
+    console.log($(window).width());
+    /*if(document.getElementById('media_display').style.display=='block')*/
+    if($(window).width()> 600) {
+        $(window).scroll(function ()
 
-    {//Au scroll dans la fenetre je déclenche la fonction
+        {//Au scroll dans la fenetre je déclenche la fonction
 
-        if ($(this).scrollTop() > hauteur)
-        {
-            //si je défile de plus de 400px (variable "hauteur") pixels du haut vers le bas ici 400px
-            $('.header3').fadeOut(1000); // On masque le 1
-            $('.header4').fadeIn(1000); // On affiche le 2
+            if ($(this).scrollTop() > hauteur)
+            {
+                //si je défile de plus de 400px (variable "hauteur") pixels du haut vers le bas ici 400px
+                $('.header3').fadeOut(1000); // On masque le 1
+                $('.header4').fadeIn(1000); // On affiche le 2
 
-        } else
-        {
-            $('.header4').fadeOut(1000);
-            $('.header3').fadeIn(1000);
-        }
-    });
+            } else
+            {
+                $('.header3').fadeOut(1000);
+                $('.header4').fadeIn(1000);
+            }
+        });
+    }
 });
-
 
 /*____________________________________________________________________________________________________________________*/
 /*Je crée une variable avec une condition pour faire apparaitre un second menu au scroll*/
@@ -84,7 +96,17 @@ $(document).ready(function()
     });
 });
 
+/*_________BURGER____________________________________________________________________________________________________*/
 
+
+$(document).ready(function() {
+
+    $('.burger').hover(function () {
+
+        $('.sidebar').toggle('slow');
+
+    });
+});
 
 /*____________________________________________________________________________________________________________________*/
 /*Je crée une variable avec une condition pour faire apparaitre mon menu sidebar au scroll de la page*/
@@ -94,21 +116,24 @@ var hauteur = 800; // 800px, c'est le nombre de pixels à partir duquel je déci
 
 $(document).ready(function()
 {
-    $(window).scroll(function ()
-    {//Au scroll dans la fenetre je déclenche la fonction
+    if($(window).width()> 600){
+        $(window).scroll(function ()
+        {//Au scroll dans la fenetre je déclenche la fonction
 
-        if ($(this).scrollTop() > hauteur)
-        {
-            //si je défile de plus de 800px (variable "hauteur") pixels du haut la sidebar apparait
-            //je l'a fait apparaitre lentement
+            if ($(this).scrollTop() > hauteur)
+            {
+                //si je défile de plus de 800px (variable "hauteur") pixels du haut la sidebar apparait
+                //je l'a fait apparaitre lentement
 
-            $('.sidebar').fadeIn(1000); // la sidebar apparait
+                $('.sidebar').fadeIn(1000); // la sidebar apparait
 
-        } else
-        {
-            $('.sidebar').fadeOut(1000); // la sidebar disparait
-        }
-    });
+            } else
+            {
+                $('.sidebar').fadeOut(1000); // la sidebar disparait
+            }
+        });
+    }
+
 });
 
 
@@ -137,28 +162,68 @@ $(document).ready(function()
 
 
 
-$('.footer').hide();  // d'abord, je masque le footer, qui porte la class "footer"
-var hauteur = 3000; // 400px, c'est le nombre de pixels à partir duquel je déclenche le footer, celui ci apparait en même temps que la sidebar
+$('#footer').hide();  // d'abord, je masque le footer, qui porte la class "footer"
+var hauteur = 1500; // 400px, c'est le nombre de pixels à partir duquel je déclenche le footer, celui ci apparait en même temps que la sidebar
 
 $(document).ready(function()
 {
-    $(window).scroll(function ()
+    if($(window).width()> 600){
 
-    {//Au scroll dans la fenetre je déclenche la fonction
+        $(window).scroll(function ()
 
-        if ($(this).scrollTop() > hauteur)
-        {
-            //si je défile de plus de 400px (variable "hauteur") pixels du haut vers le bas ici 400px
+        {//Au scroll dans la fenetre je déclenche la fonction
 
-            $('.footer').fadeIn(1000); // On affiche le footer
+            if ($(this).scrollTop() > hauteur)
+            {
+                //si je défile de plus de 400px (variable "hauteur") pixels du haut vers le bas ici 400px
 
-        } else
-        {
-            $('.footer').fadeOut(1000); // On masque le footer
+                $('#footer').fadeIn(1000); // On affiche le footer
 
-        }
-    });
+            } else
+            {
+                $('#footer').fadeOut(1000); // On masque le footer
+
+            }
+        });
+
+    }
+
 });
+
+
+/*_________________________________________________________________________________________FOOTER_MS___SMARTPHONE_____*/
+/*Je crée une variable avec une condition pour faire apparaitre mon footer au scroll*/
+
+
+
+$('#footer_ms').hide();  // d'abord, je masque le footer, qui porte la class "footer"
+var hauteur = 1500; // 400px, c'est le nombre de pixels à partir duquel je déclenche le footer, celui ci apparait en même temps que la sidebar
+
+$(document).ready(function()
+{
+    if($(window).width()> 300){
+
+        $(window).scroll(function ()
+
+        {//Au scroll dans la fenetre je déclenche la fonction
+
+            if ($(this).scrollTop() > hauteur)
+            {
+                //si je défile de plus de 400px (variable "hauteur") pixels du haut vers le bas ici 400px
+
+                $('#footer_ms').fadeIn(1000); // On affiche le footer
+
+            } else
+            {
+                $('#footer_ms').fadeOut(1000); // On masque le footer
+
+            }
+        });
+
+    }
+
+});
+
 
 
 /*____________________________________________________________________________________________________________________*/
@@ -245,6 +310,43 @@ $('.top_admin').click(function()
 
 
 
+$('.down_admin').hide();  // d'abord, je masque l'icon arrow, qui porte la class "top"
+var hauteur = 200; // 200px, c'est le nombre de pixels à partir duquel je déclenche l'apparition de la flèche
+
+$(document).ready(function()
+{
+    $(window).scroll(function ()
+
+    {//Au scroll dans la fenetre je déclenche la fonction
+
+        if ($(this).scrollTop() > hauteur)
+        {
+            //si je défile de plus de 400px (variable "hauteur")nb de px du haut vers le bas
+
+            $('.down_admin').fadeIn(1000); // On affiche l'icon arrow
+
+        } else
+        {
+            $('.down_admin').fadeOut(1000); // On masque l'icon arrow
+
+        }
+    });
+});
+
+/*____________________________________________________________________________________________________________________*/
+/*J'ajoute à ma arrow une animation au clic pour lui permettre d'atteindre le haut de ma page*/
+
+$('.down_admin').on();
+
+$('.down_admin').click(function()
+{/*au clic une animation me permet d'atteindre le top de ma page lentement*/
+    /*$(window).scrollTop(0);*/
+    $('html, body').animate({scrollTop:5000}, 'slow');
+});
+
+
+
+
 
 /*____________________________________________________________________________________________________________________*/
 /*Je crée une variable avec une condition pour faire apparaitre un bloc white*/
@@ -282,8 +384,25 @@ $(document).ready(function(){
 
     $('.content_modal').delay(500).fadeOut(3000);
 
+   /*pour la modal confirmation insert product*/
+    $('.message').delay(1000).fadeOut(3000);
+
 });
 
+
+
+
+/*$(document).ready(function() {
+
+    $('.burger').hover(function () {
+
+        $('.sidebar').show('slow');
+
+    }, function () {
+
+        $('.sidebar').hide('slow');
+    });
+});*/
 
 
 

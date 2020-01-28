@@ -2,6 +2,6 @@ swiftmailer:
     encryption: ssl
     auth_mode:  login
     host:      smtp.gmail.com
-    username:  alexandra.diasdarocha@lapiscine.pro
-    password:  Ardenxela33
+    username:  annelamourpatisseries@gmail.com
+    password:  mouche2013&
     transport: gmail

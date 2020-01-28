@@ -38,7 +38,7 @@
 }
 
 .form_content_label{
-  @include fontAdam;
+  @include fontRoboto;
   margin-top:30px;
   width: 50%;
   text-transform: uppercase;
@@ -81,6 +81,14 @@
 .back_content img{
   width: 30%;
   margin-left: 0;
+}
+
+.message {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  z-index: 100;
+  background-color: red;
 }
 
 /*_________________________________ FORMULAIRE END*/

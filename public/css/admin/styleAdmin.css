@@ -24,7 +24,6 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   justify-content: center;
   background-color: #5b6f6d;
   align-items: center;
-  /*position: fixed;*/
   z-index: 1; }
 
 .logoAdmin {
@@ -35,9 +34,9 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   width: 100%; }
 
 .text_header {
-  font-family: Minimal, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-align: right;
-  color: #959690;
+  color: #90a39d;
   margin-right: 10%;
   font-size: 20px; }
 
@@ -82,6 +81,14 @@ ul {
   top: 80%;
   margin-right: 30px; }
 
+.down_admin {
+  height: 30px;
+  display: flex;
+  position: fixed;
+  right: 5%;
+  top: 85%;
+  margin-right: 30px; }
+
 /*____________________________________________________________________________________________________________________*/
 /*VARIABLES IMPORTÉES*/
 /*VARIABLE*/
@@ -113,7 +120,7 @@ On appelle la variable à la place de la valeur dans nos class ou id */
 
 .insert {
   vertical-align: top;
-  color: #90a39e;
+  color: #90a39d;
   width: 18%;
   margin: 50px;
   text-align: center; }
@@ -264,8 +271,7 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   width: 300px; }
 
 .form_content_label {
-  font-family: 'Adam';
-  src: url("../font/adam.otf") format("opentype");
+  font-family: 'Roboto', sans-serif;
   margin-top: 30px;
   width: 50%;
   text-transform: uppercase; }
@@ -302,6 +308,13 @@ On appelle la variable à la place de la valeur dans nos class ou id */
 .back_content img {
   width: 30%;
   margin-left: 0; }
+
+.message {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  z-index: 100;
+  background-color: red; }
 
 /*_________________________________ FORMULAIRE END*/
 /*____________________________________________________________________________________________________________________*/
@@ -437,6 +450,9 @@ On appelle la variable à la place de la valeur dans nos class ou id */
 /*@include centerer ou centerImage; => me permettra d'inclure la variable au sein de ma class*/
 /*___________________________________________________________________________
 //LIST PRODUCTS*/
+#table td {
+  vertical-align: middle; }
+
 .table {
   margin-left: auto;
   margin-right: auto;
@@ -444,12 +460,14 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   width: 60%; }
 
 .table tr {
-  border: solid 1px #959690;
+  border: 0;
   padding: 0;
   /* @include fontMinimal;
    letter-spacing: 2px;
-
    width: 100%;*/ }
+
+.table td {
+  border: 0; }
 
 .table img {
   width: 60%;
@@ -495,9 +513,10 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   font-size: 15px; }
 
 .icon_update {
-  width: 150%; }
+  width: 40px; }
 
 .icon_update img {
+  width: 100%;
   padding: 0;
   margin: 0; }
 
@@ -539,11 +558,41 @@ On appelle la variable à la place de la valeur dans nos class ou id */
   margin-top: -7px; }
 
 .icon_delete {
-  width: 150%; }
+  width: 70px; }
 
 .icon_delete img {
+  width: 100%;
   margin-left: 10px;
   margin-top: 0; }
+
+.modal_admin {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  display: flex; }
+
+.content_modal_admin {
+  background-color: #a0b2a4;
+  margin: 0 auto;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; }
+
+.btn_confirm {
+  background-color: #a20000;
+  color: white;
+  border-color: #a20000; }
+
+.btn_close {
+  background-color: #a0b2a4;
+  color: white;
+  border-color: #a0b2a4; }
 
 /*____________________________________________________________________________________________________________________*/
 /*MEDIAQUERIES ADMIN*/

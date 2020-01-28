@@ -6,6 +6,23 @@
     {# j'intègre le contenu de ma page entre le 'block' et le 'endblock'#}
      {% block content %}
 
+         {#message flash / ce message ne s'affichera seulement en cas d'erreur#}
+         {#{% if app.flashes %}
+             <div class="modal_admin">#}
+                 {#Je récupère les messages flash pour les afficher#}
+                {# {% for messages in app.flashes %}
+                     {% for message in messages %}
+                         {{ message }}
+                     {% endfor %}
+                 {% endfor %}
+             </div>
+         {% endif %}#}
+         {#end message flash#}
+
+         {% if action is not defined %}
+         {% set action = 'update' %}
+         {% endif %}
+
          {#Je crée une condition afin d'appeler le titre à ma page selon l'action choisie#}
          {% if action =='update' %}
              <div class="back_content">
@@ -33,7 +50,7 @@
          {% endif %}
 
          {#Je crée un tableau qui englobera tous les produits de ma BDD selon l'action choisie (soit updateProduct soit deleteProduct)#}
-         <table class="table">
+         <table class="table" id="table">
 
              {#Je crée une boucle afin d'afficher tous les produits présents dans ma BDD#}
              {% for product in products %}
@@ -62,10 +79,53 @@
                              </a>
 
                          {%elseif action == 'delete' %}
-                             <a href="{{ path('DeleteProduct', { 'id': product.id }) }}">
+
+                             {# Je créé une modal avant action delete#}
+                             {# data-toggle = class de la modale, data-target = id de la modale (unique) #}
+                             <button type="button" class="btn btn-link icon_delete" data-toggle="modal" data-target="{{ '#modal_delete' ~ product.id }}">
+                                 <img src="{{ asset('assets/icon/delete_small.svg') }}" alt="icon delete"/>
+                             </button>
+
+                             {# Modale pour confirmation de suppression #}
+                             <div class="modal fade" id="{{ 'modal_delete' ~ product.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                 <div class="modal-dialog modal-dialog-centered" role="document">
+                                     <div class="modal-content">
+                                         <div class="modal-header">
+                                             <h5 class="modal-title" id="exampleModalLabel">{{ product.NomPdt }}</h5>
+                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                 <span aria-hidden="true">&times;</span>
+                                             </button>
+                                         </div>
+                                         <div class="modal-body">
+                                             <p>Confirmez-vous la suppression de votre produit ?</p>
+                                         </div>
+                                         <div class="modal-footer">
+                                             <button type="button" class="btn btn-secondary btn_close" data-dismiss="modal">Fermer</button>
+                                             <a href="{{ path('DeleteProduct', {'id':product.id}) }}"><button type="button" class="btn btn-secondary btn_confirm">Confirmer</button></a>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+
+
+
+
+
+
+
+
+                             {#<a href="{{ path('DeleteProduct', { 'id': product.id }) }}">
                                  <div class="icon_delete"><img src="{{ asset('assets/icon/delete_small.svg') }}" alt="icon delete"/>
                                  </div>
-                             </a>
+                             </a>#}
+
+
+
+
+
+
+
+
                          {% endif %}
                      </td>
                  </tr>

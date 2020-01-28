@@ -10,7 +10,7 @@
     La valeur index permet à la page d'être indexée et la valeur follow permet aux liens d'être suivis par les robots
     et de transmettre de la popularité.#}
     <meta name="robots" content="index, follow">
-    <title>Projet fil rouge</title>
+    <title>Anne Lamour Pâtisseries</title>
 
 
     {#<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">#}
@@ -30,40 +30,48 @@
 
 {#//Mon header fait parti d'un fichier partiel ce qui me permettra de l'appeler sur chacune de mes pages grâce à 'extends'#}
 <header>
+
+
     <div  class="header1">
             <div class="logo1">
                 <a href="{{ path ('home') }}">
                     <img src="{{ asset('assets/logo/logo_1000.svg') }}" alt="logo Anne Lamour Patisserie">
                 </a>
             </div>
-            {#<div class="text_header1">
-                <p>De toutes les passions, la seule vraiment respectable me parait être la gourmandise.</p>
-                <p>Guy De Maupassant</p>
-            </div>#}
-            {#<div class="burger1"><img src="{{ asset('assets/icon/burger_1000.png') }}" alt="menu burger"></div>#}
-           {# <div class="img_header"> <img src="{{ asset('assets/img/slide_1.png') }}" alt="slide1_home"/></div>#}
-        <div class="menu">
+
+        <nav class="menu">
 
                 <div><a href="{{ path ('home') }}"> HOME </a></div>
 
-                <div><a href="{{ path ('productsByCategorie', {'categorie': 'patisserie'}) }}"> PATISSERIES </a></div>
+                <div><a href="{{ path ('productsByCategorie', {'categorie': 'patisseries'}) }}"> PATISSERIES </a></div>
 
-                <div><a href="{{ path ('productsByCategorie', {'categorie': 'chocolat'}) }}"> CHOCOLATS </a></div>
+                <div><a href="{{ path ('productsByCategorie', {'categorie': 'chocolats'}) }}"> CHOCOLATS </a></div>
 
-                <div><a href="{{ path ('productsByCategorie', {'categorie': 'glace'}) }}"> GLACES </a></div>
+                <div><a href="{{ path ('productsByCategorie', {'categorie': 'buches'}) }}"> BUCHES </a></div>
 
-                <div><a href="{{ path ('ateliersByCategorie') }}"> ATELIERS </a></div>
+                <div><a href="{{ path ('contact') }}"> CONTACT </a></div>
 
+                {#<div><a href="{{ path ('ateliersByCategorie', {'categorie': 'atelier'}) }}"> ATELIERS </a></div>#}
 
-        </div>
+        </nav>
     </div>
 
-    <div  class="header2">
+    <div  id="header2">
         <a href="{{ path ('home') }}">
             <div class="logo2"><img src="{{ asset('assets/logo/logo_w_1000.svg') }}" alt="logo Anne Lamour Patisserie"></div>
         </a>
     </div>
-    <div class="bloc_white"></div>
+    <div id="bloc_white"></div>
+
+    {#___________________________________________________________________PARTIE SMARTPHONE#}
+
+    <div id="header1_ms">
+        <div id="logo1_ms">
+            <a href="{{ path ('home') }}">
+                <img src="{{ asset('assets/logo/logo_1000.svg') }}" alt="logo Anne Lamour Patisserie">
+            </a>
+        </div>
+    </div>
 
 </header>
 {#//--------------------------------------------------------------------------------------------------------HEADER USER END#}
@@ -78,24 +86,36 @@
             {% endblock %}
         </div>
 
+    <div class="burger">
+            <div class="burger_line"></div>
+            <div class="burger_line"></div>
+            <div class="burger_line"></div>
+    </div>
+
     <div class="sidebar">
         <ul>
             <li><a href="{{ path ('home') }}"> HOME </a></li>
             <br>
-            <li><a href="{{ path ('productsByCategorie', {'categorie': 'patisserie'}) }}"> PATISSERIES </a></li>
+            <li><a href="{{ path ('productsByCategorie', {'categorie': 'patisseries'}) }}"> PATISSERIES </a></li>
             <br>
-            <li><a href="{{ path ('productsByCategorie', {'categorie': 'chocolat'}) }}"> CHOCOLATS </a></li>
+            <li><a href="{{ path ('productsByCategorie', {'categorie': 'chocolats'}) }}"> CHOCOLATS </a></li>
             <br>
-            <li><a href="{{ path ('productsByCategorie', {'categorie': 'glace'}) }}"> GLACES </a></li>
+            <li><a href="{{ path ('productsByCategorie', {'categorie': 'buches'}) }}"> BUCHES </a></li>
             <br>
-            <li><a href="{{ path ('ateliersByCategorie') }}"> ATELIERS </a></li>
-            <br>
-          {#  <li><a href="{{ path ('contact') }}"> CONTACT </a></li>#}
+            <li><a href="{{ path ('contact') }}"> CONTACT </a></li>
+            {#<br>#}
+            {#<li><a href="{{ path ('cgv') }}">M•LEGALES</a></li>#}
+            {#<br>#}
+            {#<li><a href="{{'https://www.instagram.com/anne_lamour_patisserie/?hl=fr'}}" target="{{ 'blank' }}">INSTAGRAM</a></li>#}
+            {#<div><a href="{{ path ('ateliersByCategorie', {'categorie': 'atelier'}) }}"> ATELIERS </a></div>#}
+            {#<br>
+            <li><a href="{{ path ('contact') }}"> CONTACT </a></li>#}
         </ul>
     </div>
     {#j'intègre un icon arrowtop qui va me permettre de remonter vers le haut de ma page
     son action sera généré depuis mon fichier.js#}
     <div class="top"><img src="{{ asset('assets/icon/arrow_top.svg') }}" alt="icon arrow-top"></div>
+    <div class="top_ms"><img src="{{ asset('assets/icon/arrow_top.svg') }}" alt="icon arrow-top"></div>
 
 </main>
 
@@ -104,29 +124,52 @@
 {#//______________________________________________________________________________________________________FOOTER START#}
 
 {#//je mets en place le footer, celui ci fait parti du fichier partiel => présent sur toutes mes vues#}
-<footer class="footer">
+<footer>
 
-    {#<div class="cgv">
-        <p>Conditions générales de vente</p>
-    </div>#}
-    <div class="foot">
-        {#//je mets en place les 3 sections#}
-        <div class="img_foot">
-            <a href="{{ path ('contact') }}">
-                <div><img src="{{ asset('assets/icon/contact.svg') }}" alt="contact"></div>
-            </a>
+    <section  id="footer">
+        <div class="foot">
+            {#//je mets en place les 3 sections#}
+            <div class="img_foot">
+                <a href="{{ path ('contact') }}">
+                    <div><img src="{{ asset('assets/icon/contact.svg') }}" alt="contact"></div>
+                </a>
+            </div>
+            <div class="img_foot">
+                <a href="{{ path ('cgv') }}">
+                    <img src="{{ asset('assets/icon/cgv.svg') }}" alt="conditions générales de vente">
+                </a>
+            </div>
+            <div class="img_foot">
+                <a href="{{'https://www.instagram.com/anne_lamour_patisserie/?hl=fr'}}" target="{{ 'blank' }}">
+                    <img src="{{ asset('assets/icon/instagram.svg')}}" alt="instagram">
+                </a>
+            </div>
         </div>
-        <div class="img_foot">
-            <a href="{{ path ('cgv') }}">
-                <img src="{{ asset('assets/icon/cgv.svg') }}" alt="conditions générales de vente">
-            </a>
-        </div>
-        <div class="img_foot">
-            <a href="{{'https://www.instagram.com/lamour.anne/?hl=fr'}}" target="{{ 'blank' }}">
-            <img src="{{ asset('assets/icon/instagram.svg')}}" alt="instagram">
-            </a>
-        </div>
-    </div>
+    </section>
+
+
+
+    {#___________________________________________________________________PARTIE SMARTPHONE#}
+    <section  id="footer_ms">
+       <div class="foot_ms">
+            {#//je mets en place les 3 sections#}
+            <div class="img_foot_ms">
+                <a href="{{ path ('contact') }}">
+                    <img src="{{ asset('assets/icon/contact.svg') }}" alt="contact">
+                </a>
+            </div>
+            <div class="img_foot_ms">
+                <a href="{{ path ('cgv') }}">
+                    <img src="{{ asset('assets/icon/cgv.svg') }}" alt="conditions générales de vente">
+                </a>
+            </div>
+            <div class="img_foot_ms">
+                <a href="{{'https://www.instagram.com/anne_lamour_patisserie/?hl=fr'}}" target="{{ 'blank' }}">
+                    <img src="{{ asset('assets/icon/instagram.svg')}}" alt="instagram">
+                </a>
+            </div>
+       </div>
+    </section>
 
 </footer>
 {#//------------------------------------------------------------------------------------------------------------FOOTER END#}

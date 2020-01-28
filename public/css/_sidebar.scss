@@ -22,7 +22,7 @@
 
 .sidebar a:active{
   text-decoration: none;
-  color:#a20000;
+  color:$redColor;
 }
 
 .sidebar a:visited{
@@ -32,7 +32,7 @@
 
 .sidebar a:hover{
   text-decoration: none;
-  color:#a20000;
+  color:$redColor;
 }
 
 ul{
@@ -40,13 +40,17 @@ ul{
 }
 
 .top{
-
   height: 30px;
   display:flex;
   position:fixed;
-  right: 5%;
+  right: 80px;
   top: 80%;
   margin-right:30px;
+  z-index: 110;
+}
+
+.top_ms{
+  display: none;
 }
 
 
